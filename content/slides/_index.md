@@ -5,3 +5,4 @@ sort_by = "date"
 +++
 
 * [01_intro](01_intro.pdf)
+* [02_structs_enums](02_structs_enums.pdf)
