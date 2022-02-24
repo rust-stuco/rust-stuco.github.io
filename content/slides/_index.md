@@ -8,4 +8,5 @@ sort_by = "date"
 * [02_structs_enums](02_structs_enums.pdf)
 * [03_ownership_borrowing_function_types](03_ownership_borrowing_function_types.pdf)
 * [04_traits_polymorphism](04_traits_polymorphism.pdf)
+* [05_modules](05_modules.pdf)
 * [06_std_lib](06_std_lib.pdf)
