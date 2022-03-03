@@ -10,3 +10,4 @@ sort_by = "date"
 * [04_traits_polymorphism](04_traits_polymorphism.pdf)
 * [05_modules](05_modules.pdf)
 * [06_std_lib](06_std_lib.pdf)
+* [07_strings](07_strings.pdf)
