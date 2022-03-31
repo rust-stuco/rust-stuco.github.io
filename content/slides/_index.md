@@ -12,3 +12,5 @@ sort_by = "date"
 * [06_std_lib](06_std_lib.pdf)
 * [07_strings](07_strings.pdf)
 * [08_error_handling](08_error_handling.pdf)
+* [09_macros](09_macros.pdf)
+* [10_unsafe](10_unsafe.pdf)
