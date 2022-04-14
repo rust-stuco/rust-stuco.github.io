@@ -15,3 +15,4 @@ sort_by = "date"
 * [09_macros](09_macros.pdf)
 * [10_unsafe](10_unsafe.pdf)
 * [11_concurrency_parallelism_1](11_concurrency_parallelism_1.pdf)
+* [12_concurrency_parallelism_2](12_concurrency_parallelism_2.pdf)
