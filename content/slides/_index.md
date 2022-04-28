@@ -16,3 +16,5 @@ sort_by = "date"
 * [10_unsafe](10_unsafe.pdf)
 * [11_concurrency_parallelism_1](11_concurrency_parallelism_1.pdf)
 * [12_concurrency_parallelism_2](12_concurrency_parallelism_2.pdf)
+* 13_livecoding (no slides or recording sorry)
+* [14_misc_cool_stuff](14_misc_cool_stuff.pdf)
