@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://Rust-Stuco.github.io"
+base_url = "https://rust-stuco.github.io"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -23,4 +23,4 @@ highlight_code = true
 
 [extra]
 author = "Jack Duvall and Cooper Pierce"
-github = "Rust-Stuco"
+github = "rust-stuco"
