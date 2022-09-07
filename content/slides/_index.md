@@ -5,6 +5,7 @@ sort_by = "date"
 +++
 
 * [01_intro](01_intro.pdf)
+* [02_structs_enums_ownership](02_structs_enums_ownership.pdf)
 
 Previous semester's slides:
 * [S22](./S22/)
