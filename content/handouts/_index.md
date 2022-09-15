@@ -16,7 +16,12 @@ sort_by = "date"
         <tr>
             <td><a href="ppm-writeup.pdf">PPM Parsing</a></td>
             <td><a href="ppm-handout.tgz">&#10515;</a></td>
-            <td>22/9/14</td>
+            <td>2022-09-14</td>
+        </tr>
+        <tr>
+            <td><a href="sudoku-writeup.pdf">Sudoku Solver</a></td>
+            <td><a href="sudoku-handout.tgz">&#10515;</a></td>
+            <td>2022-09-21</td>
         </tr>
     </tbody>
 </table>
