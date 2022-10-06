@@ -24,7 +24,7 @@ sort_by = "date"
             <td>2022-09-21</td>
         </tr>
         <tr>
-            <td><a href="egrep-writeup.pdf"><pre>egrep</pre></a></td>
+            <td><a href="egrep-writeup.pdf">egrep</a></td>
             <td><a href="egrep-handout.tgz">&#10515;</a></td>
             <td>2022-10-26</td>
         </tr>
