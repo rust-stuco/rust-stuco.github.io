@@ -8,6 +8,7 @@ sort_by = "date"
 * [02_structs_enums_ownership](02_structs_enums_ownership.pdf)
 * [03_lifetimes_modules_function_types](03_lifetimes_modules_function_types.pdf)
 * [04_polymorphism](04_polymorphism.pdf)
+* [06_stdlib_strings](06_stdlib_strings.pdf)
 
 Previous semester's slides:
 * [S22](./S22/)
