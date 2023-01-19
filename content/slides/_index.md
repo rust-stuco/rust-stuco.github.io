@@ -4,8 +4,7 @@ description = "The course website for 98-008: Student Taught Courses (StuCo): Sh
 sort_by = "date"
 +++
 
-No slides available yet.
-
+* [01_intro](01_intro.pdf)
 
 Previous semester's slides:
 * [F22](./F22/)
