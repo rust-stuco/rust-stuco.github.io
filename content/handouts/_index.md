@@ -4,7 +4,22 @@ description = "The course website for 98-008: Student Taught Courses (StuCo): Sh
 sort_by = "date"
 +++
 
-There are no handouts for S23 yet.
+<table style="width: 100%; text-align: center;">
+    <thead>
+        <tr>
+            <th>Assignment</th>
+            <th>Handout</th>
+            <th>Due</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="ppm-writeup.pdf">PPM Parsing</a></td>
+            <td><a href="ppm-handout.tgz">&#10515;</a></td>
+            <td>2023-02-01</td>
+        </tr>
+    </tbody>
+</table>
 
 Previous handouts:
 * [F22](./F22/)
