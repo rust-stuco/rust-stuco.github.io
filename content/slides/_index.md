@@ -7,6 +7,7 @@ sort_by = "date"
 * [01_intro](01_intro.pdf)
 * [02_structs_enums_ownership](02_structs_enums_ownership.pdf)
 * [03_references_polymorphism](03_references_polymorphism.pdf)
+* [04_lifetimes_functions](04_lifetimes_functions.pdf)
 
 Previous semester's slides:
 * [F22](./F22/)
