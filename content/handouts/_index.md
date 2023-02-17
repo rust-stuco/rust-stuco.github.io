@@ -19,6 +19,13 @@ sort_by = "date"
             <td>2023-02-01</td>
         </tr>
     </tbody>
+    <tbody>
+        <tr>
+            <td><a href="egrep-writeup.pdf"><pre>egrep</pre></td>
+            <td><a href="egrep-handout.tgz">&#10515;</a></td>
+            <td>2023-03-01</td>
+        </tr>
+    </tbody>
 </table>
 
 Previous handouts:
