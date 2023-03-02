@@ -8,8 +8,9 @@ sort_by = "date"
 * [02_structs_enums_ownership](02_structs_enums_ownership.pdf)
 * [03_references_polymorphism](03_references_polymorphism.pdf)
 * [04_lifetimes_functions](04_lifetimes_functions.pdf)
-05_livecoding (no slides)
+* 05_livecoding (no slides)
 * [06_standard_library](06_standard_library.pdf)
+* [07_errors_testing](07_errors_testing.pdf)
 
 Previous semester's slides:
 * [F22](./F22/)
