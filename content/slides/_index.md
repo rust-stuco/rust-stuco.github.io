@@ -11,6 +11,7 @@ sort_by = "date"
 * 05_livecoding (no slides)
 * [06_standard_library](06_standard_library.pdf)
 * [07_errors_testing](07_errors_testing.pdf)
+* [08_macros](08_macros.pdf)
 
 Previous semester's slides:
 * [F22](./F22/)
