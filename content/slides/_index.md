@@ -12,6 +12,7 @@ sort_by = "date"
 * [06_standard_library](06_standard_library.pdf)
 * [07_errors_testing](07_errors_testing.pdf)
 * [08_macros](08_macros.pdf)
+* [09_unsafe](09_unsafe.pdf)
 
 Previous semester's slides:
 * [F22](./F22/)
