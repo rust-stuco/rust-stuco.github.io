@@ -13,6 +13,7 @@ sort_by = "date"
 * [07_errors_testing](07_errors_testing.pdf)
 * [08_macros](08_macros.pdf)
 * [09_unsafe](09_unsafe.pdf)
+* [10_ffi](10_ffi.pdf)
 
 Previous semester's slides:
 * [F22](./F22/)
