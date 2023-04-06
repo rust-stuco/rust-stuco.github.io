@@ -14,6 +14,7 @@ sort_by = "date"
 * [08_macros](08_macros.pdf)
 * [09_unsafe](09_unsafe.pdf)
 * [10_ffi](10_ffi.pdf)
+* [11_concurrency_1_threads](11_concurrency_1_threads.pdf)
 
 Previous semester's slides:
 * [F22](./F22/)
