@@ -6,8 +6,8 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
-### Week 1: 
+<!--### Week 1: 
 Welcome to the course!  
-[Slides](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/lecture1-draft/week1/slides.html)
+[Slides](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/slides.html)-->
 
-### More coming soon&trade;
+###  Coming soon&trade;

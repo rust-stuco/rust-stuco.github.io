@@ -1,0 +1,17 @@
+---
+title: About - Rust Stuco
+name: About
+layout: layouts/page.njk
+eleventyNavigation:
+  key: About
+  order: 3
+---
+
+Intro to Rust Lang (98-008) is intended to provide a swift but approachable introduction to the Rust programming language. We don't expect any previous exposure to the language, but we expect some previous background in C, and previous completion of 15-122.
+
+There will be weekly homeworks that are intended to take less than an hour each, so that you have a chance to practice what we have taught in lecture for that week.
+
+Please contact us with any questions or concerns, by Discord or by email. Thank you for your interest in our course!
+
+
+[Full Syllabus](/assets/pdf/syllabus-s24.pdf)
