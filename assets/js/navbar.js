@@ -9,7 +9,7 @@ if (!window.TweenLite) {
 document.addEventListener("DOMContentLoaded", function () {
     updateDarkMode()
     // then remove opacity at load time for a subtle animation
-    navbar.classList.remove("opacity-0")
+    navbar.classList.remove("hidden")
 })
 
 const themeToggle = document.getElementById('theme-toggle')
@@ -82,8 +82,8 @@ function toggleMobileMenu() {
         menuClosed.classList.add('hidden')
         menuClosed.classList.remove('block')
 
-        menu.classList.add('opacity-100')
-        menu.classList.remove('opacity-0')
+        menu.classList.add('block')
+        menu.classList.remove('hidden')
     } else {
         menuClosed.classList.add('block')
         menuClosed.classList.remove('hidden')
@@ -91,8 +91,8 @@ function toggleMobileMenu() {
         menuOpened.classList.add('hidden')
         menuOpened.classList.remove('block')
 
-        menu.classList.add('opacity-0')
-        menu.classList.remove('opacity-100')
+        menu.classList.add('hidden')
+        menu.classList.remove('block')
     }
 }
 
