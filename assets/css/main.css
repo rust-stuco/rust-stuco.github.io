@@ -4,12 +4,6 @@
 
 @font-face { font-family: 'Nikkyou Sans'; src: url('../fonts/NikkyouSans-mLKax.ttf'); } 
 
-/* Dark mode transition */
-
-body * {
-    @apply transition-colors duration-200;
-}
-
 /* ported conveniences from legacy intvstyle */
 
 .parallaxbg {
