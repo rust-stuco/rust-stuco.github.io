@@ -9,6 +9,7 @@ eleventyNavigation:
 ## Week 1: Introduction
 **Slides:**
 ([light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/light.html), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/dark.html))  
+**Homework:** ([handout](/hw/handouts/primerlab.zip), [writeup](/hw/doc/primerlab/index.html))  
 **Agenda:**
 - Why Rust?
 - `cargo` basics
