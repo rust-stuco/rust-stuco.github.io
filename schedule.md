@@ -6,8 +6,17 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
-<!--### Week 1: 
-Welcome to the course!  
-[Slides](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/slides.html)-->
+## Week 1: Introduction
+**Slides:**
+([light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/light.html), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/dark.html))  
+**Agenda:**
+- Why Rust?
+- `cargo` basics
+- Rust Syntax
+    - Variables and Mutability
+    - Types
+    - Functions, Statements, and Expressions
+    - Control Flow
+- Course Logistics
+    - Installing Rust
 
-###  Coming soon&trade;
