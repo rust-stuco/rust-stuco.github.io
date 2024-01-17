@@ -1,5 +1,4 @@
--
--
+---
 title: Schedule - Rust Stuco
 name: Schedule
 layout: layouts/page.njk
@@ -9,8 +8,9 @@ eleventyNavigation:
 ---
 ## Week 1: Introduction
 **Slides:**
-([light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/light.html), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/dark.html))  
-**Homework:** ([handout](/hw/handouts/primerlab.zip), [writeup](/hw/doc/primerlab/index.html))  
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/dark.pdf))
+
+**Homework:** ([handout](/hw/primerlab/primerlab.zip), [writeup](/hw/primerlab/doc/primerlab/index.html))  
 **Agenda:**
 - Why Rust?
 - Cargo Basics
@@ -23,3 +23,4 @@ eleventyNavigation:
     - Control Flow
 - Course logistics
 - Installing Rust
+
