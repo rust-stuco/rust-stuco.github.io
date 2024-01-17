@@ -1,4 +1,5 @@
----
+-
+-
 title: Schedule - Rust Stuco
 name: Schedule
 layout: layouts/page.njk
@@ -12,12 +13,13 @@ eleventyNavigation:
 **Homework:** ([handout](/hw/handouts/primerlab.zip), [writeup](/hw/doc/primerlab/index.html))  
 **Agenda:**
 - Why Rust?
-- `cargo` basics
-- Rust Syntax
+- Cargo Basics
+- Syntax
     - Variables and Mutability
-    - Types
+    - Data Types
+        - Scalar types
+        - Compound types
     - Functions, Statements, and Expressions
     - Control Flow
-- Course Logistics
-    - Installing Rust
-
+- Course logistics
+- Installing Rust
