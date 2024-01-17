@@ -17,10 +17,10 @@ eleventyNavigation:
 - Syntax
     - Variables and Mutability
     - Data Types
-        - Scalar types
-        - Compound types
+        - Scalar Types
+        - Compound Types
     - Functions, Statements, and Expressions
     - Control Flow
-- Course logistics
+- Course Logistics
 - Installing Rust
 
