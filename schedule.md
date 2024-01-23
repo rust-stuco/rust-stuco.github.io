@@ -54,6 +54,7 @@ eleventyNavigation:
     - `&str`
 - `Vec`
     - Memory Layout
+
 **Extra Material:**
 - [Rust Book Chapter 4](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
 - [YouTube video](https://www.youtube.com/watch?v=VFIOSWy93H0)
