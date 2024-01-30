@@ -6,6 +6,31 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
+## Week 3: Structs and Enums
+**Slides:**
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week3/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week3/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week3/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week3/dark.pdf))
+
+**Homework:** ([handout](/hw/pokelab/pokelab.zip), [writeup](/hw/pokelab/doc/pokelab/index.html))  
+**Agenda:**
+- Ownership Review
+- Structs
+    - Creating Structs
+        - Update syntax
+    - Tuple Structs
+    - Unit Structs
+    - Lifetimes sneak peek
+- `impl` Structs and Methods
+    - Automatic referencing and dereferencing
+    - `Self` vs `&self`
+    - Associated functions
+- Enum basics
+    - Pattern Matching
+    - Option Type
+    - `if let`
+
+**Extra Material:**
+- Rust Book Chapters 5 and 6
+
 ## Week 2: Ownership
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week2/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week2/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/dark.pdf))
