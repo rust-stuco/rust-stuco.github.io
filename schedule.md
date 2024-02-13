@@ -6,6 +6,28 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
+## Week 5: Error Handling and Traits
+**Slides:**
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week5/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week5/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/dark.pdf))
+
+**Homework:** ([handout](/hw/summarylab/summarylab.zip), [writeup](/hw/summarylab/doc/summarylab/index.html))
+
+**Agenda:**
+- Type Aliases
+- Const Generics
+- Error Handling
+    - `panic!`
+    - `Result<V,E>`
+- The Never Type
+- Traits
+    - Trait Bounds
+    - `Copy` vs `Clone`
+    - Supertraits
+    - Derivable Traits
+
+**Extra Material:**
+- Rust Book Chapter 10.1 and 10.2
+
 ## Week 4: Standard Collections and Generics
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week4/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week4/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week4/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week4/dark.pdf))
