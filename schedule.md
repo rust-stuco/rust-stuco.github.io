@@ -6,6 +6,28 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
+## Week 6: Modules and Testing
+**Slides:**
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week6/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week6/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/dark.pdf))
+
+**Homework:** ([handout](/hw/greplab/greplab.zip), [writeup](/hw/greplab/doc/greplab/index.html))
+
+**Lecture:**
+- Module system (30 min)
+    - Packages and Crates (5 min)
+    - Modules (25 min)
+        - Using Modules (10 min)
+        - Paths (10 min)
+        - Misc (5 min)
+- Testing (20 min)
+    - Simple Testing (10 min)
+    - Controlled Testing (5 min)
+    - Test Organization (5 min)
+
+**Extra Material**
+- Rust Book Chapters 7, 11, and 14
+
+
 ## Week 5: Error Handling and Traits
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week5/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week5/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/dark.pdf))
