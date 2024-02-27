@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["fib_fun","sum_squares"]};
