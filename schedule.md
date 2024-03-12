@@ -6,11 +6,11 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
-## Week 7: Crates, Closures, and Iterators
+## Week 8: Lifetimes
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/dark.pdf))
 
-**Homework:** (On Gradescope)
+**Homework:** ([on Gradescope](https://www.gradescope.com/courses/655380))
 
 **Lecture:**
 - Lifetimes Intro and Motivation
