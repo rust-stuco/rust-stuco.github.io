@@ -8,6 +8,20 @@ eleventyNavigation:
 ---
 ## Week 7: Crates, Closures, and Iterators
 **Slides:**
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/dark.pdf))
+
+**Homework:** (On Gradescope)
+
+**Lecture:**
+- Lifetimes Intro and Motivation
+- Lifetime Annotations
+- Lifetime Elision
+- Lifetimes as Generics and Bounds
+- 'static Lifetimes
+- What is `'a` lifetime [video](https://www.youtube.com/watch?v=gRAVZv7V91Q)?
+
+## Week 7: Crates, Closures, and Iterators
+**Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week7/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week7/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week7/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week7/dark.pdf))
 
 **Homework:** ([handout](/hw/iterlab/iterlab.zip), [writeup](/hw/iterlab/doc/iterlab/index.html))
