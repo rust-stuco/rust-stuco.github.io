@@ -6,6 +6,22 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
+## Week 9: Box and Trait Objects
+**Slides:**
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/dark.pdf))
+
+**Homework:** Final project season!
+
+**Lecture:**
+- The `Box<T>` Type
+- The `Deref` Trait and Deref Coercion
+- The `Drop` Trait and `std::mem::drop`
+- Object-Oriented Programming
+- Trait Objects
+    - Dynamic dispatch with `dyn`
+- Dynamically Sized Types
+<!-- - Object Safety -->
+
 ## Week 8: Lifetimes
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/dark.pdf))
