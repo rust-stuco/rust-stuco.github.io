@@ -6,6 +6,19 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
+## Week 11: Parallelism
+**Slides:**
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/dark.pdf))
+
+**Homework:** Final project season!
+
+**Lecture:**
+- Threads
+- Synchronization
+- Message Passing
+- `Send` and `Sync`
+- More Synchronization
+
 ## Week 10: Smart Pointers and Unsafe
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/dark.pdf))
