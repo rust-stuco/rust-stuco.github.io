@@ -18,6 +18,9 @@ eleventyNavigation:
 - Message Passing
 - `Send` and `Sync`
 - More Synchronization
+**Extra Material:**
+- Rust Book Chapter 16
+- Rustonomicon Chapter 8
 
 ## Week 10: Smart Pointers and Unsafe
 **Slides:**
