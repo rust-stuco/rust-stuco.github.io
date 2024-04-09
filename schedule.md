@@ -6,6 +6,20 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
+## Week 12: Concurrency
+**Slides:**
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/dark.pdf))
+
+**Homework:** Final project season!
+
+**Lecture:**
+- `async`/`await`
+- Futures
+- Polling
+**Extra Material:**
+- [Async Book](https://rust-lang.github.io/async-book/)
+
+
 ## Week 11: Parallelism
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/dark.pdf))
