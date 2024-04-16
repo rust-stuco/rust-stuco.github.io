@@ -6,6 +6,20 @@ eleventyNavigation:
   key: Schedule
   order: 2
 ---
+## Week 13: Macros
+**Slides:**
+[light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/dark.pdf))
+
+**Homework:** Final project season!
+
+**Lecture:**
+- Declarative Macros
+- Proc Macros
+**Extra Material:**
+- [Rust Book 19.5](https://doc.rust-lang.org/book/ch19-06-macros.html)
+- [Rust Macros Reference](https://doc.rust-lang.org/reference/macros.html)
+- [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html)
+
 ## Week 12: Concurrency
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/dark.pdf))
