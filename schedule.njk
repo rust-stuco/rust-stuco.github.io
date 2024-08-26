@@ -21,7 +21,7 @@ eleventyNavigation:
         <tr>
             <td>
                 <h2 class="mt-0 mb-2 italic font-bold">{{ entry.title }}</h2>
-                <a href="#/" id="toggleButton{{loop.index}}">Details &#x25BC;</a>
+                <a href="#/" id="toggleButton{{loop.index}}">Details ▼</a>
                 <ul id="toggleDiv{{loop.index}}" class="hidden">
                     {% if entry.details_released %}
                         {% for topic in entry.agenda %}
