@@ -2,10 +2,8 @@
 title: Schedule - Rust Stuco
 name: Schedule
 layout: layouts/page.njk
-eleventyNavigation:
-  key: Schedule
-  order: 2
 ---
+{# TODO: port this all to the json file  #}
 ## Week 13: Macros
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/dark.pdf))
@@ -15,6 +13,7 @@ eleventyNavigation:
 **Lecture:**
 - Declarative Macros
 - Proc Macros
+
 **Extra Material:**
 - [Rust Book 19.5](https://doc.rust-lang.org/book/ch19-06-macros.html)
 - [Rust Macros Reference](https://doc.rust-lang.org/reference/macros.html)
@@ -30,6 +29,7 @@ eleventyNavigation:
 - `async`/`await`
 - Futures
 - Polling
+
 **Extra Material:**
 - [Async Book](https://rust-lang.github.io/async-book/)
 
@@ -46,6 +46,7 @@ eleventyNavigation:
 - Message Passing
 - `Send` and `Sync`
 - More Synchronization
+
 **Extra Material:**
 - Rust Book Chapter 16
 - Rustonomicon Chapter 8
@@ -240,7 +241,7 @@ eleventyNavigation:
 **Slides:**
 [light](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/light.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/light.pdf)), [dark](http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/dark.html) ([pdf](https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/dark.pdf))
 
-**Homework:** ([handout](/hw/primerlab/primerlab.zip), [writeup](/hw/primerlab/doc/primerlab/index.html))  
+**Homework:** ([handout](/hw/primerlab/primerlab.zip), [writeup](/hw/primerlab/doc/primerlab/index.html))
 **Agenda:**
 - Why Rust?
 - Cargo Basics

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face { font-family: 'Nikkyou Sans'; src: url('../fonts/NikkyouSans-mLKax.ttf'); } 
 
 /* ported conveniences from legacy intvstyle */
 
@@ -12,6 +11,10 @@
 
 .intvhighlight {
     @apply bg-white text-intv-dark px-1 font-semibold inline-block leading-[1.125]
+}
+
+.font-display {
+    @apply font-bold italic
 }
 
 /* rules for the dark mode switch */
@@ -60,11 +63,11 @@
 /* convenient link style */
 
 a.link, .prose a {
-    @apply text-amber-600 dark:text-amber-400 no-underline
+    @apply text-orange-600 dark:text-orange-400 no-underline
 }
 
 a.link:hover, .prose a:hover {
-    @apply text-amber-500  no-underline
+    @apply text-orange-500  no-underline
 }
 
 .image {

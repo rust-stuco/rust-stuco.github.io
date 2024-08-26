@@ -13,7 +13,7 @@ There will be weekly homeworks that are intended to take less than an hour each,
 
 Please contact us with any questions or concerns, by Discord or by email. Thank you for your interest in our course!
 
-[<center>View Full Syllabus</center>](/assets/pdf/syllabus-s24.pdf)
+[<center>View Full Syllabus</center>](/assets/pdf/syllabus-f24.pdf)
 
 ### Previous Iterations:
 

@@ -30,7 +30,7 @@
         <!-- Branding -->
         <div class="flex items-center relative">
           <a href="/">
-            <h1 class="text-2xl hover:brightness-125 transition-all] text-slate-800 dark:text-orange-100 ">RUST STUCO</h1>
+            <img class="h-8 min-w-[2rem] rounded-md hover:scale-105 active:scale-95 hover:brightness-105 transition-all sepia-[.5]" src="/assets/img/apple-touch-icon.png">
           </a>
         </div>
         <div class="hidden sm:ml-6 sm:block">
@@ -38,9 +38,9 @@
             {% for entry in navPages %}
             <a href="{{ entry.url }}" 
                {% if entry.url == page.url %}
-               class="text-amber-50 bg-slate-700 px-3 py-2 text-md font-semibold" 
+               class="text-amber-50 bg-slate-700 px-3 py-2 text-md font-bold rounded-sm"
                {% else %}
-               class="text-slate-800 dark:text-orange-100 hover:bg-slate-700 hover:text-white px-3 py-2 text-md font-semibold transition-all" 
+               class="text-slate-800 dark:text-orange-300 hover:bg-gray-700 hover:text-white rounded-sm px-3 py-2 text-md font-bold transition-all" 
                {% endif %}
                aria-current="page">
               {{ entry.title }}
@@ -79,9 +79,9 @@
       {% for entry in navPages %}
       <a href="{{ entry.url }}" 
           {% if entry.url == page.url %}
-          class="text-white bg-gray-700 rounded-md px-3 py-2 text-sm font-semibold block" 
+          class="text-white bg-gray-700 rounded-md px-3 py-2 text-sm font-bold block" 
           {% else %}
-          class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-semibold transition-all block" 
+          class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold transition-all block" 
           {% endif %}
           aria-current="page">
         {{ entry.title }}

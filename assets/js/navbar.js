@@ -99,3 +99,15 @@ function toggleMobileMenu() {
 menuButton.addEventListener("click", (e) => {
     toggleMobileMenu()
 })
+
+document.querySelectorAll('a[id^="toggleButton"]').forEach(button => {
+    const idNumber = button.id.replace('toggleButton', '');
+    const correspondingDiv = document.getElementById(`toggleDiv${idNumber}`);
+
+    console.log("adding listener")
+
+    button.addEventListener('click', () => {
+        console.log("ping ")
+        correspondingDiv.classList.toggle('hidden');
+    });
+});

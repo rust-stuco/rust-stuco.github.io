@@ -22,7 +22,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'display': ['"Nikkyou Sans"', 'Fira Sans', ...defaultTheme.fontFamily.sans],
+      'display': ['"Zilla Slab"', 'Fira Sans', ...defaultTheme.fontFamily.sans],
       'sans': ['Fira Sans', ...defaultTheme.fontFamily.sans],
     },
     extend: {
@@ -38,11 +38,12 @@ module.exports = {
         'intv-dark-accent': '#182b39',
         'intv-bright': '#1b65c6',
         'intv-bright-accent': '#0392BF',
-        'intv-bright-dark': '#3273dc',
+        'intv-bright-dark': '#d3914',
         'intv-bright-accent-dark': '#0392BF',
         'pure-red': 'rgb(255, 0, 0)',
         'pure-green': 'rgb(0, 255, 0)',
         'pure-blue': 'rgb(0, 0, 255)',
+        'rust-dark-bg': '#051726'
       },
       textShadow: {
         sm: '0 0.063rem 0.125rem var(--tw-shadow-color)',

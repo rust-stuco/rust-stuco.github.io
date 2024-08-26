@@ -1,0 +1,115 @@
+{
+    "schedule": [
+        {
+            "title": "Introduction",
+            "agenda": [
+                { "title": "Why Rust?", "sub": []},
+                { "title": "Cargo Basics", "sub": []},
+                { "title": "Syntax", "sub": [
+                    { "title": "Variables and Mutability", "sub": []},
+                    { "title": "Data Types", "sub": [
+                        { "title": "Scalar Types", "sub": []},
+                        { "title": "Compound Types", "sub": []}
+                    ]},
+                    { "title": "Functions, Statements, and Expressions", "sub": []},
+                    { "title": "Control Flow", "sub": []}
+                ]},
+                { "title": "Course Logistics", "sub": []},
+                { "title": "Installing Rust", "sub": []}
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/dark.pdf",
+            "hw_handout": "/hw/primerlab/primerlab.zip",
+            "hw_writeup": "/hw/primerlab/doc/primerlab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": [
+                { "title": "Rust Book Chapters 1–3", "link": "https://doc.rust-lang.org/book/ch01-00-getting-started.html", "sub": []},
+                { "title": "`rustlings` exercises", "link": "https://github.com/rust-lang/rustlings", "sub": [
+                    { "title": "variables", "link": "", "sub": [] },
+                    { "title": "functions", "link": "", "sub": [] },
+                    { "title": "if", "link": "", "sub": [] },
+                    { "title": "primitive_types", "link": "", "sub": [] }
+                ]}
+            ]
+        },
+        {
+            "title": "Ownership",
+            "agenda": [
+                { "title": "Ownership", "sub": [
+                    { "title": "Announcements and Review", "sub": []},
+                    { "title": "Ownership Rules", "sub": []},
+                    { "title": "Memory and Allocation", "sub": []},
+                    { "title": "`String` Type and Aliasing", "sub": []},
+                    { "title": "`Copy` and `Clone` Traits", "sub": []},
+                    { "title": "Ownership with Functions and Return Values", "sub": []}
+                ] },
+                { "title": "References and Borrowing", "sub": [
+                    { "title": "Reference Vs Ownership", "sub": []},
+                    { "title": "Immutable and Mutable References", "sub": []},
+                    { "title": "Dangling References and Data", "sub": []}
+                ] },
+                { "title": "Slices", "sub": [
+                    { "title": "Memory Layout", "sub": []},
+                    { "title": "`&str`", "sub": []}
+                ] },
+                { "title": "`Vec`", "sub": [
+                    { "title": "Memory Layout", "sub": []}
+                ] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week2/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week2/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/dark.pdf",
+            "hw_handout": "/hw/getownedlab/getownedlab.zip",
+            "hw_writeup": "/hw/getownedlab/doc/getownedlab/index.html",
+            "hw_released": false,
+            "details_released": false,
+            "slides_released": false,
+            "extras": [
+                { "title": "Rust Book Chapter 4", "link": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html", "sub": []},
+                { "title": "YouTube video", "link": "https://www.youtube.com/watch?v=VFIOSWy93H0", "sub": []}
+            ]
+        },
+        {
+            "title": "Structs and Enums",
+            "agenda": [
+                { "title": "Ownership Review", "sub": [] },
+                { "title": "Structs", "sub": [
+                    { "title": "Creating structs", "sub": []},
+                    { "title": "Update syntax", "sub": []},
+                    { "title": "Tuple structs", "sub": []},
+                    { "title": "Unit structs", "sub": []},
+                    { "title": "Lifetimes sneak peek", "sub": []}
+                ] },
+                { "title": "`impl` Structs and Methods", "sub": [
+                    { "title": "Automatic referencing and dereferencing", "sub": []},
+                    { "title": "`Self` vs `&self`", "sub": []},
+                    { "title": "Associated functions", "sub": []},
+                    { "title": "Match Control Flow", "sub": []}
+                ] },
+                { "title": "Enum basics", "sub": [
+                    { "title": "Pattern Matching", "sub": []},
+                    { "title": "Option Type", "sub": []},
+                    { "title": "`if let`", "sub": []}
+                ] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week3/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week3/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week3/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week3/dark.pdf",
+            "hw_handout": "/hw/pokelab/pokelab.zip",
+            "hw_writeup": "/hw/pokelab/doc/pokelab/index.html",
+            "hw_released": false,
+            "details_released": false,
+            "slides_released": false,
+            "extras": [
+                { "title": "Rust Book Chapter 5", "link": "https://doc.rust-lang.org/book/ch05-00-structs.html", "sub": []},
+                { "title": "Rust Book Chapter 6", "link": "https://doc.rust-lang.org/book/ch06-00-enums.html", "sub": []}
+            ]
+        }
+    ]
+}

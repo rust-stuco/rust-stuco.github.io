@@ -1,0 +1,85 @@
+---
+title: Schedule - Rust Stuco
+name: Schedule
+layout: layouts/page.njk
+eleventyNavigation:
+  key: Schedule
+  order: 2
+---
+
+<table>
+    <thead>
+        <tr class="font-semibold italic font-display text-lg">
+            <th>Topics</th>
+            <th>Extra Material</th>
+            <th>Slides</th>
+            <th>Homework</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in site.schedule %}
+        <tr>
+            <td>
+                <h2 class="mt-0 mb-2 italic font-bold">{{ entry.title }}</h2>
+                <a href="#/" id="toggleButton{{loop.index}}">Details &#x25BC;</a>
+                <ul id="toggleDiv{{loop.index}}" class="hidden">
+                    {% if entry.details_released %}
+                        {% for topic in entry.agenda %}
+                            <li>{{ topic.title }}</li>
+                            <ul>
+                            {% for subtopic in topic.sub %}
+                                <li>{{ subtopic.title }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% endfor %}
+                    {% else %}
+                        <li><i>Details TBA</i></li>
+                    {% endif %}
+                </ul>
+            </td>
+            <td>
+                {% if entry.details_released %}
+                <ul>
+                    {% for topic in entry.extras %}
+                        {% if topic.link %}
+                            <li><a href="{{ topic.link }}">{{ topic.title }}</a></li>
+                        {% else %}
+                            <li>{{ topic.title }}</li>
+                        {% endif %}
+                        <ul>
+                        {% for subtopic in topic.sub %}
+                            {% if subtopic.link %}
+                                <li><a href="{{ subtopic.link }}">{{ subtopic.title }}</a></li>
+                            {% else %}
+                                <li>{{ subtopic.title }}</li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    {% endfor %}
+                {% else %}
+                    —
+                </ul>
+                {% endif %}
+            </td>
+            <td>
+                {% if entry.slides_released %}
+                    <ul>
+                        <li><nobr><a href="{{ entry.slides_light_html }}">light</a><a href="{{ slides_light_pdf }}"> (pdf)</a></nobr></li>
+                        <li><nobr><a href="{{ entry.slides_dark_html }}">dark</a><a href="{{ slides_dark_pdf }}"> (pdf)</a></nobr></li>
+                    </ul>
+                {% else %}
+                    —
+                {% endif %}
+            </td>
+            <td>
+                {% if entry.hw_released %}
+                    <ul>
+                        <li><a href="{{ entry.hw_handout }}">handout</a></li>
+                        <li><a href="{{ entry.hw_writeup }}">writeup</a></li>
+                    </ul>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

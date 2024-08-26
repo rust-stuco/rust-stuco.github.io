@@ -8,14 +8,14 @@ layout: layouts/base.njk
         {% include "../components/nav.njk" %}
     </div>
     <div class="text-center">
-    <div class="bg-slate-900 bg-opacity-50 inline-block mt-36 mx-auto justify-self-center p-3">
-        <h1 class="font-display font-bold text-6xl pb-4 text-center text-shadow text-orange-100">{{ herotitle }}</h1>
-        <h2 class="font-display font-semibold text-5xl text-center text-shadow text-orange-100">{{ herosubtitle }}</h1>
+    <div class="bg-slate-900 bg-opacity-50 inline-block mt-36 mx-auto justify-self-center p-3 rounded-md" title="{{ herotooltip }}">
+        <h1 class="font-display font-bold text-6xl pb-4 text-center text-shadow text-orange-300">{{ herotitle }}</h1>
+        <h2 class="font-display font-bold text-5xl text-center text-shadow text-orange-300">{{ herosubtitle }}</h1>
     </div>
     </div>
 </div>
     <div class="container max-w-3xl mx-auto">
-        <h1 class="font-display font-semibold text-4xl text-center pt-16 pb-8">{{ name }}</h1>
+        <h1 class="font-display font-bold text-4xl text-center pt-16 pb-8">{{ name }}</h1>
         <article class="prose dark:prose-invert prose-headings:font-display mx-auto">
             {{ content | safe }}
         </article>
