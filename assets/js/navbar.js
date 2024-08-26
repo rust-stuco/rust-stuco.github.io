@@ -18,7 +18,7 @@ function updateDarkMode() {
     let theme = localStorage.theme
 
     if (!theme) {
-        theme = 'auto'
+        theme = 'dark'
     }
 
     document.querySelector(`#theme-toggle input[value='${theme}']`).checked = true
