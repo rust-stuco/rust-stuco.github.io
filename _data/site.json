@@ -18,9 +18,9 @@
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/dark.pdf",
             "hw_handout": "/hw/primerlab/primerlab.zip",
             "hw_writeup": "/hw/primerlab/doc/primerlab/index.html",
-            "hw_released": false,
+            "hw_released": true,
             "details_released": true,
-            "slides_released": false,
+            "slides_released": true,
             "extras": [
                 { "title": "Rust Book Chapters 1–3", "link": "https://doc.rust-lang.org/book/ch01-00-getting-started.html", "sub": []},
                 { "title": "`rustlings` exercises", "link": "https://github.com/rust-lang/rustlings", "sub": [
