@@ -3,19 +3,14 @@
         {
             "title": "Introduction",
             "agenda": [
+                { "title": "Intro", "sub": []},
                 { "title": "Why Rust?", "sub": []},
                 { "title": "Cargo Basics", "sub": []},
-                { "title": "Syntax", "sub": [
-                    { "title": "Variables and Mutability", "sub": []},
-                    { "title": "Data Types", "sub": [
-                        { "title": "Scalar Types", "sub": []},
-                        { "title": "Compound Types", "sub": []}
-                    ]},
-                    { "title": "Functions, Statements, and Expressions", "sub": []},
-                    { "title": "Control Flow", "sub": []}
-                ]},
-                { "title": "Course Logistics", "sub": []},
-                { "title": "Installing Rust", "sub": []}
+                { "title": "Variables and Mutability", "sub": []},
+                { "title": "Data Types", "sub": []},
+                { "title": "Functions, Statements, and Expressions", "sub": []},
+                { "title": "Control Flow", "sub": []},
+                { "title": "Course Logistics", "sub": []}
             ],
             "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/light.html",
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/light.pdf",
