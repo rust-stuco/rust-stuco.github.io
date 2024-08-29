@@ -60,7 +60,19 @@ which runs the tests in release mode. This runs the tests with
 compiler optimizations (like the <code>-O2</code> flag for C) and without debug symbols.
 Also, if you want to run a specific test like <code>fn it_works()</code>, run <code>cargo test -- it_works</code>
 with the name of the test instead of <code>it_works</code>.</p>
-<h2 id="submission"><a href="#submission">Submission</a></h2><h4 id="unix"><a href="#unix">Unix</a></h4>
+<h2 id="submission"><a href="#submission">Submission</a></h2><h4 id="formatting-and-style"><a href="#formatting-and-style">Formatting and Style</a></h4>
+<p>The autograder will run these two commands on your code:</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check
+</code></pre></div>
+<p>If the autograder detects any errors from the command above,
+you will not be able to receive any points. This may seem strict, but we have decided to follow
+standard best practices for Rust.</p>
+<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>,
+you ensure that anybody reading your code (who is familiar with Rust) will be
+able to easily navigate your code. This can help with diving into an unfamiliar code base,
+and it also eliminates the need for debate with others over style rules, saving time and energy.</p>
+<p>See the official <a href="https://doc.rust-lang.org/stable/style-guide/">guidelines</a> for more information.</p>
+<h4 id="unix"><a href="#unix">Unix</a></h4>
 <p>If you are on a unix system, we will try to create a <code>handin.zip</code> automatically for you,
 <strong>but you will need to have <code>zip</code> already installed</strong>.</p>
 <p>If you <em>do not</em> have <code>zip</code> installed on your system,
