@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["add","fib","gcd","is_prime","nth_prime"]};
