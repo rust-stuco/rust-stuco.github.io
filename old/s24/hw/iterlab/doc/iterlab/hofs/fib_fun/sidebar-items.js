@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["read_the_docs","sum_fib_range"]};

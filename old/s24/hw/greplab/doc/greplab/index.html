@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>greplab - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../static.files/rustdoc-ac92e1bbe349e143.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="greplab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0 (07dca489a 2024-02-04)" data-channel="1.76.0" data-search-js="search-2b6ce74ff89ae146.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../static.files/storage-f2adc0d6ca4d09fb.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-305769736d49e732.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-feafe1bb7466e4bd.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../greplab/index.html">greplab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block">
+            <li><a id="all-types" href="all.html">All Items</a></li></ul></div></nav><div class="sidebar-resizer"></div>
+    <main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><div id="sidebar-button" tabindex="-1"><a href="../greplab/all.html" title="show sidebar"></a></div><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" tabindex="-1"><a href="../help.html" title="help">?</a></div><div id="settings-menu" tabindex="-1"><a href="../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Crate <a class="mod" href="#">greplab</a><button id="copy-path" title="Copy item path to clipboard"><img src="../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="src" href="../src/greplab/lib.rs.html#1">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a href="#98-008-intro-to-the-rust-programming-language">98-008: Intro to the Rust Programming Language</a></h4>
+<p><em>A reminder that if you did the challenge from last homework, you don’t need to do this one.</em>
+<em>Follow the instructions in the <a href="#submission">Submission</a> section,</em>
+<em>but submit your CLI tool code instead of this and give us a heads up that you did that!</em></p>
+<h2 id="grep-lab"><a href="#grep-lab">Grep Lab</a></h2>
+<p>The goal of this homework is to make sure you know how to create a command line tool in Rust,
+as well as how to write unit tests for your programs.</p>
+<p>This homework is going to be <em>very</em> different from other homeworks.
+There is no autograder, and we will probably only
+<a href="#grading">grade your code</a> at the end of the semester.</p>
+<p><strong>For this homework, you will follow</strong>
+<strong><a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Chapter 12</a> of the Rust Book</strong>
+<strong>and create a project called <code>minigrep</code></strong>.
+Follow the hyperlink and go through all of
+<a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Chapter 12</a>,
+building <code>minigrep</code> as you go along.</p>
+<p>There will be no handout for this homework. Intead, run <code>cargo new minigrep</code> to get started!</p>
+<p>We encourage you to not skim through the book and blindly copy and paste any code you see.
+Of course, we cannot enforce this, so it’s basically up to you
+how much you want to get out of this homework.</p>
+<p>We will require 2 things, both explained the <a href="#requirements">Requirements</a> section.
+But first, a bit about <a href="#grading">grading</a>.</p>
+<h2 id="grading"><a href="#grading">Grading</a></h2>
+<p><strong>This homework will not be graded until the end of the semester.</strong>
+More specifically, if a student is under the 60% threshold needed to pass this course,
+we will manually go through their submission for this homework
+and see if we can increase their grade.</p>
+<p>Since we expect most students to get above 60% (since 50% comes from required attendance,
+and you automatically fail if you don’t show up 3 times),
+we will not manually grade everyone’s submission.</p>
+<p>If you have already completed all of the previous homeworks,
+and you know you will show up to enough lectures, then you don’t actually need to do this homework.
+That being said, we think this is still a valuable exercise, especially since
+we provided all of the boilerplate, documentation, and testing for you in the previous homeworks.</p>
+<p>If you have the time, and you want to get better at Rust,
+we encourage you to still go through with this! If you don’t, then no worries.
+You will still have the opportunity to get experience creating your own crate in the final project.</p>
+<hr />
+<p>If we do grade your submission (at the end of the semester),
+we will grade on the robustness of your code (does your code run without modifications),
+correctness of your feature, the quality of your tests,
+and general style (documentation and comments).</p>
+<p><em>If you would like us to review your code as you submit it (in preparation for your final project),</em>
+<em>just let us know and we can make an exception!</em></p>
+<p>The next section will explain what the <a href="#requirements">requirements</a> are for this homework.</p>
+<h2 id="requirements"><a href="#requirements">Requirements</a></h2>
+<p><strong>The first requirement</strong> is that you add at least 1 additional feature to <code>minigrep</code> on top of the
+functionality described in the Book. Given this requirement,
+it might actually be more efficient for you to read the (relatively short)
+<a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Chapter 12</a>
+in its entirety, rather than copy and paste everything and then reverse engineer.
+See the <a href="#extra-features">Extra Features</a> section below for some potential features you could add.</p>
+<p><strong>The second requirement</strong> is that you write test cases to test whatever feature you added.
+Try to write at least 2 test cases
+(1 for general functionality, 1 for either edge cases or performance).</p>
+<h2 id="extra-features"><a href="#extra-features">Extra Features</a></h2>
+<p>The extra feature you want to add is <strong>up to you</strong> once you’ve finished the base <code>minigrep</code>.</p>
+<ul>
+<li>
+<p>A very basic feature that you could add is a “count” flag through
+<code>-c</code> or <code>--count</code>, which changes the output to show how many lines a pattern is in,
+rather than printing out all of the lines.</p>
+</li>
+<li>
+<p>Another feature you could implement is searching directories as well as specific files.</p>
+</li>
+<li>
+<p>You could even add regex support!
+You may want to use the <a href="https://docs.rs/regex/latest/regex/"><code>regex</code></a> crate for this.</p>
+</li>
+</ul>
+<p>There are many things that you could do here, so try and be creative if you have time!
+A good source of inspiration would be the man page for
+<a href="https://man7.org/linux/man-pages/man1/grep.1.html"><code>grep</code></a>.</p>
+<p>Whatever you choose, add a comment in your <code>main.rs</code> file telling us what
+feature you added and how to invoke it on the command line.</p>
+<h2 id="submission"><a href="#submission">Submission</a></h2>
+<p>This time, you will submit the entire <code>minigrep</code> crate to Gradescope
+(instead of just the <code>src/</code> directory)!</p>
+<p>Please delete the <code>target/</code> subdirectory before you zip the crate’s root folder,
+either manually or with <code>cargo clean</code>. Keeping that there will just add size.
+You can always regenerate it with <code>cargo build</code> and <code>cargo test</code>.</p>
+<p><em>If you did the challenge from last week, please submit your crate</em>
+<em>in the same way, removing all temporary and uneccessary files.</em></p>
+<h2 id="collaboration"><a href="#collaboration">Collaboration</a></h2>
+<p>In general, feel free to discuss homeworks with other students!
+As long as you do not copy someone else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that
+other students can see your questions and answers as well!</p>
+<p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
+<h2 id="feedback"><a href="#feedback">Feedback</a></h2>
+<p>We would like to reiterate that you should let us know if you spent
+anywhere in significant excess of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve,
+so if you find yourself not understanding the concepts,
+you should reach out to us and let us know as well —
+chances are, you’re not the only one!</p>
+</div></details></section></div></main></body></html>
