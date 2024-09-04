@@ -34,26 +34,25 @@
         {
             "title": "Ownership",
             "agenda": [
-                { "title": "Ownership", "sub": [
+                { "title": "Preliminary Content", "sub": [
                     { "title": "Announcements and Review", "sub": []},
-                    { "title": "Ownership Rules", "sub": []},
-                    { "title": "Memory and Allocation", "sub": []},
-                    { "title": "`String` Type and Aliasing", "sub": []},
+                    { "title": "Review: Scopes", "sub": []},
+                    { "title": "`String` and String Literals", "sub": []}
+                ] },
+                { "title": "Ownership", "sub": [
+                    { "title": "Ownership Rules, Memory Allocation, and Aliasing", "sub": []},
                     { "title": "`Copy` and `Clone` Traits", "sub": []},
                     { "title": "Ownership with Functions and Return Values", "sub": []}
                 ] },
                 { "title": "References and Borrowing", "sub": [
-                    { "title": "Reference Vs Ownership", "sub": []},
+                    { "title": "References vs Ownership", "sub": []},
                     { "title": "Immutable and Mutable References", "sub": []},
-                    { "title": "Dangling References and Data", "sub": []}
+                    { "title": "Dangling References and Data Races", "sub": []}
                 ] },
                 { "title": "Slices", "sub": [
-                    { "title": "Memory Layout", "sub": []},
                     { "title": "`&str`", "sub": []}
                 ] },
-                { "title": "`Vec`", "sub": [
-                    { "title": "Memory Layout", "sub": []}
-                ] }
+                { "title": "`Vec`", "sub": [] }
             ],
             "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week2/light.html",
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/light.pdf",
@@ -61,12 +60,15 @@
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/dark.pdf",
             "hw_handout": "/hw/getownedlab/getownedlab.zip",
             "hw_writeup": "/hw/getownedlab/doc/getownedlab/index.html",
-            "hw_released": false,
-            "details_released": false,
-            "slides_released": false,
+            "hw_released": true,
+            "details_released": true,
+            "slides_released": true,
             "extras": [
                 { "title": "Rust Book Chapter 4", "link": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html", "sub": []},
-                { "title": "YouTube video", "link": "https://www.youtube.com/watch?v=VFIOSWy93H0", "sub": []}
+                { "title": "YouTube video", "link": "https://www.youtube.com/watch?v=VFIOSWy93H0", "sub": []},
+                { "title": "Brown Rust Book Chapter 4", "link": "https://rust-book.cs.brown.edu/ch04-00-understanding-ownership.html", "sub": [
+                    { "title": "More low-level overview of ownership", "sub": [] }
+                ]}
             ]
         },
         {
