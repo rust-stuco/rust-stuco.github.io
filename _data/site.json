@@ -100,9 +100,9 @@
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week3/dark.pdf",
             "hw_handout": "/hw/pokelab/pokelab.zip",
             "hw_writeup": "/hw/pokelab/doc/pokelab/index.html",
-            "hw_released": false,
-            "details_released": false,
-            "slides_released": false,
+            "hw_released": true,
+            "details_released": true,
+            "slides_released": true,
             "extras": [
                 { "title": "Rust Book Chapter 5", "link": "https://doc.rust-lang.org/book/ch05-00-structs.html", "sub": []},
                 { "title": "Rust Book Chapter 6", "link": "https://doc.rust-lang.org/book/ch06-00-enums.html", "sub": []}
