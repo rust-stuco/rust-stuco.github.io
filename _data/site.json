@@ -107,6 +107,42 @@
                 { "title": "Rust Book Chapter 5", "link": "https://doc.rust-lang.org/book/ch05-00-structs.html", "sub": []},
                 { "title": "Rust Book Chapter 6", "link": "https://doc.rust-lang.org/book/ch06-00-enums.html", "sub": []}
             ]
+        },
+        {
+            "title": "Collections and Generics",
+            "agenda": [
+                { "title": "Vectors", "sub": [
+                    { "title": "`Vec<T>` API", "sub": [] },
+                    { "title": "Ownership and Borrowing", "sub": [] }
+                ]},
+                { "title": "Strings", "sub": [
+                    { "title": "UTF-8", "sub": [] },
+                    { "title": "`String` API", "sub": [] }
+                ]},
+                { "title": "Maps", "sub": [
+                    { "title": "Focus on `HashMap` and `HashSet`", "sub": [] },
+                    { "title": "`Entry` API", "sub": [] }
+                ]},
+                { "title": "Generics", "sub": [
+                    { "title": "Functions", "sub": [] },
+                    { "title": "Structs and Enums", "sub": [] },
+                    { "title": "`impl` Blocks", "sub": [] },
+                    { "title": "Monomorphization", "sub": [] }
+                ]}
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week4/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week4/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week4/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week4/dark.pdf",
+            "hw_handout": "/hw/multilab/multilab.zip",
+            "hw_writeup": "/hw/multilab/doc/multilab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": true,
+            "extras": [
+                { "title": "Rust Book Chapter 8", "link": "https://doc.rust-lang.org/book/ch08-00-common-collections.html", "sub": []},
+                { "title": "Rust Book Chapter 10.1", "link": "https://doc.rust-lang.org/book/ch10-01-syntax.html", "sub": []}
+            ]
         }
     ]
 }
