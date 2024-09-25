@@ -143,6 +143,36 @@
                 { "title": "Rust Book Chapter 8", "link": "https://doc.rust-lang.org/book/ch08-00-common-collections.html", "sub": []},
                 { "title": "Rust Book Chapter 10.1", "link": "https://doc.rust-lang.org/book/ch10-01-syntax.html", "sub": []}
             ]
+        },
+        {
+            "title": "Error Handling and Traits",
+            "agenda": [
+                { "title": "Type Aliases", "sub": []},
+                { "title": "Const Generics", "sub": []},
+                { "title": "Error Handling", "sub": [
+                    { "title": "panic!", "sub": [] },
+                    { "title": "Result<V,E>", "sub": [] }
+                ]},
+                { "title": "The Never Type", "sub": []},
+                { "title": "Traits", "sub": [
+                    { "title": "Intro to Traits", "sub": [] },
+                    { "title": "Derivable Traits", "sub": [] },
+                    { "title": "Trait Bounds", "sub": [] }
+                ]}
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week5/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week5/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/dark.pdf",
+            "hw_handout": "/hw/summarylab/summarylab.zip",
+            "hw_writeup": "/hw/summarylab/doc/summarylab/index.html",
+            "hw_released": true,
+            "details_released": true,
+            "slides_released": true,
+            "extras": [
+                { "title": "Rust Book Chapter 10.1", "link": "https://doc.rust-lang.org/book/ch10-01-syntax.html", "sub": []},
+                { "title": "Rust Book Chapter 10.2", "link": "https://doc.rust-lang.org/book/ch10-02-traits.html", "sub": []}
+            ]
         }
     ]
 }
