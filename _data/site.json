@@ -173,6 +173,173 @@
                 { "title": "Rust Book Chapter 10.1", "link": "https://doc.rust-lang.org/book/ch10-01-syntax.html", "sub": []},
                 { "title": "Rust Book Chapter 10.2", "link": "https://doc.rust-lang.org/book/ch10-02-traits.html", "sub": []}
             ]
+        },
+        {
+            "title": "Modules and Testing",
+            "agenda": [
+                { "title": "Module System", "sub": [
+                    { "title": "Packages and Crates", "sub": [] },
+                    { "title": "Using Modules", "sub": [] },
+                    { "title": "Module Paths", "sub": [] }
+                ] },
+                { "title": "Testing", "sub": [
+                    { "title": "Controlled Testing", "sub": [] },
+                    { "title": "Test Organization", "sub": [] }
+                ] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week6/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week6/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/dark.pdf",
+            "hw_handout": "/hw/greplab/greplab.zip",
+            "hw_writeup": "/hw/greplab/doc/greplab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": [
+                { "title": "Rust Book Chapter 7", "link": "https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html", "sub": [] },
+                { "title": "Rust Book Chapter 11", "link": "https://doc.rust-lang.org/book/ch11-00-testing.html", "sub": [] },
+                { "title": "Rust Book Chapter 14", "link": "https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html", "sub": [] }
+            ]
+        },
+        {
+            "title": "Crates, Closures, and Iterators",
+            "agenda": [
+                { "title": "Crate Highlights", "sub": [
+                    { "title": "`rand`", "sub": [] },
+                    { "title": "`clap`", "sub": [] },
+                    { "title": "`anyhow`", "sub": [] },
+                    { "title": "`tracing`", "sub": [] },
+                    { "title": "`flamegraph`", "sub": [] }
+                ] },
+                { "title": "Closures", "sub": [
+                    { "title": "Fn Traits", "sub": [] }
+                ] },
+                { "title": "Iterators", "sub": [
+                    { "title": "Loops vs. Iterators", "sub": [] }
+                ] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week7/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week7/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week7/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week7/dark.pdf",
+            "hw_handout": "/hw/iterlab/iterlab.zip",
+            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": [
+                { "title": "Rust Book Chapter 13", "link": "https://doc.rust-lang.org/book/ch13-00-functional-features.html", "sub": [] },
+                { "title": "Rust Book Chapter 14", "link": "https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html", "sub": [] }
+            ]
+        },
+        {
+            "title": "Lifetimes",
+            "agenda": [
+                { "title": "Intro and Motivation", "sub": [] },
+                { "title": "Annotations", "sub": [] },
+                { "title": "Elision", "sub": [] },
+                { "title": "Generics and Bounds", "sub": [] },
+                { "title": "'static", "sub": [] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/dark.pdf",
+            "hw_handout": "/hw/iterlab/iterlab.zip",
+            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": [
+                { "title": "What is 'a lifetime? (video)", "link": "https://www.youtube.com/watch?v=gRAVZv7V91Q", "sub": [] },
+                { "title": "Rust Book Chapter 10.3", "link": "https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html", "sub": [] },
+                { "title": "Lifetimes (Rustonomicon)", "link": "https://doc.rust-lang.org/nomicon/lifetimes.html", "sub": [] },
+                { "title": "Lifetimes (Rust by Example)", "link": "https://doc.rust-lang.org/rust-by-example/scope/lifetime.html", "sub": [] }
+            ]
+        },
+        {
+            "title": "Box and Trait Objects",
+            "agenda": [
+                { "title": "The `Box<T>` Type", "sub": [] },
+                { "title": "The `Deref` Trait", "sub": [] },
+                { "title": "Deref Coercion", "sub": [] },
+                { "title": "The `Drop` Trait and `std::mem::drop`", "sub": [] },
+                { "title": "Object-Oriented Programming", "sub": [] },
+                { "title": "Trait Objects", "sub": [ 
+                    { "title": "Dynamic dispatch with `dyn`", "sub": [] }
+                ] },
+                { "title": "Dynamically Sized Types", "sub": [] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/dark.pdf",
+            "hw_handout": "/hw/iterlab/iterlab.zip",
+            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": []
+        },
+        {
+            "title": "Smart Pointers and Unsafe",
+            "agenda": [
+                { "title": "The `Rc` Type", "sub": [] },
+                { "title": "The `RefCell` Type", "sub": [] },
+                { "title": "Memory Leaks", "sub": [] },
+                { "title": "Unsafe Superpowers", "sub": [] },
+                { "title": "Raw Pointers", "sub": [] },
+                { "title": "FFI", "sub": [] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/dark.pdf",
+            "hw_handout": "/hw/iterlab/iterlab.zip",
+            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": []
+        },
+        {
+            "title": "Parallelism",
+            "agenda": [
+                { "title": "Threads", "sub": [] },
+                { "title": "Synchronization", "sub": [] },
+                { "title": "Message Passing", "sub": [] },
+                { "title": "`Send` and `Sync`", "sub": [] },
+                { "title": "More Synchronization", "sub": [] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/dark.pdf",
+            "hw_handout": "/hw/iterlab/iterlab.zip",
+            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": []
+        },
+        {
+            "title": "Concurrency",
+            "agenda": [
+                { "title": "`async`/`await`", "sub": [] },
+                { "title": "Futures", "sub": [] },
+                { "title": "Polling", "sub": [] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/dark.pdf",
+            "hw_handout": "/hw/iterlab/iterlab.zip",
+            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": []
         }
     ]
 }
