@@ -195,7 +195,7 @@
             "hw_writeup": "/hw/greplab/doc/greplab/index.html",
             "hw_released": false,
             "details_released": true,
-            "slides_released": false,
+            "slides_released": true,
             "extras": [
                 { "title": "Rust Book Chapter 7", "link": "https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html", "sub": [] },
                 { "title": "Rust Book Chapter 11", "link": "https://doc.rust-lang.org/book/ch11-00-testing.html", "sub": [] },
