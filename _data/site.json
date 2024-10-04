@@ -193,7 +193,7 @@
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/dark.pdf",
             "hw_handout": "/hw/greplab/greplab.zip",
             "hw_writeup": "/hw/greplab/doc/greplab/index.html",
-            "hw_released": false,
+            "hw_released": true,
             "details_released": true,
             "slides_released": true,
             "extras": [
