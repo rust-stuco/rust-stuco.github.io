@@ -209,7 +209,6 @@
                     { "title": "`rand`", "sub": [] },
                     { "title": "`clap`", "sub": [] },
                     { "title": "`anyhow`", "sub": [] },
-                    { "title": "`tracing`", "sub": [] },
                     { "title": "`flamegraph`", "sub": [] }
                 ] },
                 { "title": "Closures", "sub": [
@@ -225,9 +224,9 @@
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week7/dark.pdf",
             "hw_handout": "/hw/iterlab/iterlab.zip",
             "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
-            "hw_released": false,
+            "hw_released": true,
             "details_released": true,
-            "slides_released": false,
+            "slides_released": true,
             "extras": [
                 { "title": "Rust Book Chapter 13", "link": "https://doc.rust-lang.org/book/ch13-00-functional-features.html", "sub": [] },
                 { "title": "Rust Book Chapter 14", "link": "https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html", "sub": [] }
