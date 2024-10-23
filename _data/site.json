@@ -249,7 +249,7 @@
             "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
             "hw_released": false,
             "details_released": true,
-            "slides_released": false,
+            "slides_released": true,
             "extras": [
                 { "title": "What is 'a lifetime? (video)", "link": "https://www.youtube.com/watch?v=gRAVZv7V91Q", "sub": [] },
                 { "title": "Rust Book Chapter 10.3", "link": "https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html", "sub": [] },
