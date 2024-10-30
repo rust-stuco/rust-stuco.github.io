@@ -258,13 +258,12 @@
             ]
         },
         {
-            "title": "Box<T>, Trait Objects, and Smart Pointers",
+            "title": "Smart Points and Trait Objects",
             "agenda": [
                 { "title": "The `Box<T>` Type", "sub": [] },
                 { "title": "The `Deref` Trait", "sub": [] },
                 { "title": "Deref Coercion", "sub": [] },
                 { "title": "The `Drop` Trait and `std::mem::drop`", "sub": [] },
-                { "title": "Object-Oriented Programming", "sub": [] },
                 { "title": "Trait Objects", "sub": [ 
                     { "title": "Dynamic dispatch with `dyn`", "sub": [] }
                 ] },
