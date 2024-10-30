@@ -258,7 +258,7 @@
             ]
         },
         {
-            "title": "Box and Trait Objects",
+            "title": "Box<T>, Trait Objects, and Smart Pointers",
             "agenda": [
                 { "title": "The `Box<T>` Type", "sub": [] },
                 { "title": "The `Deref` Trait", "sub": [] },
@@ -268,33 +268,14 @@
                 { "title": "Trait Objects", "sub": [ 
                     { "title": "Dynamic dispatch with `dyn`", "sub": [] }
                 ] },
-                { "title": "Dynamically Sized Types", "sub": [] }
+                { "title": "Dynamically Sized Types", "sub": [] },
+                { "title": "The `Rc` Type", "sub": [] },
+                { "title": "The `RefCell` Type", "sub": [] }
             ],
             "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/light.html",
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/light.pdf",
             "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/dark.html",
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/dark.pdf",
-            "hw_handout": "/hw/iterlab/iterlab.zip",
-            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
-            "hw_released": false,
-            "details_released": true,
-            "slides_released": false,
-            "extras": []
-        },
-        {
-            "title": "Smart Pointers and Unsafe",
-            "agenda": [
-                { "title": "The `Rc` Type", "sub": [] },
-                { "title": "The `RefCell` Type", "sub": [] },
-                { "title": "Memory Leaks", "sub": [] },
-                { "title": "Unsafe Superpowers", "sub": [] },
-                { "title": "Raw Pointers", "sub": [] },
-                { "title": "FFI", "sub": [] }
-            ],
-            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/light.html",
-            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/light.pdf",
-            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/dark.html",
-            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/dark.pdf",
             "hw_handout": "/hw/iterlab/iterlab.zip",
             "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
             "hw_released": false,
@@ -333,6 +314,25 @@
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/light.pdf",
             "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/dark.html",
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/dark.pdf",
+            "hw_handout": "/hw/iterlab/iterlab.zip",
+            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_released": false,
+            "details_released": true,
+            "slides_released": false,
+            "extras": []
+        },
+        {
+            "title": "Unsafe",
+            "agenda": [
+                { "title": "Memory Leaks", "sub": [] },
+                { "title": "Unsafe Superpowers", "sub": [] },
+                { "title": "Raw Pointers", "sub": [] },
+                { "title": "FFI", "sub": [] }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/dark.pdf",
             "hw_handout": "/hw/iterlab/iterlab.zip",
             "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
             "hw_released": false,
