@@ -279,7 +279,7 @@
             "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
             "hw_released": false,
             "details_released": true,
-            "slides_released": false,
+            "slides_released": true,
             "extras": []
         },
         {
