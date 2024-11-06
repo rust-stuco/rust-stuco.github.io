@@ -291,15 +291,15 @@
                 { "title": "`Send` and `Sync`", "sub": [] },
                 { "title": "More Synchronization", "sub": [] }
             ],
-            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/light.html",
-            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/light.pdf",
-            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/dark.html",
-            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/dark.pdf",
-            "hw_handout": "/hw/iterlab/iterlab.zip",
-            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
-            "hw_released": false,
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/dark.pdf",
+            "hw_handout": "/hw/filterlab/filterlab.zip",
+            "hw_writeup": "/hw/filterlab/doc/filterlab/index.html",
+            "hw_released": true,
             "details_released": true,
-            "slides_released": false,
+            "slides_released": true,
             "extras": []
         },
         {
