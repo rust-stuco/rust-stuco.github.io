@@ -245,8 +245,8 @@
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/light.pdf",
             "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/dark.html",
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/dark.pdf",
-            "hw_handout": "/hw/iterlab/iterlab.zip",
-            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_handout": "",
+            "hw_writeup": "",
             "hw_released": false,
             "details_released": true,
             "slides_released": true,
@@ -264,7 +264,7 @@
                 { "title": "The `Deref` Trait", "sub": [] },
                 { "title": "Deref Coercion", "sub": [] },
                 { "title": "The `Drop` Trait and `std::mem::drop`", "sub": [] },
-                { "title": "Trait Objects", "sub": [ 
+                { "title": "Trait Objects", "sub": [
                     { "title": "Dynamic dispatch with `dyn`", "sub": [] }
                 ] },
                 { "title": "Dynamically Sized Types", "sub": [] },
@@ -275,8 +275,8 @@
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/light.pdf",
             "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/dark.html",
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/dark.pdf",
-            "hw_handout": "/hw/iterlab/iterlab.zip",
-            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
+            "hw_handout": "",
+            "hw_writeup": "",
             "hw_released": false,
             "details_released": true,
             "slides_released": true,
@@ -317,7 +317,7 @@
             "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
             "hw_released": false,
             "details_released": true,
-            "slides_released": false,
+            "slides_released": true,
             "extras": []
         },
         {
@@ -332,9 +332,7 @@
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/light.pdf",
             "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/dark.html",
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/dark.pdf",
-            "hw_handout": "/hw/iterlab/iterlab.zip",
-            "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
-            "hw_released": true,
+            "hw_released": false,
             "details_released": true,
             "slides_released": true,
             "extras": []
