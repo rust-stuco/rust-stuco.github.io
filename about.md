@@ -17,5 +17,6 @@ Please contact us with any questions or concerns, by Discord or by email. Thank 
 
 ### Previous Iterations:
 
-- [S24](/old/s24/)
-- [S22, F22, and S23](https://old-rust-stuco.duvallj.pw/)
+- [F24](/old/f24/): Benjamin Owad, Connor Tsui, and David Rudo
+- [S24](/old/s24/): Benjamin Owad, Connor Tsui, and David Rudo
+- [S22, F22, and S23](https://old-rust-stuco.duvallj.pw/): Jack Duvall and Cooper Pierce
