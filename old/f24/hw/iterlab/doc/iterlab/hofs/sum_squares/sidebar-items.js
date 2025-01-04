@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["sum_of_squared_odd_numbers","sum_of_squared_odd_numbers_bad"]};

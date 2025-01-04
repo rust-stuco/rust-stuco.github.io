@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["ElementalStone","EvolvedEevee"],"struct":["Eevee"]};
