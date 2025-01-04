@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>summarylab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../static.files/rustdoc-c5d6553a23f1e5a6.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="summarylab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0 (eeb90cda1 2024-09-04)" data-channel="1.81.0" data-search-js="search-d234aafac6c221dd.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-d2fab2bf619172d3.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../summarylab/index.html">summarylab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section><ul class="block"><li><a href="#modules">Modules</a></li><li><a href="#traits">Traits</a></li></ul></section></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <a class="mod" href="#">summarylab</a><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><span class="out-of-band"><a class="src" href="../src/summarylab/lib.rs.html#1-45">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="summary-lab"><a class="doc-anchor" href="#summary-lab">§</a>Summary Lab</h2>
+<p>The goal of this homework is to make sure you understand error handling and the <code>?</code> operator,
+as well as traits and how to implement them. While these are the main topics for this week,
+this homework will also heavily test your fluency with Rust’s <a href="https://doc.rust-lang.org/1.81.0/alloc/string/struct.String.html" title="struct alloc::string::String"><code>String</code></a> and its methods.</p>
+<p>You will be implementing two traits on two different types. The two traits are
+<a href="trait.Reader.html" title="trait summarylab::Reader"><code>Reader</code></a> and <a href="trait.Summary.html" title="trait summarylab::Summary"><code>Summary</code></a>, and the two types
+are <a href="reader/email_reader/struct.EmailReader.html" title="struct summarylab::reader::email_reader::EmailReader"><code>EmailReader</code></a> and
+<a href="reader/tweet_reader/struct.TweetReader.html" title="struct summarylab::reader::tweet_reader::TweetReader"><code>TweetReader</code></a>.</p>
+<p>Since string parsing is a bit tricky (especially in Rust), you will get <code>100</code> points for completing
+the implementation for <a href="reader/email_reader/struct.EmailReader.html" title="struct summarylab::reader::email_reader::EmailReader"><code>EmailReader</code></a>
+and <code>50</code> points for completing the implementation for
+<a href="reader/tweet_reader/struct.TweetReader.html" title="struct summarylab::reader::tweet_reader::TweetReader"><code>TweetReader</code></a>.
+This means you only need to do the first part for full credit, and the second part is
+extra credit!</p>
+<p>If you find yourself spending more than an hour on the first part of the assignment,
+please let us know!
+This assignment is harder than the previous homeworks,
+so there is no shame if you can’t complete it in under an hour.
+We may give partial credit to honest attempts at the end of the semester,
+even if you don’t pass any test cases.</p>
+<p>That being said, if you have the time,
+we still encourage you to try and pass all of the test cases for practice!</p>
+<h2 id="part-1-emails"><a class="doc-anchor" href="#part-1-emails">§</a>Part 1: Emails</h2>
+<p>Click this hyperlink to go to the writeup for
+<a href="reader/email_reader/struct.EmailReader.html" title="struct summarylab::reader::email_reader::EmailReader"><code>EmailReader</code></a>!</p>
+<h2 id="part-2-tweets-bonus"><a class="doc-anchor" href="#part-2-tweets-bonus">§</a>Part 2: Tweets (Bonus)</h2>
+<p>Click this hyperlink to go to the writeup for
+<a href="reader/tweet_reader/struct.TweetReader.html" title="struct summarylab::reader::tweet_reader::TweetReader"><code>TweetReader</code></a>!</p>
+<h2 id="challenge-command-line-tool-bonus"><a class="doc-anchor" href="#challenge-command-line-tool-bonus">§</a>Challenge: Command Line Tool (Bonus)</h2>
+<p>As a sneak peek, for the next homework
+we’re going to ask you to implement the same command line tool as the one explained in the book
+<a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Chapter 12</a>.
+Since the book walks you through exactly how to do it,
+it will be much more straightforward compared to this homework.</p>
+<p><strong><em>If you have ample time to spare</em>, and you want to get better at Rust,</strong>
+<strong>here is a challenge you can do now instead of next week’s homework:</strong></p>
+<p>Instead of just running preset tests, you can turn this crate into a binary that <em>actually</em>
+reads from the file system.</p>
+<p>Right now, the <code>new</code> functions on all of the <code>Reader</code>s never actually get called because
+there is no <code>main</code> function to call them. If you’re up to the challenge (and you have time),
+create a command line tool that allows you to read in a tweet or an email from the <code>data</code> folder
+(either through a pipe or specifying a file) that outputs a summary of what it reads.</p>
+<p>You can decide what flags to pass in for specific outputs. And if you’d like, you can
+take a look at the <a href="https://docs.rs/clap/latest/clap/index.html">clap</a> third-party crate
+to help you!</p>
+<p>We don’t have an autograder set up for this, so you’ll mostly be on your own.
+We will still expect you to write your own test cases and have generally good documentation.</p>
+<p>If you do decide to do this challenge, let us know that you did and we’ll
+manually grade it ourselves to determine how many points you will receive
+(the maximum points we would probably be willing to give out is triple that of a normal homework).</p>
+<p>To reiterate: Only do this if you have ample time to spare and you want to get better at Rust!
+<strong>This is not a trivial task.</strong></p>
+<p><strong>If you decide to do this challenge, you can skip next week’s homework</strong>, or rather,
+you can turn this in next week in place of the official next homework.
+It would still be a good idea to read through
+<a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Chapter 12</a>
+since you should know how to write your own test cases and parse command line arguments.</p>
+<h2 id="submission"><a class="doc-anchor" href="#submission">§</a>Submission</h2><h4 id="unix"><a class="doc-anchor" href="#unix">§</a>Unix</h4>
+<p>If you are on a unix system, we will try to create a <code>handin.zip</code> automatically for you,
+<strong>but you will need to have <code>zip</code> already installed</strong>.</p>
+<p>If you <em>do not</em> have <code>zip</code> installed on your system,
+install <code>zip</code> on your machine or use the CMU Linux SSH machines.
+If you need help with this, please reach out to us!</p>
+<p>Once you have <code>zip</code> installed, we will create the <code>handin.zip</code> automatically for you
+(<em>take a peek into <code>build.rs</code> if you’re interested in how this works!</em>).</p>
+<p>Once you have the <code>handin.zip</code> file, submit it to Gradescope.</p>
+<h4 id="windows"><a class="doc-anchor" href="#windows">§</a>Windows</h4>
+<p>If you are on a windows system, you can zip the <code>src/</code> folder manually
+and upload that to Gradescope.</p>
+<p>Note that you don’t <em>need</em> to name it <code>handin.zip</code>, you can name it whatever you’d like.</p>
+<h2 id="collaboration"><a class="doc-anchor" href="#collaboration">§</a>Collaboration</h2>
+<p>In general, feel free to discuss homeworks with other students!
+As long as you do not copy someone else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that
+other students can see your questions and answers as well!</p>
+<p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
+<h2 id="feedback"><a class="doc-anchor" href="#feedback">§</a>Feedback</h2>
+<p>We would like to reiterate that you should let us know if you spent
+anywhere in significant excess of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve,
+so if you find yourself not understanding the concepts,
+you should reach out to us and let us know as well —
+chances are, you’re not the only one!</p>
+</div></details><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="reader/index.html" title="mod summarylab::reader">reader</a></div></li></ul><h2 id="traits" class="section-header">Traits<a href="#traits" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="trait" href="trait.Reader.html" title="trait summarylab::Reader">Reader</a></div><div class="desc docblock-short">For now, ignore the <code>Self: Sized</code> annotation on this trait.
+If you are interested, you can take a look at
+<a href="https://github.com/pretzelhammer/rust-blog/blob/master/posts/sizedness-in-rust.md#sized-trait">this</a>
+blog.
+The high-level reasoning is that Rust must be able to determine the size of
+a return type at compile time. We’ll talk more about this when we talk about
+Trait Objects in week 9!</div></li><li><div class="item-name"><a class="trait" href="trait.Summary.html" title="trait summarylab::Summary">Summary</a></div><div class="desc docblock-short">A trait that shares methods of summarizing text like emails and tweets.</div></li></ul></section></div></main></body></html>
