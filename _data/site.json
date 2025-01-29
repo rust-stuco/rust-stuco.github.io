@@ -3,14 +3,13 @@
         {
             "title": "Introduction",
             "agenda": [
-                { "title": "Intro" },
                 { "title": "Why Rust?" },
-                { "title": "Cargo Basics" },
-                { "title": "Variables and Mutability" },
-                { "title": "Data Types" },
-                { "title": "Functions, Statements, and Expressions" },
-                { "title": "Control Flow" },
-                { "title": "Course Logistics" }
+                { "title": "Cargo basics" },
+                { "title": "Variables and mutability" },
+                { "title": "Data types" },
+                { "title": "Functions, statements, and expressions" },
+                { "title": "Control flow" },
+                { "title": "Course logistics" }
             ],
             "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/introduction-light.html",
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/introduction-light.pdf",
@@ -42,22 +41,16 @@
             "title": "Ownership (Part 1)",
             "agenda": [
                 {
-                    "title": "Preliminary Content",
-                    "sub": [
-                        { "title": "Announcements and Review" },
-                        { "title": "Review: Scopes" },
-                        { "title": "`String` and String Literals" }
-                    ]
-                },
-                {
                     "title": "Ownership",
                     "sub": [
                         {
-                            "title": "Ownership Rules, Memory Allocation, and Aliasing"
+                            "title": "Ownership Rules"
                         },
-                        { "title": "`Copy` and `Clone` Traits" },
+                        { "title": "Motivation: Strings" },
+                        { "title": "Data validity" },
+                        { "title": "Move semantics, `Copy` and `Clone`" },
                         {
-                            "title": "Ownership with Functions and Return Values"
+                            "title": "Ownership with functions and return values"
                         }
                     ]
                 },
@@ -65,12 +58,12 @@
                     "title": "References and Borrowing",
                     "sub": [
                         { "title": "References vs Ownership" },
-                        { "title": "Immutable and Mutable References" },
-                        { "title": "Dangling References and Data Races" }
+                        { "title": "Immutable and mutable references" },
+                        { "title": "Dangling References and data races" }
                     ]
                 },
-                { "title": "Slices", "sub": [{ "title": "`&str`" }] },
-                { "title": "`Vec`" }
+                { "title": "Slices" },
+                { "title": "`Vec` Sneak Peek" }
             ],
             "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week2/ownership_p1-light.html",
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/ownership_p1-light.pdf",
@@ -111,8 +104,7 @@
                     "sub": [
                         { "title": "Automatic referencing and dereferencing" },
                         { "title": "`Self` vs `&self`" },
-                        { "title": "Associated functions" },
-                        { "title": "Match Control Flow" }
+                        { "title": "Associated functions" }
                     ]
                 },
                 {
@@ -120,7 +112,7 @@
                     "sub": [
                         { "title": "Pattern Matching" },
                         { "title": "Option Type" },
-                        { "title": "`if let`" }
+                        { "title": "`match` control flow" }
                     ]
                 }
             ],
