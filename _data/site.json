@@ -173,7 +173,7 @@
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week4/collections_generics-dark.pdf",
             "hw_handout": "/hw/multilab/multilab.zip",
             "hw_writeup": "/hw/multilab/doc/multilab/index.html",
-            "hw_released": false,
+            "hw_released": true,
             "details_released": true,
             "slides_released": true,
             "extras": [
