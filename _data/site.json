@@ -216,7 +216,7 @@
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/errors_traits-dark.pdf",
             "hw_handout": "/hw/pokerlab/pokerlab.zip",
             "hw_writeup": "/hw/pokerlab/doc/pokerlab/index.html", 
-            "hw_released": false,
+            "hw_released": true,
             "details_released": true,
             "slides_released": true,
             "extras": [
