@@ -110,8 +110,8 @@
                 {
                     "title": "Enum basics",
                     "sub": [
-                        { "title": "Pattern Matching" },
                         { "title": "Option Type" },
+                        { "title": "Pattern Matching" },
                         { "title": "`match` control flow" }
                     ]
                 }
@@ -153,7 +153,7 @@
                 {
                     "title": "Maps",
                     "sub": [
-                        { "title": "Focus on `HashMap` and `HashSet`" },
+                        { "title": "`HashMap`" },
                         { "title": "`Entry` API" }
                     ]
                 },
@@ -244,10 +244,12 @@
                 {
                     "title": "Testing",
                     "sub": [
+                        { "title": "Simple Testing" },
                         { "title": "Controlled Testing" },
                         { "title": "Test Organization" }
                     ]
-                }
+                },
+                { "title": "Code Review" }
             ],
             "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week6/modules_testing-light.html",
             "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/modules_testing-light.pdf",
@@ -272,10 +274,9 @@
         {
             "title": "Closures and Iterators",
             "agenda": [
-                { "title": "Closures", "sub": [{ "title": "Fn Traits" }] },
+                { "title": "Closures", "sub": [{ "title": "`Fn` Traits" }] },
                 {
-                    "title": "Iterators",
-                    "sub": [{ "title": "Loops vs. Iterators" }]
+                    "title": "Iterators"
                 },
                 {
                     "title": "Crate Highlights",
