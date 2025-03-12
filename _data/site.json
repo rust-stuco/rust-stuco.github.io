@@ -327,7 +327,7 @@
             "hw_writeup": "",
             "hw_released": false,
             "details_released": true,
-            "slides_released": false,
+            "slides_released": true,
             "extras": [
                 {
                     "title": "Brown Rust Book Chapter 4",
