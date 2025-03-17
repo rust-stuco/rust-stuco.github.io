@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>splitlab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="splitlab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0 (4d91de4e4 2025-02-17)" data-channel="1.85.0" data-search-js="search-75f5ac3e.js" data-settings-js="settings-0f613d39.js" ><script src="../static.files/storage-59e33391.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../splitlab/index.html">splitlab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#98-008-intro-to-the-rust-programming-language" title="98-008: Intro to the Rust Programming Language">98-008: Intro to the Rust Programming Language</a></li><li><a href="#split-lab" title="Split Lab">Split Lab</a></li><li><a href="#notes" title="Notes">Notes</a><ul><li><a href="#livestream" title="Livestream">Livestream</a></li></ul></li><li><a href="#submission" title="Submission">Submission</a><ul><li><a href="#formatting-and-style" title="Formatting and Style">Formatting and Style</a></li><li><a href="#unix" title="Unix">Unix</a></li><li><a href="#windows" title="Windows">Windows</a></li></ul></li><li><a href="#collaboration" title="Collaboration">Collaboration</a></li><li><a href="#feedback" title="Feedback">Feedback</a></li></ul><h3><a href="#modules">Crate Items</a></h3><ul class="block"><li><a href="#modules" title="Modules">Modules</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>splitlab</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/splitlab/lib.rs.html#1-7">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="split-lab"><a class="doc-anchor" href="#split-lab">§</a>Split Lab</h2>
+<p>The goal of this homework is to give you a better understanding of <strong>lifetimes</strong> in Rust.</p>
+<p>So far, we have mostly dealt with owned values. However, there is overhead to dealing with owned
+values everywhere, as holding multiply clones of data can be inefficient and expensive. For
+performance-critical applications, it is often necessary to use references instead of owned values.
+When you use references, you are also using lifetimes, even if you can’t see them directly.</p>
+<p>In this homework, you will implement functionality similar to that of the <a href="https://doc.rust-lang.org/std/primitive.str.html#method.split"><code>split</code></a> method on
+<a href="https://doc.rust-lang.org/std/primitive.str.html"><code>str</code></a> in the Rust standard library. You will need to construct a <code>Split</code> struct that implements
+the <a href="https://doc.rust-lang.org/1.85.0/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator"><code>Iterator</code></a> trait, where the items it yields are slices of the original string (the
+<code>haystack</code>), deliminated by some <code>delimiter</code>.</p>
+<p>A correct solution is likely going to contain very few lines of code (~20). However, the interaction
+between the lifetimes and your code will probably be tricky to implement on your own.</p>
+<p>Instead of trying to figure this out on your own, we ask that you watch the following livestream
+called <a href="https://youtu.be/rAl-9HwD858?si=VTQfI8Re7DvrtDqy">“Crust of Rust: Lifetime Annotations”</a>.
+This is a live-coding stream on YouTube where Jon Gjengset (a very notable educator in the Rust
+community) explains exactly how to implement this iterator.</p>
+<h2 id="notes"><a class="doc-anchor" href="#notes">§</a>Notes</h2>
+<p>Please don’t spend too much time on this! The goal here is to understand how lifetimes work, not how
+to specifically implement something that is already in the standard library.</p>
+<p><strong>Also, the starter code we have given you is slightly different to how Jon implements this
+iterator, so be aware of the difference. It is not so different that you will need to rewrite
+everything from scratch.</strong> You will, however, need to make some changes to the starter code in order
+to get things to compile (mainly removing the placeholder <code>'static</code> lifetimes).</p>
+<p><em>Note that Jon does not reveal how to make those compile until the end of the livestream (the
+“Multiple lifetimes” sections).</em></p>
+<p><strong>Finally, it is probably in your interest to watch the livestream <em>before</em> writing any code, as you
+will not need to write more than 20 lines of code, and understanding the concepts is far more
+important.</strong> If you try to finesse how much of the livestream you watch and how much code you write
+in between the sections, you will likely end up spending <strong>more</strong> time than if you just watched the
+entire livestream and wrote your own solution.</p>
+<br>
+<h3 id="livestream"><a class="doc-anchor" href="#livestream">§</a>Livestream</h3>
+<p>The livestream is 90 minutes, but you can skip several sections. We’ve listed the sections you
+<em>should</em> watch below (you can jump around via the chapters on YouTube). Of course, we would
+recommend watching the entire livestream if you have time, as Jon is an excellent teacher! It is
+also in general a good exercise to watch how an experienced developer writes code.</p>
+<p>What’s even better is that you watch the entire livestream <em>without</em> touching your code editor, and
+after you finish it, you can try to implement the iterator yourself!</p>
+<h4 id="livestream-sections"><a class="doc-anchor" href="#livestream-sections">§</a>Livestream Sections</h4>
+<p>Below are the sections. If they are <del>struck out</del>, they are not absolutely necessary to watch in
+order to finish this assignment, but they will definitely help you understand the concepts better.
+The <strong>bolded</strong> sections are ones that we think are <strong>very</strong> important.</p>
+<h5 id="naive-implementation"><a class="doc-anchor" href="#naive-implementation">§</a>Naive Implementation</h5>
+<p>In these sections, Jon walks you through a naive implementation of a split iterator.</p>
+<ul>
+<li><del>0:00:00 Introduction</del></li>
+<li><del>0:03:36 Start a rust project</del></li>
+<li><strong>0:05:20 Struct and method definitions for StrSplit and first test</strong></li>
+<li><del>0:09:32 How you decide between a library and a binary</del></li>
+<li><strong>0:10:58 Start implementing StrSplit</strong></li>
+<li><del>0:16:15 When to use match vs if let some</del></li>
+</ul>
+<h5 id="compile-error-lifetime-specifiers"><a class="doc-anchor" href="#compile-error-lifetime-specifiers">§</a>Compile Error: Lifetime Specifiers</h5>
+<p>After writing the naive implementation, you will realize that there are compile-time errors. How do
+we fix them?</p>
+<ul>
+<li><strong>0:17:10 Doesn’t compile! missing lifetime specifier</strong></li>
+<li>0:20:33 Can I be wrong by specifying lifetimes?</li>
+<li>0:21:25 Anonymous lifetime ’_</li>
+<li><del>0:23:10 Order lifetimes based on how long they are</del></li>
+<li><del>0:25:18 Anonymous lifetime ’_ (with multiple lifetimes)</del></li>
+<li><strong>0:26:52 Compile error: lifetime of reference outlives lifetime of borrowed content</strong></li>
+<li>0:34:45 Static lifetime</li>
+</ul>
+<h5 id="bugs"><a class="doc-anchor" href="#bugs">§</a>Bugs</h5>
+<p>The compile-time errors have been fixed, but there are still a few logical bugs.</p>
+<p>The bugs in this section don’t get fixed until the end of this group of sections. If you would like
+you can skip everything and then pause to read the updated code.</p>
+<p><em>Note that this code is not exactly idiomatic to 2024 Rust, as there were certain features not
+stabilized back in 2020. In other words, don’t worry too much about the <code>ref</code> keyword. You can look
+at the reference solution on our GitHub that does not use <code>ref</code>.</em></p>
+<ul>
+<li>0:41:27 Bug when a delimiter tails a string</li>
+<li>0:48:07 What is the ref keyword and why not &amp;</li>
+<li>0:51:36 What’s the * on the left of remainder</li>
+<li>0:52:46 What is take() doing</li>
+<li>0:54:48 Mutable references are one level deep</li>
+<li>0:55:39 Solving a hang with as_mut()</li>
+</ul>
+<h5 id="multiple-lifetimes"><a class="doc-anchor" href="#multiple-lifetimes">§</a>Multiple Lifetimes</h5>
+<p>The code is working, but it will not work for very specific scenarios. What happens if the haystack
+and the delimiter have different lifetimes? Or in other words, what happens if they come from
+different places?</p>
+<ul>
+<li><strong>0:57:49 Multiple lifetimes, implementing until_char</strong></li>
+<li><del>1:03:19 Difference between a str and a String</del></li>
+<li><strong>1:08:15 Multiple lifetimes (continued)</strong></li>
+</ul>
+<h5 id="generic-delimiters-extra-credit"><a class="doc-anchor" href="#generic-delimiters-extra-credit">§</a>Generic Delimiters (Extra Credit):</h5>
+<p>We can observe that our delimiters only need to have one operation: finding themselves inside a
+string! You can implement the <code>split_pattern</code> file which exposes a <code>Pattern</code> trait. This is a
+simplified version of the real <code>Pattern</code> trait in the standard library.</p>
+<ul>
+<li>1:15:24 Generic delimiter (Delimiter trait)</li>
+<li>1:23:14 char length utf8</li>
+<li>1:25:30 Standard library split</li>
+<li>1:27:39 Q&amp;A</li>
+</ul>
+<h2 id="submission"><a class="doc-anchor" href="#submission">§</a>Submission</h2><h4 id="formatting-and-style"><a class="doc-anchor" href="#formatting-and-style">§</a>Formatting and Style</h4>
+<p>The autograder will run these two commands on your code:</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check</code></pre></div>
+<p><strong>If the autograder detects any errors from the command above, you will not be able to receive</strong>
+<strong>any points.</strong> This may seem strict, but we have decided to follow standard best practices for
+Rust.</p>
+<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>, you ensure
+that anybody reading your code (who is familiar with Rust) will be able to easily navigate your
+code. This can help with diving into an unfamiliar code base, and it also eliminates the need for
+debate with others over style rules, saving time and energy.</p>
+<p>See the official <a href="https://doc.rust-lang.org/stable/style-guide/">guidelines</a> for more information.</p>
+<h4 id="unix"><a class="doc-anchor" href="#unix">§</a>Unix</h4>
+<p>If you are on a unix system, we will try to create a <code>handin.zip</code> automatically for you,
+<strong>but you will need to have <code>zip</code> already installed</strong>.</p>
+<p>If you <em>do not</em> have <code>zip</code> installed on your system, install <code>zip</code> on your machine or use the CMU
+Linux SSH machines. If you need help with this, please reach out to us!</p>
+<p>Once you have <code>zip</code> installed, we will create the <code>handin.zip</code> automatically for you (<em>take a peek</em>
+<em>into <code>build.rs</code> file if you’re interested in how this works!</em>).</p>
+<p>Once you have the <code>handin.zip</code> file, submit it (and only the zip) to Gradescope.</p>
+<h4 id="windows"><a class="doc-anchor" href="#windows">§</a>Windows</h4>
+<p>If you are on a windows system, you can zip the <code>src/</code> folder manually and upload that to
+Gradescope.</p>
+<p>Note that you don’t <em>need</em> to name it <code>handin.zip</code>, you can name it whatever you’d like.</p>
+<h2 id="collaboration"><a class="doc-anchor" href="#collaboration">§</a>Collaboration</h2>
+<p>In general, feel free to discuss homeworks with other students! As long as you do not copy someone
+else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that other students can
+see your questions and answers as well!</p>
+<p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
+<h2 id="feedback"><a class="doc-anchor" href="#feedback">§</a>Feedback</h2>
+<p>We would like to reiterate that you should let us know if you spent anywhere in significant excess
+of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve, so if you find yourself not understanding
+the concepts, you should reach out to us and let us know as well — chances are, you’re not the
+only one!</p>
+</div></details><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="split_pattern/index.html" title="mod splitlab::split_pattern">split_<wbr>pattern</a></div></li><li><div class="item-name"><a class="mod" href="split_str/index.html" title="mod splitlab::split_str">split_<wbr>str</a></div></li></ul></section></div></main></body></html>
