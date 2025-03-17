@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["split_pattern","split_str"]};
