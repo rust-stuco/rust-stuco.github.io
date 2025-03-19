@@ -350,7 +350,7 @@
             "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/lifetimes-dark.pdf",
             "hw_handout": "/hw/splitlab/splitlab.zip",
             "hw_writeup": "/hw/splitlab/doc/splitlab/index.html",
-            "hw_released": false,
+            "hw_released": true,
             "details_released": true,
             "slides_released": true,
             "extras": [
