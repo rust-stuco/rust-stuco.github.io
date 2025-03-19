@@ -7,7 +7,7 @@ When you use references, you are also using lifetimes, even if you can’t see t
 <p>In this homework, you will implement functionality similar to that of the <a href="https://doc.rust-lang.org/std/primitive.str.html#method.split"><code>split</code></a> method on
 <a href="https://doc.rust-lang.org/std/primitive.str.html"><code>str</code></a> in the Rust standard library. You will need to construct a <code>Split</code> struct that implements
 the <a href="https://doc.rust-lang.org/1.85.0/core/iter/traits/iterator/trait.Iterator.html" title="trait core::iter::traits::iterator::Iterator"><code>Iterator</code></a> trait, where the items it yields are slices of the original string (the
-<code>haystack</code>), deliminated by some <code>delimiter</code>.</p>
+<code>haystack</code>), delimited by some <code>delimiter</code>.</p>
 <p>A correct solution is likely going to contain very few lines of code (~20). However, the interaction
 between the lifetimes and your code will probably be tricky to implement on your own.</p>
 <p>Instead of trying to figure this out on your own, we ask that you watch the following livestream
@@ -17,18 +17,18 @@ community) explains exactly how to implement this iterator.</p>
 <h2 id="notes"><a class="doc-anchor" href="#notes">§</a>Notes</h2>
 <p>Please don’t spend too much time on this! The goal here is to understand how lifetimes work, not how
 to specifically implement something that is already in the standard library.</p>
-<p><strong>Also, the starter code we have given you is slightly different to how Jon implements this
-iterator, so be aware of the difference. It is not so different that you will need to rewrite
-everything from scratch.</strong> You will, however, need to make some changes to the starter code in order
-to get things to compile (mainly removing the placeholder <code>'static</code> lifetimes).</p>
+<p><strong>Also, the starter code we have given you is slightly different to how Jon implements <code>Split</code>, so
+be aware of the difference. It is not so different that you will need to rewrite everything from
+scratch.</strong> You will, however, need to make some changes to the starter code in order to get things
+to compile (mainly removing the placeholder <code>'static</code> lifetimes).</p>
 <p><em>Note that Jon does not reveal how to make those compile until the end of the livestream (the
-“Multiple lifetimes” sections).</em></p>
+“Multiple lifetimes” sections). After that section, you only need to keep watching if you want to
+complete the extra credit in <code>src/split_pattern.rs</code>.</em></p>
 <p><strong>Finally, it is probably in your interest to watch the livestream <em>before</em> writing any code, as you
 will not need to write more than 20 lines of code, and understanding the concepts is far more
 important.</strong> If you try to finesse how much of the livestream you watch and how much code you write
 in between the sections, you will likely end up spending <strong>more</strong> time than if you just watched the
 entire livestream and wrote your own solution.</p>
-<br>
 <h3 id="livestream"><a class="doc-anchor" href="#livestream">§</a>Livestream</h3>
 <p>The livestream is 90 minutes, but you can skip several sections. We’ve listed the sections you
 <em>should</em> watch below (you can jump around via the chapters on YouTube). Of course, we would
