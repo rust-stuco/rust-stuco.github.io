@@ -7,79 +7,149 @@ eleventyNavigation:
   order: 4
 ---
 
-<table style="width: min(200vw, 75vw); margin-left: 50%; transform: translateX(-50%);">
-    <thead>
-        <tr class="font-semibold italic font-display text-lg">
-            <th>Topics</th>
-            <th>Extra Material</th>
-            <th>Slides</th>
-            <th>Homework</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for entry in site.schedule %}
-        <tr>
-            <td>
-                <h2 class="mt-0 mb-2 italic font-bold">{{ entry.title }}</h2>
-                <a href="#/" id="toggleButton{{loop.index}}">Details ▼</a>
-                <ul id="toggleDiv{{loop.index}}" class="hidden">
+<div class="schedule-container" style="width: min(200vw, 75vw); margin-left: 50%; transform: translateX(-50%);">
+    <table>
+        <thead>
+            <tr class="font-semibold italic font-display text-lg">
+                <th>Topics</th>
+                <th>Extra Material</th>
+                <th>Slides</th>
+                <th>Homework</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in site.schedule %}
+            <tr>
+                <td>
+                    <h2 class="mt-0 mb-2 italic font-bold">{{ entry.title }}</h2>
+                    <a href="#/" id="toggleButton{{loop.index}}">Details ▼</a>
+                    <ul id="toggleDiv{{loop.index}}" class="hidden">
+                        {% if entry.details_released %}
+                            {% for topic in entry.agenda %}
+                                <li>{{ topic.title }}</li>
+                                <ul>
+                                {% for subtopic in topic.sub %}
+                                    <li>{{ subtopic.title }}</li>
+                                {% endfor %}
+                                </ul>
+                            {% endfor %}
+                        {% else %}
+                            <li><i>Details TBA</i></li>
+                        {% endif %}
+                    </ul>
+                </td>
+                <td>
                     {% if entry.details_released %}
-                        {% for topic in entry.agenda %}
-                            <li>{{ topic.title }}</li>
+                    <ul>
+                        {% for topic in entry.extras %}
+                            {% if topic.link %}
+                                <li><a href="{{ topic.link }}">{{ topic.title }}</a></li>
+                            {% else %}
+                                <li>{{ topic.title }}</li>
+                            {% endif %}
                             <ul>
                             {% for subtopic in topic.sub %}
-                                <li>{{ subtopic.title }}</li>
+                                {% if subtopic.link %}
+                                    <li><a href="{{ subtopic.link }}">{{ subtopic.title }}</a></li>
+                                {% else %}
+                                    <li>{{ subtopic.title }}</li>
+                                {% endif %}
                             {% endfor %}
                             </ul>
                         {% endfor %}
                     {% else %}
-                        <li><i>Details TBA</i></li>
+                        —
+                    </ul>
                     {% endif %}
-                </ul>
-            </td>
-            <td>
-                {% if entry.details_released %}
-                <ul>
-                    {% for topic in entry.extras %}
-                        {% if topic.link %}
-                            <li><a href="{{ topic.link }}">{{ topic.title }}</a></li>
-                        {% else %}
-                            <li>{{ topic.title }}</li>
-                        {% endif %}
+                </td>
+                <td>
+                    {% if entry.slides_released %}
                         <ul>
-                        {% for subtopic in topic.sub %}
-                            {% if subtopic.link %}
-                                <li><a href="{{ subtopic.link }}">{{ subtopic.title }}</a></li>
-                            {% else %}
-                                <li>{{ subtopic.title }}</li>
-                            {% endif %}
-                        {% endfor %}
+                            <li><a href="{{ entry.slides_light_html }}">light</a><a href="{{ entry.slides_light_pdf }}"> (pdf)</a></li>
+                            <li><a href="{{ entry.slides_dark_html }}">dark</a><a href="{{ entry.slides_dark_pdf }}"> (pdf)</a></li>
                         </ul>
-                    {% endfor %}
-                {% else %}
-                    —
-                </ul>
-                {% endif %}
-            </td>
-            <td>
-                {% if entry.slides_released %}
-                    <ul>
-                        <li><nobr><a href="{{ entry.slides_light_html }}">light</a><a href="{{ entry.slides_light_pdf }}"> (pdf)</a></nobr></li>
-                        <li><nobr><a href="{{ entry.slides_dark_html }}">dark</a><a href="{{ entry.slides_dark_pdf }}"> (pdf)</a></nobr></li>
-                    </ul>
-                {% else %}
-                    —
-                {% endif %}
-            </td>
-            <td>
-                {% if entry.hw_released %}
-                    <ul>
-                        <li><a href="{{ entry.hw_handout }}">handout</a></li>
-                        <li><a href="{{ entry.hw_writeup }}">writeup</a></li>
-                    </ul>
-                {% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+                    {% else %}
+                        —
+                    {% endif %}
+                </td>
+                <td>
+                    {% if entry.hw_released %}
+                        <ul>
+                            <li><a href="{{ entry.hw_handout }}">handout</a></li>
+                            <li><a href="{{ entry.hw_writeup }}">writeup</a></li>
+                        </ul>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* Container for scrolling on mobile */
+    .schedule-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    /* Table base styles */
+    .schedule-container table {
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    
+    .schedule-container th,
+    .schedule-container td {
+        padding: 10px 16px;
+        text-align: left;
+        vertical-align: top;
+    }
+    
+    /* Desktop view - wide table */
+    @media (min-width: 768px) {
+        .schedule-container table {
+            width: 90%;
+            max-width: 1400px; /* Make the table significantly wider */
+        }
+        
+        /* Column widths for desktop */
+        .schedule-container th:first-child,
+        .schedule-container td:first-child {
+            width: 35%;
+        }
+        
+        .schedule-container th:nth-child(2),
+        .schedule-container td:nth-child(2) {
+            width: 35%;
+        }
+        
+        .schedule-container th:nth-child(3),
+        .schedule-container td:nth-child(3),
+        .schedule-container th:nth-child(4),
+        .schedule-container td:nth-child(4) {
+            width: 15%;
+        }
+    }
+    
+    /* Mobile view - horizontal scrolling */
+    @media (max-width: 767px) {
+        .schedule-container {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .schedule-container table {
+            min-width: 800px; /* Ensures table maintains width on mobile */
+        }
+        
+        .schedule-container th,
+        .schedule-container td {
+            font-size: 0.9rem;
+        }
+        
+        .schedule-container ul {
+            padding-left: 1rem;
+        }
+    }
+</style>
