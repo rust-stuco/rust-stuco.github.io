@@ -475,21 +475,53 @@
             ]
         },
         {
-            "title": "Rust Ecosystem",
-            "agenda": [{ "title": "TBD" }],
-            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/parallelism-light.html",
-            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/parallelism-light.pdf",
-            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/parallelism-dark.html",
-            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/parallelism-dark.pdf",
+            "title": "The Rust Ecosystem",
+            "agenda": [
+                {
+                    "title": "The Rust Toolchain",
+                    "sub": [
+                        { "title": "`rustup`" },
+                        { "title": "`clippy`" },
+                        { "title": "`rustfmt`" }
+                    ]
+                },
+                {
+                    "title": "Performance and Analysis",
+                    "sub": [
+                        { "title": "Criterion" },
+                        { "title": "Flamegraphs" }
+                    ]
+                },
+                {
+                    "title": "Reading Documentation",
+                    "sub": [
+                        { "title": "`rand`" },
+                        { "title": "`time` vs `chrono`" },
+                        { "title": "`anyhow` vs `thiserror`" }
+                    ]
+                }
+            ],
+            "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/ecosystem-light.html",
+            "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/ecosystem-light.pdf",
+            "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/ecosystem-dark.html",
+            "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/ecosystem-dark.pdf",
             "hw_handout": "",
             "hw_writeup": "",
             "hw_released": false,
-            "details_released": false,
-            "slides_released": false,
+            "details_released": true,
+            "slides_released": true,
             "extras": [
                 {
-                    "title": "Something",
-                    "link": "somelink"
+                    "title": "The rustup book",
+                    "link": "https://rust-lang.github.io/rustup/index.html"
+                },
+                {
+                    "title": "Criterion.rs Documentation",
+                    "link": "https://bheisler.github.io/criterion.rs/book/"
+                },
+                {
+                    "title": "Curated Rust Ecosystem Crates",
+                    "link": "https://blessed.rs/crates"
                 }
             ]
         },
