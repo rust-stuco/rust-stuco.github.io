@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>primerlab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-42caa33d.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="primerlab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.84.0 (9fc6b4312 2025-01-07)" data-channel="1.84.0" data-search-js="search-92e6798f.js" data-settings-js="settings-0f613d39.js" ><script src="../static.files/storage-59e33391.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../primerlab/index.html">primerlab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#98-008-intro-to-the-rust-programming-language" title="98-008: Intro to the Rust Programming Language">98-008: Intro to the Rust Programming Language</a></li><li><a href="#primer-lab" title="Primer Lab">Primer Lab</a></li><li><a href="#setup" title="Setup">Setup</a></li><li><a href="#part-1-exercises" title="Part 1: Exercises">Part 1: Exercises</a></li><li><a href="#part-2-function-implementations" title="Part 2: Function implementations">Part 2: Function implementations</a></li><li><a href="#submission" title="Submission">Submission</a><ul><li><a href="#formatting-and-style" title="Formatting and Style">Formatting and Style</a></li><li><a href="#unix" title="Unix">Unix</a></li><li><a href="#windows" title="Windows">Windows</a></li></ul></li><li><a href="#collaboration" title="Collaboration">Collaboration</a></li><li><a href="#feedback" title="Feedback">Feedback</a></li></ul><h3><a href="#modules">Crate Items</a></h3><ul class="block"><li><a href="#modules" title="Modules">Modules</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>primerlab</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/primerlab/lib.rs.html#1-7">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="primer-lab"><a class="doc-anchor" href="#primer-lab">§</a>Primer Lab</h2>
+<p>The goal of this homework is to make sure that you understand Rust’s basic syntax.</p>
+<p>There is a markdown-rendered version of this writeup on our website that we would recommend using.
+It is automatically generated using Rust’s documentation tooling, and is very similar to Rust
+documentation that you will find in the wild!</p>
+<p>We recommend you make use of the <a href="https://doc.rust-lang.org/book/">Rust Book</a> chapters 1-3 for this
+homework, as we consider the book the “textbook” of this course. It’s generally easy to follow along
+with, and would make handy reference material for the homeworks in this course.</p>
+<p>We’ve tried to calibrate this homework to take around an hour, so if you are spending much more than
+that, please let us know! This time bound does <em>not</em> include setting up Rust on your machine, so if
+you have trouble with installing Rust, make sure to ask for help!</p>
+<h2 id="setup"><a class="doc-anchor" href="#setup">§</a>Setup</h2>
+<p>Make sure you have Rust installed. You should have installed Rust through <code>rustup</code>. To confirm, run:</p>
+<div class="example-wrap"><pre class="language-sh"><code>$ rustup --version
+rustup 1.27.1 (54dd3d00f 2024-04-24)
+$ cargo --version
+cargo 1.84.0 (66221abde 2024-11-19)</code></pre></div>
+<p>Make sure that both of those commands execute successfully, and that they have relatively recent
+dates. If the dates are not recent, you can update <code>rustup</code> by running <code>rustup update</code>.</p>
+<p>If you want a local version of this generated writeup, you can generate it with <code>cargo doc</code>. Once
+you have <code>cargo</code> installed, run <code>cargo doc --open</code> in this directory to generate documentation for
+this homework.</p>
+<div class="example-wrap"><pre class="language-sh"><code>$ cargo doc --open
+Documenting primerlab v0.1.0 (&lt;path&gt;/primerlab)
+   Finished dev [unoptimized + debuginfo] target(s) in 0.11s
+    Opening &lt;path&gt;/primerlab/target/doc/primerlab/index.html</code></pre></div>
+<p>Either way, a version of this writeup will be up on our website!</p>
+<h2 id="part-1-exercises"><a class="doc-anchor" href="#part-1-exercises">§</a>Part 1: Exercises</h2>
+<p>For the first part of this homework, there are 8 files that do not compile under <code>src/exercises</code>.
+You will need to modify each of them in some way to make them compile.</p>
+<p>Run this command in the root of your project (parent directory of the <code>src/</code> folder):</p>
+<div class="example-wrap"><pre class="language-sh"><code>$ cargo test</code></pre></div>
+<p><strong>What does the error say?</strong> Go into <code>src/exercises/fixme1.rs</code> and make the change.</p>
+<p>When you are able to run <code>cargo test</code> without any errors,
+move on to the next exercise by uncommenting <code>pub mod fixme2</code> in <code>src/exercises/mod.rs</code>.
+Go through all 8 of the exercises by uncommenting each of the <code>pub mod fixme_;</code>s,
+and make sure that all the <code>fixme_</code> test cases pass when you run <code>cargo test</code>.</p>
+<p>At this point, you’ll see some other tests failing. You’ll fix those in the next section!</p>
+<h2 id="part-2-function-implementations"><a class="doc-anchor" href="#part-2-function-implementations">§</a>Part 2: Function implementations</h2>
+<p>You will now need to implement 4 relatively simple functions in Rust.
+In <code>src/functions.rs</code>, you will find 4 functions with a <code>todo!()</code> inside of them.
+Replace that <code>todo!()</code> with your implementation, according to the comment specification.</p>
+<p><em>One of the functions requires you to implement it in a certain way,</em>
+<em>so make sure to read those comments carefully.</em></p>
+<p>To test all of your functions, run:</p>
+<div class="example-wrap"><pre class="language-sh"><code>$ cargo test</code></pre></div>
+<p>Note that <code>cargo test</code> will run the tests under <code>src/tests.rs</code>, as well as run each of the
+code examples in the comments.</p>
+<p>If you find that a test is running slowly, run <code>cargo test --release</code>,
+which runs the tests in release mode. This runs the tests with
+compiler optimizations (like the <code>-O2</code> flag for C) and without debug symbols.</p>
+<p>Also, if you want to run a specific test like <code>fn it_works()</code>, run <code>cargo test -- it_works</code>
+with the name of the test instead of <code>it_works</code>.</p>
+<p>If you find yourself struggling, make sure to read the comments! They contain useful hints…</p>
+<h2 id="submission"><a class="doc-anchor" href="#submission">§</a>Submission</h2><h4 id="formatting-and-style"><a class="doc-anchor" href="#formatting-and-style">§</a>Formatting and Style</h4>
+<p>The autograder will run these two commands on your code:</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check</code></pre></div>
+<p><strong>If the autograder detects any errors from the command above, you will not be able to receive</strong>
+<strong>any points.</strong> This may seem strict, but we have decided to follow standard best practices for
+Rust.</p>
+<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>, you ensure
+that anybody reading your code (who is familiar with Rust) will be able to easily navigate your
+code. This can help with diving into an unfamiliar code base, and it also eliminates the need for
+debate with others over style rules, saving time and energy.</p>
+<p>See the official <a href="https://doc.rust-lang.org/stable/style-guide/">guidelines</a> for more information.</p>
+<h4 id="unix"><a class="doc-anchor" href="#unix">§</a>Unix</h4>
+<p>If you are on a unix system, we will try to create a <code>handin.zip</code> automatically for you,
+<strong>but you will need to have <code>zip</code> already installed</strong>.</p>
+<p>If you <em>do not</em> have <code>zip</code> installed on your system, install <code>zip</code> on your machine or use the CMU
+Linux SSH machines. If you need help with this, please reach out to us!</p>
+<p>Once you have <code>zip</code> installed, we will create the <code>handin.zip</code> automatically for you (<em>take a peek</em>
+<em>into <code>build.rs</code> file if you’re interested in how this works!</em>).</p>
+<p>Once you have the <code>handin.zip</code> file, submit it (and only the zip) to Gradescope.</p>
+<h4 id="windows"><a class="doc-anchor" href="#windows">§</a>Windows</h4>
+<p>If you are on a windows system, you can zip the <code>src/</code> folder manually and upload that to
+Gradescope.</p>
+<p>Note that you don’t <em>need</em> to name it <code>handin.zip</code>, you can name it whatever you’d like.</p>
+<h2 id="collaboration"><a class="doc-anchor" href="#collaboration">§</a>Collaboration</h2>
+<p>In general, feel free to discuss homeworks with other students! As long as you do not copy someone
+else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that other students can
+see your questions and answers as well!</p>
+<p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
+<h2 id="feedback"><a class="doc-anchor" href="#feedback">§</a>Feedback</h2>
+<p>We would like to reiterate that you should let us know if you spent anywhere in significant excess
+of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve, so if you find yourself not understanding
+the concepts, you should reach out to us and let us know as well — chances are, you’re not the
+only one!</p>
+</div></details><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="mod" href="exercises/index.html" title="mod primerlab::exercises">exercises</a></div><div class="desc docblock-short">All examples taken from <a href="https://github.com/rust-lang/rustlings/tree/main/exercises">rustlings
+exercises</a></div></li><li><div class="item-name"><a class="mod" href="functions/index.html" title="mod primerlab::functions">functions</a></div></li></ul></section></div></main></body></html>

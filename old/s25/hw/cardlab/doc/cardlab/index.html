@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>cardlab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-42caa33d.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="cardlab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.84.1 (e71f9a9a9 2025-01-27)" data-channel="1.84.1" data-search-js="search-92e6798f.js" data-settings-js="settings-0f613d39.js" ><script src="../static.files/storage-59e33391.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../cardlab/index.html">cardlab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#98-008-intro-to-the-rust-programming-language" title="98-008: Intro to the Rust Programming Language">98-008: Intro to the Rust Programming Language</a></li><li><a href="#card-lab" title="Card Lab">Card Lab</a></li><li><a href="#part-1-modeling" title="Part 1: Modeling">Part 1: Modeling</a><ul><li><a href="#suggested-modeling" title="Suggested Modeling">Suggested Modeling</a></li></ul></li><li><a href="#part-2-implementation" title="Part 2: Implementation">Part 2: Implementation</a></li><li><a href="#submission" title="Submission">Submission</a><ul><li><a href="#formatting-and-style" title="Formatting and Style">Formatting and Style</a></li><li><a href="#unix" title="Unix">Unix</a></li><li><a href="#windows" title="Windows">Windows</a></li></ul></li><li><a href="#collaboration" title="Collaboration">Collaboration</a></li><li><a href="#feedback" title="Feedback">Feedback</a></li></ul><h3><a href="#structs">Crate Items</a></h3><ul class="block"><li><a href="#structs" title="Structs">Structs</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>cardlab</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/cardlab/lib.rs.html#1-7">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="card-lab"><a class="doc-anchor" href="#card-lab">§</a>Card Lab</h2>
+<p>The goal of this homework is to make sure that you understand Rust’s Structs and Enums, semantically
+known as Algebraic Data Types.</p>
+<p>In this homework, you will be modeling and implementing a <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> type, which represents a card in
+a standard deck of 52 playing cards (excluding Jokers).</p>
+<p>In the first part of this homework, you will model a <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> by defining the fields and enums
+needed to represent a playing card. In the second part, you will then implement some comparison
+methods on <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> that somebody using your <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> might find useful (that “somebody” could be
+you in the future!).</p>
+<p><strong>This writeup is relatively long. Please make sure to read the entire writeup, as it contains
+useful information and guidance that will make completing this homework easier!</strong></p>
+<p>The reference solution can be found on our GitHub, but we ask that you first give a solid attempt at
+finishing this homework before looking at the solution. If you find yourself stuck, please do not
+hesitate to reach out to us for help!</p>
+<p>Finally, in a few weeks, we will ask you to use the <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> type that you created in this homework
+to help with a future homework that models a game of Poker. So make sure to spend some time
+understanding what you have written, as you will need to use it in the future!</p>
+<h2 id="part-1-modeling"><a class="doc-anchor" href="#part-1-modeling">§</a>Part 1: Modeling</h2>
+<p>In the file <code>src/card.rs</code>, you will see a unit struct <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> type, as well as several
+implementation blocks. In this first part, you will model the structure of this <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> type.</p>
+<p>There are many “correct” ways to do this, some more favorable than others. For example, you <em>could</em>
+model a <code>Card</code> like this:</p>
+
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">pub struct </span>Card {
+    name: String,
+}
+
+<span class="kw">let </span>three_of_spades = Card::new(String::from(<span class="string">"three of spades"</span>));
+<span class="kw">let </span>king_of_spades = Card::new(String::from(<span class="string">"king of spades"</span>));
+<span class="macro">assert!</span>(three_of_spades &lt; king_of_spades);</code></pre></div>
+<p>If we were to adopt this model, how would we implement the logic saying that “three of spades” is
+less than “king of spades”? It is certainly possible, but it is probably tedious and inefficient.
+And what happens if someone writes <code>Card::new(String::from("fourteen of gold"))</code>? Now you also have
+to handle these edge cases.</p>
+<p>What if we instead assigned a unique integer to each card? Since we only have 52 cards, this should
+be very easy.</p>
+
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">pub struct </span>Card {
+    value: u8,
+}</code></pre></div>
+<p>However, how would we assign integers to specific cards? If we say that the integer 2 represents the
+two of diamonds, and the integer 3 represents the three of diamonds, what should represent the two
+of hearts? Of clubs? And even if you did figure out how to represent them, if someone using your
+card type chooses any value other than the 52 you choose for your <code>Card</code> type, you have now have to
+handle those errors.</p>
+<p>Again, using a single integer is possible, but it might be painful to implement and error prone.</p>
+<h3 id="suggested-modeling"><a class="doc-anchor" href="#suggested-modeling">§</a>Suggested Modeling</h3>
+<p>For this lab, we will show you a model for <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> that <em>eliminates the possibility of incorrect
+state</em>. More specifically, we will model the <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> in such a way that it is impossible to create
+an invalid <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a>.</p>
+<p>This model is purposefully inefficient (prioritizing correctness over performance), so if you would
+like to try using a model different from the one we suggest, go for it!</p>
+<p>Here is the model for <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> that we suggest:</p>
+
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">pub struct </span>Card {
+    rank: Rank,
+    suit: Suit,
+}</code></pre></div>
+<p>Since playing cards are uniquely identified by the pair of <code>(Rank, Suit)</code>, we can model our code in
+the same way. <code>Rank</code> and <code>Suit</code> can also be enums:</p>
+
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">enum </span>Suit {
+    <span class="doccomment">/// The Diamond suit, typically represented by a red ♦ symbol.
+    </span>Diamond,
+    <span class="doccomment">/// The Club suit, typically represented by a black ♣ symbol.
+    </span>Club,
+    <span class="doccomment">/// The Heart suit, typically represented by a red ♥ symbol.
+    </span>Heart,
+    <span class="doccomment">/// The Spade suit, typically represented by a black ♠ symbol.
+    </span>Spade,
+}
+
+<span class="kw">enum </span>Rank {
+    <span class="doccomment">/// A number card (2-10).
+    </span>Number(Number),
+    <span class="doccomment">/// A face card (Ace, King, Queen, Jack).
+    </span>Face(Face),
+}</code></pre></div>
+<p>Modeling <code>Suit</code> is rather straightforward and obvious, but modeling <code>Rank</code> is a little more
+complicated. Because a card can have both a number as its value and as well as a face, we choose to
+represent the <code>Rank</code> type as an enum (sum type) between a <code>Number</code> type and a <code>Face</code> type.</p>
+<p>It is up to you how you want to model <code>Rank</code>. If you choose to follow our model, you will need to
+define a <code>Number</code> and <code>Face</code> type. Additionally, it is likely that you will have to write a lot more
+boilerplate code (as the tradeoff for being more correct).</p>
+<p>Once you have finished modeling <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a>, you can move on to implementation!</p>
+<h2 id="part-2-implementation"><a class="doc-anchor" href="#part-2-implementation">§</a>Part 2: Implementation</h2>
+<p>You will need to implement 5 public methods on <a href="struct.Card.html" title="struct cardlab::Card"><code>Card</code></a> in <code>src/card.rs</code>:</p>
+<ol>
+<li><a href="struct.Card.html#method.new" title="associated function cardlab::Card::new"><code>Card::new</code></a></li>
+<li><a href="struct.Card.html#method.suit_name" title="method cardlab::Card::suit_name"><code>Card::suit_name</code></a></li>
+<li><a href="struct.Card.html#method.rank_value" title="method cardlab::Card::rank_value"><code>Card::rank_value</code></a></li>
+<li><a href="struct.Card.html#method.eq" title="method cardlab::Card::eq"><code>Card::eq</code></a></li>
+<li><a href="struct.Card.html#method.cmp" title="method cardlab::Card::cmp"><code>Card::cmp</code></a></li>
+</ol>
+<p>Click on the links above for more information on the function specification.</p>
+<p>Note that the last two methods (<code>eq</code> and <code>cmp</code>) are methods on standard library <em>traits</em>. We will
+talk more about traits in a few weeks, but for now just treat these methods as normal implementation
+methods. As you can probably guess, <code>eq</code> implements the <code>==</code> operator and <code>cmp</code> implements the
+remaining comparison operators (<code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>&gt;</code>).</p>
+<p>If you go with our modeling above (with the <code>Suit</code> and <code>Rank</code> types), you will find that you want to
+compare two <code>Rank</code> types together. You can copy and paste the <code>impl &lt;Trait&gt; for Card</code> blocks and
+replace the <code>Card</code> for <code>Rank</code> / <code>Suit</code> and implement those methods to allow comparison for the types
+you have defined.</p>
+<p>In other words, you’ll probably want to implement <code>impl PartialEq for Rank</code>, <code>impl Ord for Rank</code>,
+and a few more things. Ask on Piazza or consult the reference solution if you are confused!</p>
+<p><em>We are aware that there is a very easy way to implement the comparison traits with derived traits.
+You technically do not have to manually implement all of the comparison traits yourself.</em></p>
+<p><em>However, we believe that it is instructive to manually write out the implementations so that you
+<strong>fully understand the code you are writing</strong>. If you <strong>do</strong> know how to use derived traits, you are
+free to use them, but we ask that you make sure you understand <strong>exactly</strong> what those macros are
+doing.</em></p>
+<p>Once you finish implementing these 5 methods (and pass all of the unit tests in <code>src/tests.rs</code>), you
+are done!</p>
+<h2 id="submission"><a class="doc-anchor" href="#submission">§</a>Submission</h2><h4 id="formatting-and-style"><a class="doc-anchor" href="#formatting-and-style">§</a>Formatting and Style</h4>
+<p>The autograder will run these two commands on your code:</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check</code></pre></div>
+<p><strong>If the autograder detects any errors from the command above, you will not be able to receive</strong>
+<strong>any points.</strong> This may seem strict, but we have decided to follow standard best practices for
+Rust.</p>
+<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>, you ensure
+that anybody reading your code (who is familiar with Rust) will be able to easily navigate your
+code. This can help with diving into an unfamiliar code base, and it also eliminates the need for
+debate with others over style rules, saving time and energy.</p>
+<p>See the official <a href="https://doc.rust-lang.org/stable/style-guide/">guidelines</a> for more information.</p>
+<h4 id="unix"><a class="doc-anchor" href="#unix">§</a>Unix</h4>
+<p>If you are on a unix system, we will try to create a <code>handin.zip</code> automatically for you,
+<strong>but you will need to have <code>zip</code> already installed</strong>.</p>
+<p>If you <em>do not</em> have <code>zip</code> installed on your system, install <code>zip</code> on your machine or use the CMU
+Linux SSH machines. If you need help with this, please reach out to us!</p>
+<p>Once you have <code>zip</code> installed, we will create the <code>handin.zip</code> automatically for you (<em>take a peek</em>
+<em>into <code>build.rs</code> file if you’re interested in how this works!</em>).</p>
+<p>Once you have the <code>handin.zip</code> file, submit it (and only the zip) to Gradescope.</p>
+<h4 id="windows"><a class="doc-anchor" href="#windows">§</a>Windows</h4>
+<p>If you are on a windows system, you can zip the <code>src/</code> folder manually and upload that to
+Gradescope.</p>
+<p>Note that you don’t <em>need</em> to name it <code>handin.zip</code>, you can name it whatever you’d like.</p>
+<h2 id="collaboration"><a class="doc-anchor" href="#collaboration">§</a>Collaboration</h2>
+<p>In general, feel free to discuss homeworks with other students! As long as you do not copy someone
+else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that other students can
+see your questions and answers as well!</p>
+<p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
+<h2 id="feedback"><a class="doc-anchor" href="#feedback">§</a>Feedback</h2>
+<p>We would like to reiterate that you should let us know if you spent anywhere in significant excess
+of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve, so if you find yourself not understanding
+the concepts, you should reach out to us and let us know as well — chances are, you’re not the
+only one!</p>
+</div></details><h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="struct" href="struct.Card.html" title="struct cardlab::Card">Card</a></div><div class="desc docblock-short">Represents a standard playing card with a suit and a rank.</div></li></ul></section></div></main></body></html>
