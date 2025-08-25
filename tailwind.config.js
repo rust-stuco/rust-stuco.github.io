@@ -33,7 +33,7 @@ module.exports = {
         "qt-action": "url('/assets/img/install-qt-action-bg.jpg')",
         "pittsburgh-test":
           "url('https://upload.wikimedia.org/wikipedia/commons/5/51/Duquesne_Incline_%2850076338942%29_%28cropped%29.jpg')",
-        "rust-s25": "url('/assets/img/crabs.jpg')",
+        "rust-s24": "url('/assets/img/crabs.jpg')",
       },
       colors: {
         "intv-dark": "#0e141c",
