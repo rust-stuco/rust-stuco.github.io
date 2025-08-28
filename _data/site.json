@@ -17,7 +17,7 @@
       "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/introduction-dark.pdf",
       "hw_handout": "/hw/primerlab/primerlab.zip",
       "hw_writeup": "/hw/primerlab/doc/primerlab/index.html",
-      "hw_released": false,
+      "hw_released": true,
       "details_released": true,
       "slides_released": true,
       "extras": [
