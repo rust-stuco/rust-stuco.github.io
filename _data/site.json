@@ -76,7 +76,7 @@
       "hw_handout": "/hw/getownedlab/getownedlab.zip",
       "hw_writeup": "/hw/getownedlab/doc/getownedlab/index.html",
       "hw_released": false,
-      "slides_released": false,
+      "slides_released": true,
       "details_released": true,
       "extras": [
         {
