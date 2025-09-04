@@ -75,7 +75,7 @@
       "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/ownership_p1-dark.pdf",
       "hw_handout": "/hw/getownedlab/getownedlab.zip",
       "hw_writeup": "/hw/getownedlab/doc/getownedlab/index.html",
-      "hw_released": false,
+      "hw_released": true,
       "slides_released": true,
       "details_released": true,
       "extras": [
