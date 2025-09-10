@@ -127,7 +127,7 @@
       "hw_handout": "/hw/cardlab/cardlab.zip",
       "hw_writeup": "/hw/cardlab/doc/cardlab/index.html",
       "hw_released": false,
-      "details_released": false,
+      "details_released": true,
       "slides_released": false,
       "extras": [
         {
