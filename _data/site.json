@@ -128,7 +128,7 @@
       "hw_writeup": "/hw/cardlab/doc/cardlab/index.html",
       "hw_released": false,
       "details_released": true,
-      "slides_released": false,
+      "slides_released": true,
       "extras": [
         {
           "title": "Rust Book Chapter 5",
