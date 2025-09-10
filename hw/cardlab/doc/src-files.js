@@ -1,3 +1,2 @@
-var srcIndex = new Map(JSON.parse('[["cardlab",["",[],["card.rs","lib.rs"]]]]'));
-createSrcSidebar();
-//{"start":36,"fragment_lengths":[40]}
+createSrcSidebar('[["cardlab",["",[],["card.rs","lib.rs"]]]]');
+//{"start":19,"fragment_lengths":[40]}
