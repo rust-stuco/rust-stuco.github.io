@@ -126,7 +126,7 @@
       "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week3/structs_enums-dark.pdf",
       "hw_handout": "/hw/cardlab/cardlab.zip",
       "hw_writeup": "/hw/cardlab/doc/cardlab/index.html",
-      "hw_released": false,
+      "hw_released": true,
       "details_released": true,
       "slides_released": true,
       "extras": [
