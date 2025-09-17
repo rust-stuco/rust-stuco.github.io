@@ -175,7 +175,7 @@
       "hw_handout": "/hw/multilab/multilab.zip",
       "hw_writeup": "/hw/multilab/doc/multilab/index.html",
       "hw_released": false,
-      "details_released": false,
+      "details_released": true,
       "slides_released": false,
       "extras": [
         {
