@@ -50,7 +50,7 @@ jobs:
 
       # When homework files are cached (no changes in homeworks repo),
       # upload the cached files as an artifact. This is necessary because
-      # build-labs and collect-homework jobs get skipped when matrix is empty,
+      # build-labs and collect-labs jobs get skipped when matrix is empty,
       # but build-website still needs the homework files
       - name: Upload cached homework files
         if: steps.cache-homework-build.outputs.cache-hit == 'true'
@@ -67,7 +67,7 @@ jobs:
       matrix:
         include: ${{fromJson(needs.discover-labs.outputs.matrix)}}
     steps:
-      - name: checkout
+      - name: Checkout repository
         uses: actions/checkout@v5
 
       - name: Clone homeworks repository
@@ -103,7 +103,7 @@ jobs:
           name: ${{ matrix.lab }}
           path: hw/${{ matrix.lab }}
 
-  collect-homework:
+  collect-labs:
     needs: [discover-labs, build-labs]
     runs-on: ubuntu-latest
     if: needs.discover-labs.outputs.matrix != '[]'
@@ -137,7 +137,7 @@ jobs:
           path: hw
 
   build-website:
-    needs: [discover-labs, collect-homework]
+    needs: [discover-labs, collect-labs]
     runs-on: ubuntu-latest
     if: always() && !cancelled()
     permissions:
@@ -147,7 +147,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: checkout
+      - name: Checkout repository
         uses: actions/checkout@v5
 
       - name: Download homework artifacts
