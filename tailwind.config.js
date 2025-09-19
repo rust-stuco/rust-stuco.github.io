@@ -5,7 +5,10 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   darkMode: "class",
-  content: ["./**/*.{html,js,njk,md}"],
+  content: [
+    "./**/*.{html,js,njk,md}",
+    "!./node_modules/**/*"
+  ],
   plugins: [
     require("@tailwindcss/typography"),
     require("@kamona/tailwindcss-perspective"),
