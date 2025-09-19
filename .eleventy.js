@@ -1,4 +1,5 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const EleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 const markdownIt = require("markdown-it")
 const markdownItAttrs = require("markdown-it-attrs")
@@ -13,7 +14,8 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownLib)
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(EleventyNavigationPlugin);
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);  
 
   // Copy assets
   eleventyConfig.addPassthroughCopy("assets/img/**/*")
@@ -34,4 +36,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("toISO", (dateObj) => {
     return dateObj.toISOString().substring(0, 10);
   });
+
+  return {
+    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || ""
+  }
 };

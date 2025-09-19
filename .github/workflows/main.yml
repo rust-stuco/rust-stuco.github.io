@@ -162,14 +162,12 @@ jobs:
 
       - name: Build website
         run: |
+          # Only set path prefix for forks
+          if [ "${{ github.repository }}" != "rust-stuco/rust-stuco.github.io" ]; then
+            export ELEVENTY_PATH_PREFIX="/${{ github.event.repository.name }}/"
+          fi
           bun install
           bun run build
-
-      - name: Move assets for fork deployment
-        if: github.repository != 'rust-stuco/rust-stuco.github.io'
-        run: |
-          mkdir -p _site/rust-stuco.github.io
-          find _site -maxdepth 1 ! -path _site ! -name rust-stuco.github.io -exec cp -r {} _site/rust-stuco.github.io/ \;
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
