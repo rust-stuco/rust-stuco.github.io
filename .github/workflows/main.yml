@@ -11,11 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
+      homeworks-hash: ${{ steps.homeworks-hash.outputs.hash }}
     steps:
       - name: checkout
         uses: actions/checkout@v5
 
+      - name: Get homeworks repository commit hash
+        id: homeworks-hash
+        run: |
+          HOMEWORKS_HASH=$(git ls-remote https://github.com/ap-1/homeworks.git HEAD | cut -f1)
+          echo "hash=$HOMEWORKS_HASH" >> $GITHUB_OUTPUT
+
+      - name: Cache complete homework build
+        id: cache-homework-build
+        uses: actions/cache@v4
+        with:
+          path: hw
+          key: homework-complete-${{ steps.homeworks-hash.outputs.hash }}
+
       - name: Clone homeworks repository
+        if: steps.cache-homework-build.outputs.cache-hit != 'true'
         run: |
           git clone --depth 1 https://github.com/ap-1/homeworks.git homeworks-temp
 
@@ -23,14 +38,27 @@ jobs:
         id: set-matrix
         run: |
           chmod +x .github/scripts/discover-labs.sh
-          matrix=$(.github/scripts/discover-labs.sh)
+          if [ -d "homeworks-temp" ]; then
+            matrix=$(.github/scripts/discover-labs.sh)
+          else
+            # Use empty matrix to skip lab building
+            matrix="[]"
+          fi
           echo "matrix<<EOF" >> $GITHUB_OUTPUT
           echo "$matrix" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
+      - name: Upload cached homework files
+        if: steps.cache-homework-build.outputs.cache-hit == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: homework-cache-complete
+          path: hw
+
   build-labs:
     needs: discover-labs
     runs-on: ubuntu-latest
+    if: needs.discover-labs.outputs.matrix != '[]'
     strategy:
       matrix:
         include: ${{fromJson(needs.discover-labs.outputs.matrix)}}
@@ -88,6 +116,14 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           path: hw
+
+      - name: Check if we have complete homework cache
+        run: |
+          if [ -d "hw/homework-cache-complete" ]; then
+            echo "Using complete homework cache"
+            mv hw/homework-cache-complete/* hw/ || true
+            rmdir hw/homework-cache-complete || true
+          fi
 
       - name: Reorganize artifacts
         run: |
