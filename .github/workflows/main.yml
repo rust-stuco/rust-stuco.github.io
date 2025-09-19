@@ -103,6 +103,10 @@ jobs:
 
       - name: Build website
         run: |
+          # Set path prefix for forks
+          if [ "${{ github.repository }}" != "rust-stuco/rust-stuco.github.io" ]; then
+            export ELEVENTY_PATH_PREFIX="/${{ github.event.repository.name }}/"
+          fi
           npm install
           npm run-script build
 

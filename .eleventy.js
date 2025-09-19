@@ -13,7 +13,6 @@ const markdownItOptions = {
 
 const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
 
-
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownLib)
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -37,4 +36,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("toISO", (dateObj) => {
     return dateObj.toISOString().substring(0, 10);
   });
+
+  return {
+    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || ""
+  };
 };
