@@ -143,12 +143,13 @@ jobs:
       - name: Build website
         run: |
           bun install
-          # Use separate build script for forked repositories
-          if [ "${{ github.repository }}" != "rust-stuco/rust-stuco.github.io" ]; then
-            bun run build:fork
-          else
-            bun run build
-          fi
+          bun run build
+
+      - name: Move assets for fork deployment
+        if: github.repository != 'rust-stuco/rust-stuco.github.io'
+        run: |
+          mkdir -p _site/rust-stuco.github.io
+          find _site -maxdepth 1 ! -path _site ! -name rust-stuco.github.io -exec cp -r {} _site/rust-stuco.github.io/ \;
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
