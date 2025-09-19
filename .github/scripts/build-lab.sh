@@ -37,7 +37,7 @@ cd "$LAB_PATH"
 
 # Generate documentation
 echo "  Generating documentation for $LAB_NAME..."
-if cargo doc --no-deps --document-private-items; then
+if cargo doc --document-private-items; then
     if [ -d "target/doc" ]; then
         doc_dir="$OUTPUT_DIR/doc"
         mkdir -p "$doc_dir"
