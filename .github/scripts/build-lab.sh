@@ -39,7 +39,7 @@ cd "$LAB_PATH"
 echo "  Generating documentation for $LAB_NAME..."
 if cargo doc --no-deps --document-private-items; then
     if [ -d "target/doc" ]; then
-        local doc_dir="$OUTPUT_DIR/doc"
+        doc_dir="$OUTPUT_DIR/doc"
         mkdir -p "$doc_dir"
         cp -r target/doc/. "$doc_dir/"
 
