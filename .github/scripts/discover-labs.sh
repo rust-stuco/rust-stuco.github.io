@@ -41,13 +41,13 @@ for week_dir in week*/; do
 done
 
 # Output as JSON array for GitHub Actions matrix
-echo "{"
-echo "  \"include\": ["
+json_output="["
 for i in "${!labs[@]}"; do
-    echo "    ${labs[$i]}"
+    json_output+="${labs[$i]}"
     if [ $i -lt $((${#labs[@]} - 1)) ]; then
-        echo ","
+        json_output+=","
     fi
 done
-echo "  ]"
-echo "}"
+json_output+="]"
+
+echo "$json_output"

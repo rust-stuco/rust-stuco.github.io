@@ -24,13 +24,16 @@ jobs:
         run: |
           chmod +x .github/scripts/discover-labs.sh
           matrix=$(.github/scripts/discover-labs.sh)
-          echo "matrix=$matrix" >> $GITHUB_OUTPUT
+          echo "matrix<<EOF" >> $GITHUB_OUTPUT
+          echo "$matrix" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
   build-labs:
     needs: discover-labs
     runs-on: ubuntu-latest
     strategy:
-      matrix: ${{fromJson(needs.discover-labs.outputs.matrix)}}
+      matrix:
+        include: ${{fromJson(needs.discover-labs.outputs.matrix)}}
     steps:
       - name: checkout
         uses: actions/checkout@v5
