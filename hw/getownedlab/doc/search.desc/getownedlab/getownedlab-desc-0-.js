@@ -1,1 +1,0 @@
-searchState.loadedDescShard("getownedlab", 0, "98-008: Intro to the Rust Programming Language\nAll examples taken from rustlings exercises and practice.rs\nAll examples taken from practice.rs\nAll examples taken from rustlings exercises")
