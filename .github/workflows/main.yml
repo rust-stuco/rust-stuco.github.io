@@ -48,11 +48,15 @@ jobs:
           echo "$matrix" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
+      # When homework files are cached (no changes in homeworks repo),
+      # upload the cached files as an artifact. This is necessary because
+      # build-labs and collect-homework jobs get skipped when matrix is empty,
+      # but build-website still needs the homework files
       - name: Upload cached homework files
         if: steps.cache-homework-build.outputs.cache-hit == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: homework-cache-complete
+          name: homework-complete
           path: hw
 
   build-labs:
@@ -99,9 +103,43 @@ jobs:
           name: ${{ matrix.lab }}
           path: hw/${{ matrix.lab }}
 
-  build-website:
-    needs: build-labs
+  collect-homework:
+    needs: [discover-labs, build-labs]
     runs-on: ubuntu-latest
+    if: needs.discover-labs.outputs.matrix != '[]'
+    steps:
+      - name: Download all lab artifacts
+        uses: actions/download-artifact@v5
+        with:
+          path: hw
+
+      - name: Reorganize artifacts  
+        run: |
+          find hw -name "*.zip" -o -name "doc" -type d | while read item; do
+            parent_dir=$(dirname "$item")
+            lab_name=$(basename "$parent_dir")
+            if [ "$parent_dir" != "hw/$lab_name" ]; then
+              mkdir -p "hw/$lab_name"
+              mv "$item" "hw/$lab_name/"
+            fi
+          done
+
+      - name: Cache complete homework build
+        uses: actions/cache/save@v4
+        with:
+          path: hw
+          key: homework-complete-${{ needs.discover-labs.outputs.homeworks-hash }}
+
+      - name: Upload complete homework artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: homework-complete
+          path: hw
+
+  build-website:
+    needs: [discover-labs, collect-homework]
+    runs-on: ubuntu-latest
+    if: always() && !cancelled()
     permissions:
       pages: write
       id-token: write
@@ -112,30 +150,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v5
 
-      - name: Download all lab artifacts
+      - name: Download homework artifacts
         uses: actions/download-artifact@v5
         with:
+          name: homework-complete
           path: hw
-
-      - name: Check if we have complete homework cache
-        run: |
-          if [ -d "hw/homework-cache-complete" ]; then
-            echo "Using complete homework cache"
-            mv hw/homework-cache-complete/* hw/ || true
-            rmdir hw/homework-cache-complete || true
-          fi
-
-      - name: Reorganize artifacts
-        run: |
-          # Move artifacts from nested structure to flat structure
-          find hw -name "*.zip" -o -name "doc" -type d | while read item; do
-            parent_dir=$(dirname "$item")
-            lab_name=$(basename "$parent_dir")
-            if [ "$parent_dir" != "hw/$lab_name" ]; then
-              mkdir -p "hw/$lab_name"
-              mv "$item" "hw/$lab_name/"
-            fi
-          done
+        continue-on-error: true
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
