@@ -4,9 +4,11 @@
   "scripts": {
     "start": "npm-run-all -p dev:*",
     "build": "run-s build:*",
+    "build:fork": "run-s build:11ty:fork build:css",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i assets/css/main.css -o _site/assets/css/main.css --watch",
     "build:11ty": "eleventy",
+    "build:11ty:fork": "eleventy --pathprefix=/rust-stuco.github.io/",
     "build:css": "tailwindcss -i assets/css/main.css -o _site/assets/css/main.css"
   },
   "repository": {

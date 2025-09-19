@@ -101,14 +101,18 @@ jobs:
             fi
           done
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Build website
         run: |
-          # Set path prefix for forks
+          bun install
+          # Use separate build script for forked repositories
           if [ "${{ github.repository }}" != "rust-stuco/rust-stuco.github.io" ]; then
-            export ELEVENTY_PATH_PREFIX="/${{ github.event.repository.name }}/"
+            bun run build:fork
+          else
+            bun run build
           fi
-          npm install
-          npm run-script build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
