@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>filterlab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="filterlab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.89.0 (29483883e 2025-08-04)" data-channel="1.89.0" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js" ><script src="../static.files/storage-4e99c027.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-fd3af306.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../filterlab/index.html">filterlab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#98-008-intro-to-the-rust-programming-language" title="98-008: Intro to the Rust Programming Language">98-008: Intro to the Rust Programming Language</a></li><li><a href="#filter-lab" title="Filter Lab">Filter Lab</a></li><li><a href="#bloom-filters" title="Bloom Filters">Bloom Filters</a><ul><li><a href="#bit-vector" title="Bit Vector">Bit Vector</a></li><li><a href="#bloom-filter" title="Bloom Filter">Bloom Filter</a></li><li><a href="#where-to-start" title="Where To Start…">Where To Start…</a></li></ul></li><li><a href="#grading" title="Grading">Grading</a></li><li><a href="#submission" title="Submission">Submission</a><ul><li><a href="#formatting-and-style" title="Formatting and Style">Formatting and Style</a></li><li><a href="#unix" title="Unix">Unix</a></li><li><a href="#windows" title="Windows">Windows</a></li></ul></li><li><a href="#collaboration" title="Collaboration">Collaboration</a></li><li><a href="#feedback" title="Feedback">Feedback</a></li></ul><h3><a href="#functions">Crate Items</a></h3><ul class="block"><li><a href="#functions" title="Functions">Functions</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>filterlab</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/filterlab/lib.rs.html#1-16">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="filter-lab"><a class="doc-anchor" href="#filter-lab">§</a>Filter Lab</h2>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>filterlab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-46f98efaafac5295.ttf.woff2,FiraSans-Regular-018c141bf0843ffd.woff2,FiraSans-Medium-8f9a781e4970d388.woff2,SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2,SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../static.files/rustdoc-c5d6553a23f1e5a6.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="filterlab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.81.0 (eeb90cda1 2024-09-04)" data-channel="1.81.0" data-search-js="search-d234aafac6c221dd.js" data-settings-js="settings-4313503d2e1961c2.js" ><script src="../static.files/storage-118b08c4c78b968e.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-d2fab2bf619172d3.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-df360f571f6edeae.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../filterlab/index.html">filterlab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section><ul class="block"><li><a href="#functions">Functions</a></li></ul></section></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <a class="mod" href="#">filterlab</a><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><span class="out-of-band"><a class="src" href="../src/filterlab/lib.rs.html#1-16">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="filter-lab"><a class="doc-anchor" href="#filter-lab">§</a>Filter Lab</h2>
 <p>The goal of this homework is to tie together several of the things we have talked about over the
 past few weeks. This includes code-related topics (such as structs, standard collections, and
 generics), but we also want to make sure you understand some of the development tools that Rust
@@ -96,55 +96,58 @@ this lab. We obviously cannot prevent you from using them, but you limit your ab
 relying on something else to write code for you.</p>
 <h2 id="grading"><a class="doc-anchor" href="#grading">§</a>Grading</h2>
 <p>There are 4 integration tests located in the <code>tests</code> directory, and 2 benchmarks located in the
-<code>benches</code> directory. You should aim to pass all 4 integration tests and perform roughly the same or
-better than our reference solution.</p>
+<code>benches</code> directory. To get full credit on this assignment, you must pass all 4 integration tests
+and perform roughly the same or better than our reference solution (by roughly the same, we mean
+it just has to do better than half the performance of our purposefully slow solution).</p>
 <p>On Gradescope, the write benchmark takes approximately 7 microseconds, and the read benchmark takes
 approximately 19 microseconds (as of 11/6/24).</p>
 <p>Ideally, your implementation should be faster since our reference solution is purposefully slow.
 However, we will be lenient with grading this, and as long as you made an effort to try and make it
 faster, you will likely get full credit.</p>
-<p>We will be manually grading your submission. We will be looking at he robustness of your code (does
-your code run without modifications), correctness of your feature, the quality of your tests,
-and general style (documentation and comments).</p>
-<p>The way we grade this assignment will be different from almost every Computer Science course here at
-CMU, where grading is mainly based on an autograder, and maybe a handful of points deductions for
-style. Instead, we will be looking at your code wholistically, judging it based on how people expect
-you to write code <em>outside</em> of school.</p>
-<p>This practice is taken from CMU’s Operating Systems course,
-<a href="https://www.cs.cmu.edu/~410/">15-410/615</a>.</p>
+<h2 id="review"><a class="doc-anchor" href="#review">§</a>Review</h2>
+<p>This semester, we are going to attempt an in-person peer review session in our last lecture!</p>
+<p>Since you have almost full agency on how you design your bloom filter, we want to make sure you have
+the opportunity to not only look at someone else’s implementation, but also have someone else review
+the code that you write and the decisions that you made.</p>
+<p>You will be able to gain extra credit points just by being present, and additional points based on
+the review you give and receive.</p>
+<p>More details to come soon!</p>
 <h2 id="submission"><a class="doc-anchor" href="#submission">§</a>Submission</h2><h4 id="formatting-and-style"><a class="doc-anchor" href="#formatting-and-style">§</a>Formatting and Style</h4>
 <p>The autograder will run these two commands on your code:</p>
-<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check</code></pre></div>
-<p><strong>If the autograder detects any errors from the command above, you will not be able to receive</strong>
-<strong>any points.</strong> This may seem strict, but we have decided to follow standard best practices for
-Rust.</p>
-<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>, you ensure
-that anybody reading your code (who is familiar with Rust) will be able to easily navigate your
-code. This can help with diving into an unfamiliar code base, and it also eliminates the need for
-debate with others over style rules, saving time and energy.</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check
+</code></pre></div>
+<p>If the autograder detects any errors from the command above,
+you will not be able to receive any points. This may seem strict, but we have decided to follow
+standard best practices for Rust.</p>
+<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>,
+you ensure that anybody reading your code (who is familiar with Rust) will be
+able to easily navigate your code. This can help with diving into an unfamiliar code base,
+and it also eliminates the need for debate with others over style rules, saving time and energy.</p>
 <p>See the official <a href="https://doc.rust-lang.org/stable/style-guide/">guidelines</a> for more information.</p>
 <h4 id="unix"><a class="doc-anchor" href="#unix">§</a>Unix</h4>
 <p>If you are on a unix system, we will try to create a <code>handin.zip</code> automatically for you,
 <strong>but you will need to have <code>zip</code> already installed</strong>.</p>
-<p>If you <em>do not</em> have <code>zip</code> installed on your system, install <code>zip</code> on your machine or use the CMU
-Linux SSH machines. If you need help with this, please reach out to us!</p>
-<p>Once you have <code>zip</code> installed, we will create the <code>handin.zip</code> automatically for you (<em>take a peek</em>
-<em>into <code>build.rs</code> file if you’re interested in how this works!</em>).</p>
-<p>Once you have the <code>handin.zip</code> file, submit it (and only the zip) to Gradescope.</p>
+<p>If you <em>do not</em> have <code>zip</code> installed on your system,
+install <code>zip</code> on your machine or use the CMU Linux SSH machines.
+If you need help with this, please reach out to us!</p>
+<p>Once you have <code>zip</code> installed, we will create the <code>handin.zip</code> automatically for you
+(<em>take a peek into <code>build.rs</code> if you’re interested in how this works!</em>).</p>
+<p>Once you have the <code>handin.zip</code> file, submit it to Gradescope.</p>
 <h4 id="windows"><a class="doc-anchor" href="#windows">§</a>Windows</h4>
-<p>If you are on a windows system, you can zip the <code>src/</code> folder manually and upload that to
-Gradescope.</p>
+<p>If you are on a windows system, you can zip the <code>src/</code> folder manually
+and upload that to Gradescope.</p>
 <p>Note that you don’t <em>need</em> to name it <code>handin.zip</code>, you can name it whatever you’d like.</p>
 <h2 id="collaboration"><a class="doc-anchor" href="#collaboration">§</a>Collaboration</h2>
-<p>In general, feel free to discuss homeworks with other students! As long as you do not copy someone
-else’s work, any communication is fair game.</p>
-<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that other students can
-see your questions and answers as well!</p>
+<p>In general, feel free to discuss homeworks with other students!
+As long as you do not copy someone else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that
+other students can see your questions and answers as well!</p>
 <p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
 <h2 id="feedback"><a class="doc-anchor" href="#feedback">§</a>Feedback</h2>
-<p>We would like to reiterate that you should let us know if you spent anywhere in significant excess
-of an hour on this homework.</p>
-<p>In addition, Rust has a notoriously steep learning curve, so if you find yourself not understanding
-the concepts, you should reach out to us and let us know as well — chances are, you’re not the
-only one!</p>
-</div></details><h2 id="functions" class="section-header">Functions<a href="#functions" class="anchor">§</a></h2><dl class="item-table"><dt><a class="fn" href="fn.add.html" title="fn filterlab::add">add</a></dt></dl></section></div></main></body></html>
+<p>We would like to reiterate that you should let us know if you spent
+anywhere in significant excess of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve,
+so if you find yourself not understanding the concepts,
+you should reach out to us and let us know as well —
+chances are, you’re not the only one!</p>
+</div></details><h2 id="functions" class="section-header">Functions<a href="#functions" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="fn" href="fn.add.html" title="fn filterlab::add">add</a></div></li></ul></section></div></main></body></html>

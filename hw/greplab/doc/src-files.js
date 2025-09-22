@@ -1,2 +1,3 @@
-createSrcSidebar('[["greplab",["",[],["lib.rs"]]]]');
-//{"start":19,"fragment_lengths":[30]}
+var srcIndex = new Map(JSON.parse('[["greplab",["",[],["lib.rs"]]]]'));
+createSrcSidebar();
+//{"start":36,"fragment_lengths":[30]}

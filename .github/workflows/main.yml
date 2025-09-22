@@ -150,6 +150,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Clean existing homework folder
+        run: rm -rf hw
+
       - name: Download homework artifacts
         uses: actions/download-artifact@v5
         with:
