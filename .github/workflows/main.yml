@@ -1,25 +1,185 @@
-# On every push this script is executed
 on: 
   push:
   workflow_dispatch:
+  repository_dispatch:
+    types: [homework-update]
+
 name: Build and deploy GH Pages
+
 jobs:
-  build:
+  discover-labs:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      homeworks-hash: ${{ steps.homeworks-hash.outputs.hash }}
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
-      - name: big build
+      - name: Get homeworks repository commit hash
+        id: homeworks-hash
         run: |
-          npm install
-          npm run-script build
+          HOMEWORKS_HASH=$(git ls-remote https://github.com/ap-1/homeworks.git HEAD | cut -f1)
+          echo "hash=$HOMEWORKS_HASH" >> $GITHUB_OUTPUT
 
-      - name: Push to gh-pages branch
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: gh-pages # The branch name where you want to push the assets
-          FOLDER: _site # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Build: ({sha}) {msg}" # The commit message
+      - name: Cache complete homework build
+        id: cache-homework-build
+        uses: actions/cache@v4
+        with:
+          path: hw
+          key: homework-complete-${{ steps.homeworks-hash.outputs.hash }}
+
+      - name: Clone homeworks repository
+        if: steps.cache-homework-build.outputs.cache-hit != 'true'
+        run: |
+          git clone --depth 1 https://github.com/ap-1/homeworks.git homeworks-temp
+
+      - name: Discover labs
+        id: set-matrix
+        run: |
+          chmod +x .github/scripts/discover-labs.sh
+          if [ -d "homeworks-temp" ]; then
+            matrix=$(.github/scripts/discover-labs.sh)
+          else
+            # Use empty matrix to skip lab building
+            matrix="[]"
+          fi
+          echo "matrix<<EOF" >> $GITHUB_OUTPUT
+          echo "$matrix" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      # When homework files are cached (no changes in homeworks repo),
+      # upload the cached files as an artifact. This is necessary because
+      # build-labs and collect-labs jobs get skipped when matrix is empty,
+      # but build-website still needs the homework files
+      - name: Upload cached homework files
+        if: steps.cache-homework-build.outputs.cache-hit == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: homework-complete
+          path: hw
+
+  build-labs:
+    needs: discover-labs
+    runs-on: ubuntu-latest
+    if: needs.discover-labs.outputs.matrix != '[]'
+    strategy:
+      matrix:
+        include: ${{fromJson(needs.discover-labs.outputs.matrix)}}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Clone homeworks repository
+        run: |
+          git clone --depth 1 https://github.com/ap-1/homeworks.git homeworks-temp
+
+      - name: Get lab content hash
+        id: lab-hash
+        run: |
+          lab_hash=$(find homeworks-temp/${{ matrix.week }}/${{ matrix.lab }} -type f \( -name "*.rs" -o -name "*.toml" -o -name "*.md" \) -exec sha256sum {} \; 2>/dev/null | sort | sha256sum | cut -d' ' -f1)
+          echo "hash=$lab_hash" >> $GITHUB_OUTPUT
+
+      - name: Cache lab artifacts
+        uses: actions/cache@v4
+        with:
+          path: hw/${{ matrix.lab }}
+          key: lab-${{ matrix.lab }}-${{ steps.lab-hash.outputs.hash }}
+
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: Build lab documentation
+        run: |
+          chmod +x .github/scripts/build-lab.sh
+          .github/scripts/build-lab.sh ${{ matrix.week }} ${{ matrix.lab }}
+
+      - name: Upload lab artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.lab }}
+          path: hw/${{ matrix.lab }}
+
+  collect-labs:
+    needs: [discover-labs, build-labs]
+    runs-on: ubuntu-latest
+    if: needs.discover-labs.outputs.matrix != '[]'
+    steps:
+      - name: Download all lab artifacts
+        uses: actions/download-artifact@v5
+        with:
+          path: hw
+
+      - name: Reorganize artifacts  
+        run: |
+          find hw -name "*.zip" -o -name "doc" -type d | while read item; do
+            parent_dir=$(dirname "$item")
+            lab_name=$(basename "$parent_dir")
+            if [ "$parent_dir" != "hw/$lab_name" ]; then
+              mkdir -p "hw/$lab_name"
+              mv "$item" "hw/$lab_name/"
+            fi
+          done
+
+      - name: Cache complete homework build
+        uses: actions/cache/save@v4
+        with:
+          path: hw
+          key: homework-complete-${{ needs.discover-labs.outputs.homeworks-hash }}
+
+      - name: Upload complete homework artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: homework-complete
+          path: hw
+
+  build-website:
+    needs: [discover-labs, collect-labs]
+    runs-on: ubuntu-latest
+    if: always() && !cancelled()
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Clean existing homework folder
+        run: rm -rf hw
+
+      - name: Download homework artifacts
+        uses: actions/download-artifact@v5
+        with:
+          name: homework-complete
+          path: hw
+        continue-on-error: true
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Build website
+        run: |
+          # Only set path prefix for forks
+          if [ "${{ github.repository }}" != "rust-stuco/rust-stuco.github.io" ]; then
+            export ELEVENTY_PATH_PREFIX="/${{ github.event.repository.name }}/"
+          fi
+          bun install
+          bun run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
