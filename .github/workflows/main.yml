@@ -87,7 +87,7 @@ jobs:
           key: lab-${{ matrix.lab }}-${{ steps.lab-hash.outputs.hash }}
 
       - name: Setup Rust
-        uses: actions-rs/toolchain@v1
+        uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
           override: true
