@@ -1,6 +1,6 @@
 {
   "name": "rust-stuco-website",
-  "description": "Website for the Rust StuCo (98-008)",
+  "description": "Website for Rust StuCo (98-008)",
   "scripts": {
     "start": "npm-run-all -p dev:*",
     "build": "run-s build:*",
