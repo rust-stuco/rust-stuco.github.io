@@ -19,7 +19,7 @@ jobs:
       - name: Get homeworks repository commit hash
         id: homeworks-hash
         run: |
-          HOMEWORKS_HASH=$(git ls-remote https://github.com/ap-1/homeworks.git HEAD | cut -f1)
+          HOMEWORKS_HASH=$(git ls-remote https://github.com/rust-stuco/homeworks.git HEAD | cut -f1)
           echo "hash=$HOMEWORKS_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache complete homework build
@@ -32,7 +32,7 @@ jobs:
       - name: Clone homeworks repository
         if: steps.cache-homework-build.outputs.cache-hit != 'true'
         run: |
-          git clone --depth 1 https://github.com/ap-1/homeworks.git homeworks-temp
+          git clone --depth 1 https://github.com/rust-stuco/homeworks.git homeworks-temp
 
       - name: Discover labs
         id: set-matrix
@@ -72,7 +72,7 @@ jobs:
 
       - name: Clone homeworks repository
         run: |
-          git clone --depth 1 https://github.com/ap-1/homeworks.git homeworks-temp
+          git clone --depth 1 https://github.com/rust-stuco/homeworks.git homeworks-temp
 
       - name: Get lab content hash
         id: lab-hash

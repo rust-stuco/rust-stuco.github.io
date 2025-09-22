@@ -2,7 +2,7 @@
 
 set -e
 
-HOMEWORKS_REPO="https://github.com/ap-1/homeworks.git"
+HOMEWORKS_REPO="https://github.com/rust-stuco/homeworks.git"
 HOMEWORKS_DIR="./homeworks-temp"
 HW_OUTPUT_DIR="./hw"
 
