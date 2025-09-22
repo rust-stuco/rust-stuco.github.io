@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>greplab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="greplab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.89.0 (29483883e 2025-08-04)" data-channel="1.89.0" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js" ><script src="../static.files/storage-4e99c027.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-fd3af306.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../greplab/index.html">greplab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#98-008-intro-to-the-rust-programming-language" title="98-008: Intro to the Rust Programming Language">98-008: Intro to the Rust Programming Language</a></li><li><a href="#grep-lab" title="Grep Lab">Grep Lab</a></li><li><a href="#requirements" title="Requirements">Requirements</a></li><li><a href="#extra-features" title="Extra Features">Extra Features</a></li><li><a href="#code-review-and-grading" title="Code Review and Grading">Code Review and Grading</a></li><li><a href="#submission" title="Submission">Submission</a></li><li><a href="#collaboration" title="Collaboration">Collaboration</a></li><li><a href="#feedback" title="Feedback">Feedback</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>greplab</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/greplab/lib.rs.html#1">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="grep-lab"><a class="doc-anchor" href="#grep-lab">§</a>Grep Lab</h2>
+<p>The goal of this homework is to make sure you know how to create a command line tool in Rust, as
+well as how to write unit tests for your programs.</p>
+<p>This homework is going to be <em>very</em> different from other homeworks. There is no autograder, and we
+will be <strong>manually grading your submission for not just correctness but also code quality and
+robustness through a code review</strong>.</p>
+<p><strong>For this homework, you will follow
+<a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Chapter 12</a> of the Rust Book and create
+a project called <code>minigrep</code></strong>. Follow the hyperlink and go through all of
+<a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Chapter 12</a>, building <code>minigrep</code> as you
+go along.</p>
+<p>There will be no handout for this homework. Instead, run <code>cargo new minigrep</code> in your terminal to
+get started!</p>
+<p>We encourage you to not skim through the book and blindly copy and paste any code you see. On top of
+asking you to write robust code, we will require one “extra” thing from your submission, which will
+check if you actually understand what you are pasting into your submission.</p>
+<h2 id="requirements"><a class="doc-anchor" href="#requirements">§</a>Requirements</h2>
+<p>You must add at least 1 additional feature to <code>minigrep</code> on top of the functionality described in
+the Book. Given this requirement, it will be more efficient for you to read the (relatively short)
+<a href="https://doc.rust-lang.org/book/ch12-00-an-io-project.html">Chapter 12</a> in its entirety, rather than
+copy and paste everything and then reverse engineer. See the <a href="#extra-features">Extra Features</a>
+section below for some potential features you could add. You must document this feature as a
+documentation comment (we will run <code>cargo doc</code> on your submission when we grade it, so it the
+documentation should be in the root of your library crate).</p>
+<p>Another soft requirement is that you add unit tests. This won’t count towards the first 100 points,
+but will definitely contribute a non-significant amount to your code review score. We care more
+about quality over quantity, but you should have at least 2 types of test cases (general
+functionality, edge cases, potentially even performance benchmarking if you want to go above and
+beyond with <a href="https://bheisler.github.io/criterion.rs/book/">criterion</a>).</p>
+<h2 id="extra-features"><a class="doc-anchor" href="#extra-features">§</a>Extra Features</h2>
+<p>The extra feature you want to add is <strong>up to you</strong> once you’ve finished the base <code>minigrep</code>.</p>
+<ul>
+<li>A very basic feature that you could add is a “count” flag through <code>-c</code> or <code>--count</code>, which changes
+the output to show how many lines a pattern is in, rather than printing out all of the lines.</li>
+<li>Another feature you could implement is searching directories as well as specific files.</li>
+<li>You can add regex support by using the <a href="https://docs.rs/regex/latest/regex/"><code>regex</code></a> crate.</li>
+<li>You can integrate a third-party CLI library such as <a href="https://docs.rs/clap/latest/clap/"><code>clap</code></a> to
+make the command line interface more user-friendly.</li>
+<li>You can integrate a third-party error-handling library such as
+<a href="https://docs.rs/anyhow/latest/anyhow/"><code>anyhow</code></a> or
+<a href="https://docs.rs/thiserror/latest/thiserror/"><code>thiserror</code></a> into your error handling code.</li>
+</ul>
+<p>If you would like to do this with a different third-party crate, please ask us for permission first!</p>
+<p>There are many things that you could do here, so try and be creative if you have time!
+A good source of inspiration would be the man page for
+<a href="https://man7.org/linux/man-pages/man1/grep.1.html"><code>grep</code></a>. If you have more than one additional
+feature, we will probably give you extra credit points in your code review.</p>
+<p>Whatever you choose, make sure you document it by indicating what your feature is in your
+documentation comments. The very first thing we will do when grading your submission will be running
+<code>cargo doc --open</code>, so make sure it is obvious!</p>
+<p>You should also make an effort to include a help message in your binary (triggered by <code>-h</code> or
+<code>--help</code> flags). Make sure to include a description of each flag and its behavior. The help message
+should also be printed if the user gives invalid command line arguments.</p>
+<h2 id="code-review-and-grading"><a class="doc-anchor" href="#code-review-and-grading">§</a>Code Review and Grading</h2>
+<p>Your submission will be manually graded, and we will give you a code review. If you simply follow
+along the tutorial and add a simple additional feature, you will get a full 100 points on this
+assignment. The code review will give you <em>up to</em> 100 extra credit points.</p>
+<p>We are mainly looking at the correctness of your feature (does your feature work how you describe in
+your documentation and does it run without modifications), the robustness of your code (architecture
+and design), the quality of tests you add, and general style (documentation and comments).</p>
+<p>If you simply follow along the tutorial and add a simple additional feature, you will not score
+very well on the code review. A high-quality submission should look <em>very</em> different from the code
+presented in the tutorial.</p>
+<p>The way we grade this assignment will be different from almost every Computer Science course here at
+CMU, where grading is mainly based on an autograder, and maybe a handful of points deductions for
+style. Instead, we will be looking at your code wholistically, judging it based on how people expect
+you to write code <em>outside</em> of school.</p>
+<p>However, we understand that this is still a StuCo, which is why this is all for extra credit.
+Nevertheless, we still believe that this is an important exercise to go through as you will likely
+need to go through this process in the future.</p>
+<p>We are going to be really harsh! This practice is taken from CMU’s Operating Systems course,
+<a href="https://www.cs.cmu.edu/~410/">15-410/605</a>. Please don’t worry if you receive a low code review
+score, and remember that this is all extra credit!</p>
+<h2 id="submission"><a class="doc-anchor" href="#submission">§</a>Submission</h2>
+<p>This time, you will submit the entire <code>minigrep</code> crate to Gradescope (instead of just the <code>src/</code>
+directory)!</p>
+<p>Please do not include the <code>target/</code> subdirectory when you zip the crate’s root folder, either
+manually or with <code>cargo clean</code>. You can always regenerate it with <code>cargo build</code> and <code>cargo test</code>.</p>
+<p>Make sure that your code is fully formatted and linted with the following commands:</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check</code></pre></div>
+<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>, you ensure
+that anybody reading your code (who is familiar with Rust) will be able to easily navigate your
+code. This can help with diving into an unfamiliar code base, and it also eliminates the need for
+debate with others over style rules, saving time and energy.</p>
+<p>See the official <a href="https://doc.rust-lang.org/stable/style-guide/">guidelines</a> for more information.</p>
+<h2 id="collaboration"><a class="doc-anchor" href="#collaboration">§</a>Collaboration</h2>
+<p>In general, feel free to discuss homeworks with other students! As long as you do not copy someone
+else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that other students can
+see your questions and answers as well!</p>
+<p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
+<h2 id="feedback"><a class="doc-anchor" href="#feedback">§</a>Feedback</h2>
+<p>We would like to reiterate that you should let us know if you spent anywhere in significant excess
+of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve, so if you find yourself not understanding
+the concepts, you should reach out to us and let us know as well — chances are, you’re not the
+only one!</p>
+</div></details></section></div></main></body></html>

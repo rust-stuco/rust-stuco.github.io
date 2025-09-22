@@ -1,0 +1,2 @@
+window.ALL_CRATES = ["aho_corasick","cfg_if","either","getrandom","itertools","libc","libm","memchr","num_traits","ppv_lite86","rand","rand_chacha","rand_core","rand_distr","regex","regex_automata","regex_syntax","rowlab","zerocopy"];
+//{"start":21,"fragment_lengths":[14,9,9,12,12,7,7,9,13,13,7,14,12,13,8,17,15,9,11]}

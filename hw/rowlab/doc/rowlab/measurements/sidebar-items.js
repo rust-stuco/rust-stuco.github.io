@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAGIC_NUMBER","STANDARD_DEVIATION","STATIONS_FILE","STATIONS_PATTERN"],"struct":["Measurements","WeatherStations"]};

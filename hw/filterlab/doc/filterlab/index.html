@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>filterlab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="filterlab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.89.0 (29483883e 2025-08-04)" data-channel="1.89.0" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js" ><script src="../static.files/storage-4e99c027.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-fd3af306.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../filterlab/index.html">filterlab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#98-008-intro-to-the-rust-programming-language" title="98-008: Intro to the Rust Programming Language">98-008: Intro to the Rust Programming Language</a></li><li><a href="#filter-lab" title="Filter Lab">Filter Lab</a></li><li><a href="#bloom-filters" title="Bloom Filters">Bloom Filters</a><ul><li><a href="#bit-vector" title="Bit Vector">Bit Vector</a></li><li><a href="#bloom-filter" title="Bloom Filter">Bloom Filter</a></li><li><a href="#where-to-start" title="Where To Start…">Where To Start…</a></li></ul></li><li><a href="#grading" title="Grading">Grading</a></li><li><a href="#submission" title="Submission">Submission</a><ul><li><a href="#formatting-and-style" title="Formatting and Style">Formatting and Style</a></li><li><a href="#unix" title="Unix">Unix</a></li><li><a href="#windows" title="Windows">Windows</a></li></ul></li><li><a href="#collaboration" title="Collaboration">Collaboration</a></li><li><a href="#feedback" title="Feedback">Feedback</a></li></ul><h3><a href="#functions">Crate Items</a></h3><ul class="block"><li><a href="#functions" title="Functions">Functions</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>filterlab</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/filterlab/lib.rs.html#1-16">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="filter-lab"><a class="doc-anchor" href="#filter-lab">§</a>Filter Lab</h2>
+<p>The goal of this homework is to tie together several of the things we have talked about over the
+past few weeks. This includes code-related topics (such as structs, standard collections, and
+generics), but we also want to make sure you understand some of the development tools that Rust
+provides (such as crates, modules, and libraries).</p>
+<p>For this lab, we will only give you testing and benchmarking code. You should see a <code>lib.rs</code> file in
+the <code>src/</code> directory. We want you to structure your code however you would like! If you are unsure,
+you can write all of your code in the <code>lib.rs</code> file and then move things out into different files as
+necessary. If you have trouble setting things up, you can always reference the reference solution on
+our <a href="https://github.com/rust-stuco/homeworks">GitHub</a>.</p>
+<p>We will additionally give you access to the <code>Cargo.toml</code> file for the first time! There are many
+ways to abuse this. For example, you could import someone else’s implementation of a bloom filter,
+or just import someone else’s implementation of a bit vector.</p>
+<p><strong>You are <em>not allowed</em> to import crates that complete this entire lab with minimal effort on your</strong>
+<strong>part. You <em>are</em> allowed to import crates that augment your own implementation in some way.</strong>
+This includes crates that have “better” hashing functions or even crates with SIMD support.</p>
+<p>We will be checking these manually. If you have any questions about this, or if you are wondering
+if a crate is allowed, please let us know!</p>
+<h2 id="bloom-filters"><a class="doc-anchor" href="#bloom-filters">§</a>Bloom Filters</h2>
+<p>In this lab, you will implement a bloom filter! Bloom filters are arguably one of the most important
+probabilistic data structures in all of Computer Systems (and perhaps even Computer Science).</p>
+<p>If you are unfamiliar with bloom filters, there are great resources online explaining how they work.
+Here are three of many good explanations:</p>
+<ul>
+<li><a href="https://youtu.be/kfFacplFY4Y?si=3gYtD9HBE3_mWOh1">YouTube Video</a></li>
+<li><a href="https://systemdesign.one/bloom-filters-explained/">System Design Article</a></li>
+<li><a href="https://brilliant.org/wiki/bloom-filter/">Brilliant Article</a></li>
+</ul>
+<p>TLDR; Bloom filters comprise of 2 main components:</p>
+<ul>
+<li>The bit vector that stores the set bits</li>
+<li>The hashing scheme, which is a combination of:
+<ul>
+<li>The “class” of hash functions</li>
+<li>The number of times you need to hash each element</li>
+</ul>
+</li>
+</ul>
+<h3 id="bit-vector"><a class="doc-anchor" href="#bit-vector">§</a>Bit Vector</h3>
+<p>Since we require 15-122, we will assume you understand how to implement a bit vector. We would
+recommend implementing the bit vector with a vector of bytes, or a <code>Vec&lt;u8&gt;</code>.</p>
+<p>If you are unfamiliar with bit vectors, you can read <a href="https://en.wikipedia.org/wiki/Bit_array">this</a>
+for a high-level summary. Please let us know if you need help with this part! You can always
+reference the reference solution on our <a href="https://github.com/rust-stuco/homeworks">GitHub</a> (as long
+as you are not copying and pasting it verbatim).</p>
+<p>As a reminder, you are <em>not</em> allowed to import someone else’s implementation of a bit vector.</p>
+<h3 id="bloom-filter"><a class="doc-anchor" href="#bloom-filter">§</a>Bloom Filter</h3>
+<p>Once you have implemented a bit vector, you must create a <code>BloomFilter</code> type that has the following
+methods:</p>
+
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="kw">impl</span>&lt;T: Hash&gt; BloomFilter&lt;T&gt; {
+    <span class="doccomment">/// Creates a new `BloomFilter` given the maximum number of elements that will be inserted into
+    /// the filter and a bound on the size of the `BloomFilter`'s bitvector.
+    </span><span class="kw">pub fn </span>new(num_bits: usize, num_hashes: usize) -&gt; <span class="self">Self </span>{ ... }
+
+    <span class="doccomment">/// Inserts an element into the bloom filter.
+    </span><span class="kw">pub fn </span>insert(<span class="kw-2">&amp;mut </span><span class="self">self</span>, elem: <span class="kw-2">&amp;</span>T)  { ... }
+
+    <span class="doccomment">/// Checks if an element might have been previously inserted into the bloom filter.
+    </span><span class="kw">pub fn </span>contains(<span class="kw-2">&amp;</span><span class="self">self</span>, elem: <span class="kw-2">&amp;</span>T) -&gt; bool  { ... }
+}</code></pre></div>
+<p>Notice that the implementation is generic over <code>T</code>. The structure of your <code>BloomFilter</code> should
+probably look like this:</p>
+
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code><span class="doccomment">/// An approximate-membership query / probabilistic data structure that supports point lookups.
+</span><span class="kw">pub struct </span>BloomFilter&lt;T&gt; {
+    &lt;-- other fields go here --&gt;
+
+    <span class="doccomment">/// A type marker used to express that this `BloomFilter` is generic over a single type.
+    ///
+    /// Note that this means this `BloomFilter` is _not_ allowed to "store" elements of different
+    /// types. Each `BloomFilter` instance is specific to a single type (Monomorphization), but the
+    /// type itself is generic.
+    ///
+    /// We could have gone with the approach of making only hashing generic, but for simplicity we
+    /// will only allow the `BloomFilter` to track elements of a single type.
+    </span>phantom: PhantomData&lt;T&gt;,
+}</code></pre></div>
+<p>Your bloom filter must be generic over <em>any</em> type <code>T</code>, only restricting the <em>methods</em> to <code>T: Hash</code>.
+If you are confused by what this means, please review Week 5’s lecture on Traits, or ask us on
+Piazza!</p>
+<h3 id="where-to-start"><a class="doc-anchor" href="#where-to-start">§</a>Where To Start…</h3>
+<p>You’ll definitely want to start by implementing the bit vector. You know how to write unit tests
+now, so throw in a few of those to make sure it is correct!</p>
+<p>Once you finish the bit vector, you may want to write some pseudo code for <code>insert</code> and <code>contains</code>
+so that you know what fields your <code>BloomFilter</code> struct needs.</p>
+<p>Finally, you will have to decide how you want to hash your elements. There are many, many ways to do
+this: some are more efficient, some are easier to implement. Good luck!</p>
+<p>We are purposefully not giving much guidance for this homework. We want this lab to be an exercise
+of writing Rust in the “real world.” This means thinking about how to solve the problem yourself,
+reading documentation, and using online resources to help you program. You will likely either have
+to look up how to hash a value in plain Rust (through the standard library), or you will have to
+look up third-party crates that have similar functionality.</p>
+<p>With that being said, we also <strong>strongly recommend</strong> trying to limit your use of LLMs to help you in
+this lab. We obviously cannot prevent you from using them, but you limit your ability to learn by
+relying on something else to write code for you.</p>
+<h2 id="grading"><a class="doc-anchor" href="#grading">§</a>Grading</h2>
+<p>There are 4 integration tests located in the <code>tests</code> directory, and 2 benchmarks located in the
+<code>benches</code> directory. You should aim to pass all 4 integration tests and perform roughly the same or
+better than our reference solution.</p>
+<p>On Gradescope, the write benchmark takes approximately 7 microseconds, and the read benchmark takes
+approximately 19 microseconds (as of 11/6/24).</p>
+<p>Ideally, your implementation should be faster since our reference solution is purposefully slow.
+However, we will be lenient with grading this, and as long as you made an effort to try and make it
+faster, you will likely get full credit.</p>
+<p>We will be manually grading your submission. We will be looking at he robustness of your code (does
+your code run without modifications), correctness of your feature, the quality of your tests,
+and general style (documentation and comments).</p>
+<p>The way we grade this assignment will be different from almost every Computer Science course here at
+CMU, where grading is mainly based on an autograder, and maybe a handful of points deductions for
+style. Instead, we will be looking at your code wholistically, judging it based on how people expect
+you to write code <em>outside</em> of school.</p>
+<p>This practice is taken from CMU’s Operating Systems course,
+<a href="https://www.cs.cmu.edu/~410/">15-410/615</a>.</p>
+<h2 id="submission"><a class="doc-anchor" href="#submission">§</a>Submission</h2><h4 id="formatting-and-style"><a class="doc-anchor" href="#formatting-and-style">§</a>Formatting and Style</h4>
+<p>The autograder will run these two commands on your code:</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check</code></pre></div>
+<p><strong>If the autograder detects any errors from the command above, you will not be able to receive</strong>
+<strong>any points.</strong> This may seem strict, but we have decided to follow standard best practices for
+Rust.</p>
+<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>, you ensure
+that anybody reading your code (who is familiar with Rust) will be able to easily navigate your
+code. This can help with diving into an unfamiliar code base, and it also eliminates the need for
+debate with others over style rules, saving time and energy.</p>
+<p>See the official <a href="https://doc.rust-lang.org/stable/style-guide/">guidelines</a> for more information.</p>
+<h4 id="unix"><a class="doc-anchor" href="#unix">§</a>Unix</h4>
+<p>If you are on a unix system, we will try to create a <code>handin.zip</code> automatically for you,
+<strong>but you will need to have <code>zip</code> already installed</strong>.</p>
+<p>If you <em>do not</em> have <code>zip</code> installed on your system, install <code>zip</code> on your machine or use the CMU
+Linux SSH machines. If you need help with this, please reach out to us!</p>
+<p>Once you have <code>zip</code> installed, we will create the <code>handin.zip</code> automatically for you (<em>take a peek</em>
+<em>into <code>build.rs</code> file if you’re interested in how this works!</em>).</p>
+<p>Once you have the <code>handin.zip</code> file, submit it (and only the zip) to Gradescope.</p>
+<h4 id="windows"><a class="doc-anchor" href="#windows">§</a>Windows</h4>
+<p>If you are on a windows system, you can zip the <code>src/</code> folder manually and upload that to
+Gradescope.</p>
+<p>Note that you don’t <em>need</em> to name it <code>handin.zip</code>, you can name it whatever you’d like.</p>
+<h2 id="collaboration"><a class="doc-anchor" href="#collaboration">§</a>Collaboration</h2>
+<p>In general, feel free to discuss homeworks with other students! As long as you do not copy someone
+else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that other students can
+see your questions and answers as well!</p>
+<p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
+<h2 id="feedback"><a class="doc-anchor" href="#feedback">§</a>Feedback</h2>
+<p>We would like to reiterate that you should let us know if you spent anywhere in significant excess
+of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve, so if you find yourself not understanding
+the concepts, you should reach out to us and let us know as well — chances are, you’re not the
+only one!</p>
+</div></details><h2 id="functions" class="section-header">Functions<a href="#functions" class="anchor">§</a></h2><dl class="item-table"><dt><a class="fn" href="fn.add.html" title="fn filterlab::add">add</a></dt></dl></section></div></main></body></html>

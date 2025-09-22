@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="98-008: Intro to the Rust Programming Language"><title>multilab - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-84e720fa.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="multilab" data-themes="" data-resource-suffix="" data-rustdoc-version="1.89.0 (29483883e 2025-08-04)" data-channel="1.89.0" data-search-js="search-92309212.js" data-settings-js="settings-5514c975.js" ><script src="../static.files/storage-4e99c027.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-fd3af306.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../multilab/index.html">multilab</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#98-008-intro-to-the-rust-programming-language" title="98-008: Intro to the Rust Programming Language">98-008: Intro to the Rust Programming Language</a></li><li><a href="#multi-lab" title="Multi Lab">Multi Lab</a></li><li><a href="#part-1-multiset" title="Part 1: `MultiSet`">Part 1: <code>MultiSet</code></a></li><li><a href="#part-2-multimap" title="Part 2: `MultiMap`">Part 2: <code>MultiMap</code></a></li><li><a href="#submission" title="Submission">Submission</a><ul><li><a href="#formatting-and-style" title="Formatting and Style">Formatting and Style</a></li><li><a href="#unix" title="Unix">Unix</a></li><li><a href="#windows" title="Windows">Windows</a></li></ul></li><li><a href="#collaboration" title="Collaboration">Collaboration</a></li><li><a href="#feedback" title="Feedback">Feedback</a></li></ul><h3><a href="#modules">Crate Items</a></h3><ul class="block"><li><a href="#modules" title="Modules">Modules</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>multilab</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/multilab/lib.rs.html#1-10">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h4 id="98-008-intro-to-the-rust-programming-language"><a class="doc-anchor" href="#98-008-intro-to-the-rust-programming-language">§</a>98-008: Intro to the Rust Programming Language</h4><h2 id="multi-lab"><a class="doc-anchor" href="#multi-lab">§</a>Multi Lab</h2>
+<p>The goal of this homework is to make sure you are comfortable with some of the generic collection
+types in the <a href="https://doc.rust-lang.org/1.89.0/std/collections/index.html" title="mod std::collections"><code>std::collections</code></a> module.</p>
+<p>You will implement two data structures that track multiplicity (the number of times elements appear)
+on top of their normal operations.</p>
+<p>The first will be a <a href="multiset/struct.MultiSet.html" title="struct multilab::multiset::MultiSet"><code>MultiSet</code></a>, which is a set that can have
+duplicate entries. The second will be a <a href="multimap/struct.MultiMap.html" title="struct multilab::multimap::MultiMap"><code>MultiMap</code></a>, which is a map that
+maps keys to any number of values.</p>
+<p>For <a href="multiset/struct.MultiSet.html" title="struct multilab::multiset::MultiSet"><code>MultiSet</code></a>, we have not provided what types the fields should be.
+<em>We recommend that you use one of the collection types provided in the <a href="https://doc.rust-lang.org/1.89.0/std/collections/index.html" title="mod std::collections"><code>std::collections</code></a> module</em>
+<em>to help you build these new types.</em></p>
+<p>We would like you think a bit more about your own code than previous homeworks, so we will be
+providing less detail than before on implementation details. Instead, you should read the
+documentation and implement the data structure and methods so that they follow the documentation and
+pass all the test cases.</p>
+<h2 id="part-1-multiset"><a class="doc-anchor" href="#part-1-multiset">§</a>Part 1: <code>MultiSet</code></h2>
+<p>Click this hyperlink to go to the documentation for <a href="multiset/struct.MultiSet.html" title="struct multilab::multiset::MultiSet"><code>MultiSet</code></a>!</p>
+<h2 id="part-2-multimap"><a class="doc-anchor" href="#part-2-multimap">§</a>Part 2: <code>MultiMap</code></h2>
+<p>Click this hyperlink to go to the documentation for <a href="multimap/struct.MultiMap.html" title="struct multilab::multimap::MultiMap"><code>MultiMap</code></a>!</p>
+<h2 id="submission"><a class="doc-anchor" href="#submission">§</a>Submission</h2><h4 id="formatting-and-style"><a class="doc-anchor" href="#formatting-and-style">§</a>Formatting and Style</h4>
+<p>The autograder will run these two commands on your code:</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo clippy &amp;&amp; cargo fmt --all -- --check</code></pre></div>
+<p><strong>If the autograder detects any errors from the command above, you will not be able to receive</strong>
+<strong>any points.</strong> This may seem strict, but we have decided to follow standard best practices for
+Rust.</p>
+<p>By following <a href="https://doc.rust-lang.org/stable/style-guide/">Rust’s style guidelines</a>, you ensure
+that anybody reading your code (who is familiar with Rust) will be able to easily navigate your
+code. This can help with diving into an unfamiliar code base, and it also eliminates the need for
+debate with others over style rules, saving time and energy.</p>
+<p>See the official <a href="https://doc.rust-lang.org/stable/style-guide/">guidelines</a> for more information.</p>
+<h4 id="unix"><a class="doc-anchor" href="#unix">§</a>Unix</h4>
+<p>If you are on a unix system, we will try to create a <code>handin.zip</code> automatically for you,
+<strong>but you will need to have <code>zip</code> already installed</strong>.</p>
+<p>If you <em>do not</em> have <code>zip</code> installed on your system, install <code>zip</code> on your machine or use the CMU
+Linux SSH machines. If you need help with this, please reach out to us!</p>
+<p>Once you have <code>zip</code> installed, we will create the <code>handin.zip</code> automatically for you (<em>take a peek</em>
+<em>into <code>build.rs</code> file if you’re interested in how this works!</em>).</p>
+<p>Once you have the <code>handin.zip</code> file, submit it (and only the zip) to Gradescope.</p>
+<h4 id="windows"><a class="doc-anchor" href="#windows">§</a>Windows</h4>
+<p>If you are on a windows system, you can zip the <code>src/</code> folder manually and upload that to
+Gradescope.</p>
+<p>Note that you don’t <em>need</em> to name it <code>handin.zip</code>, you can name it whatever you’d like.</p>
+<h2 id="collaboration"><a class="doc-anchor" href="#collaboration">§</a>Collaboration</h2>
+<p>In general, feel free to discuss homeworks with other students! As long as you do not copy someone
+else’s work, any communication is fair game.</p>
+<p>All formal questions should be asked on Piazza. Try to discuss on Piazza so that other students can
+see your questions and answers as well!</p>
+<p>You can also discuss on Discord, but try to keep any technical questions on Piazza.</p>
+<h2 id="feedback"><a class="doc-anchor" href="#feedback">§</a>Feedback</h2>
+<p>We would like to reiterate that you should let us know if you spent anywhere in significant excess
+of an hour on this homework.</p>
+<p>In addition, Rust has a notoriously steep learning curve, so if you find yourself not understanding
+the concepts, you should reach out to us and let us know as well — chances are, you’re not the
+only one!</p>
+</div></details><h2 id="modules" class="section-header">Modules<a href="#modules" class="anchor">§</a></h2><dl class="item-table"><dt><a class="mod" href="multimap/index.html" title="mod multilab::multimap">multimap</a></dt><dd>This module contains a multimap type that associates keys with multiple values.</dd><dt><a class="mod" href="multiset/index.html" title="mod multilab::multiset">multiset</a></dt><dd>This module contains a multiset type that can store elements of a generic type.</dd></dl></section></div></main></body></html>

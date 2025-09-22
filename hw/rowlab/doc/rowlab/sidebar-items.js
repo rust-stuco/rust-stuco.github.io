@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["BILLION"],"fn":["aggregate"],"mod":["aggregation","measurements"],"struct":["WeatherStations"]};
