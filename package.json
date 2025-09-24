@@ -1,6 +1,6 @@
 {
-  "name": "interversehq",
-  "description": "Interverse Website",
+  "name": "rust-stuco-website",
+  "description": "Website for Rust StuCo (98-008)",
   "scripts": {
     "start": "npm-run-all -p dev:*",
     "build": "run-s build:*",
@@ -21,14 +21,13 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "markdown-it-attrs": "^4.1.6",
     "@kamona/tailwindcss-perspective": "^0.1.1",
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.16",
+    "markdown-it-attrs": "^4.3.1",
     "npm-run-all": "^4.1.5",
-    "nunjucks-date-filter": "^0.1.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.4.17"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001549"
+    "caniuse-lite": "^1.0.30001743"
   }
 }
