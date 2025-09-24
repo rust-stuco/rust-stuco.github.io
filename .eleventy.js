@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("hw/**/*")
   eleventyConfig.addPassthroughCopy("old/**/*")
   eleventyConfig.ignores.add("old/**/*")
+  eleventyConfig.ignores.add("hw/**/*.html")
 
   // Copy favicon stuff
   eleventyConfig.addPassthroughCopy("*.png")
