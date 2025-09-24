@@ -218,8 +218,8 @@
       "hw_handout": "/hw/pokerlab/pokerlab.zip",
       "hw_writeup": "/hw/pokerlab/doc/pokerlab/index.html",
       "hw_released": false,
-      "details_released": false,
-      "slides_released": false,
+      "details_released": true,
+      "slides_released": true,
       "extras": [
         {
           "title": "Rust Book Chapter 9",
