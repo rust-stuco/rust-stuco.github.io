@@ -1,6 +1,11 @@
-on: 
+on:
   push:
   workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: 'Force rebuild all labs (ignores cache)'
+        type: boolean
+        default: false
   repository_dispatch:
     types: [homework-update]
 
@@ -25,12 +30,13 @@ jobs:
       - name: Cache complete homework build
         id: cache-homework-build
         uses: actions/cache@v4
+        if: inputs.force_rebuild != true
         with:
           path: hw
           key: homework-complete-${{ steps.homeworks-hash.outputs.hash }}
 
       - name: Clone homeworks repository
-        if: steps.cache-homework-build.outputs.cache-hit != 'true'
+        if: steps.cache-homework-build.outputs.cache-hit != 'true' || inputs.force_rebuild == true
         run: |
           git clone --depth 1 https://github.com/rust-stuco/homeworks.git homeworks-temp
 
@@ -38,7 +44,7 @@ jobs:
         id: set-matrix
         run: |
           chmod +x .github/scripts/discover-labs.sh
-          if [ -d "homeworks-temp" ]; then
+          if [ -d "homeworks-temp" ] || [ "${{ inputs.force_rebuild }}" = "true" ]; then
             matrix=$(.github/scripts/discover-labs.sh)
           else
             # Use empty matrix to skip lab building
