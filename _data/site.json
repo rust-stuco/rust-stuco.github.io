@@ -222,11 +222,11 @@
       "hw_name": "PokerLab",
       "hw_handout": "/hw/pokerlab/pokerlab.zip",
       "hw_writeup": "/hw/pokerlab/doc/pokerlab/index.html",
-      "hw_released": false,
+      "hw_released": true,
       "hw_ec_name": "SummaryLab",
       "hw_ec_handout": "/hw/summarylab/summarylab.zip",
       "hw_ec_writeup": "/hw/summarylab/doc/summarylab/index.html",
-      "hw_ec_released": false,
+      "hw_ec_released": true,
       "details_released": true,
       "slides_released": true,
       "extras": [
