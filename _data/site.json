@@ -265,9 +265,10 @@
       "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/modules_testing-light.pdf",
       "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week6/modules_testing-dark.html",
       "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/modules_testing-dark.pdf",
+      "hw_name": "GrepLab",
       "hw_handout": "/hw/greplab/greplab.zip",
       "hw_writeup": "/hw/greplab/doc/greplab/index.html",
-      "hw_released": false,
+      "hw_released": true,
       "details_released": true,
       "slides_released": true,
       "extras": [
