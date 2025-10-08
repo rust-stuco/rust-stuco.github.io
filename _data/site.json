@@ -11,10 +11,10 @@
         { "title": "Control flow" },
         { "title": "Course logistics" }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/introduction-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/introduction-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week1/introduction-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week1/introduction-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/01_introduction/introduction-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/01_introduction/introduction-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/01_introduction/introduction-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/01_introduction/introduction-dark.pdf",
       "hw_name": "PrimerLab",
       "hw_handout": "/hw/primerlab/primerlab.zip",
       "hw_writeup": "/hw/primerlab/doc/primerlab/index.html",
@@ -70,10 +70,10 @@
         { "title": "Slices" },
         { "title": "`Vec` Sneak Peek" }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week2/ownership_p1-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/ownership_p1-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week2/ownership_p1-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week2/ownership_p1-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/02_ownership_p1/ownership_p1-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/02_ownership_p1/ownership_p1-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/02_ownership_p1/ownership_p1-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/02_ownership_p1/ownership_p1-dark.pdf",
       "hw_name": "GetOwnedLab",
       "hw_handout": "/hw/getownedlab/getownedlab.zip",
       "hw_writeup": "/hw/getownedlab/doc/getownedlab/index.html",
@@ -122,10 +122,10 @@
           ]
         }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week3/structs_enums-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week3/structs_enums-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week3/structs_enums-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week3/structs_enums-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/03_structs_enums/structs_enums-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/03_structs_enums/structs_enums-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/03_structs_enums/structs_enums-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/03_structs_enums/structs_enums-dark.pdf",
       "hw_name": "CardLab",
       "hw_handout": "/hw/cardlab/cardlab.zip",
       "hw_writeup": "/hw/cardlab/doc/cardlab/index.html",
@@ -171,10 +171,10 @@
           ]
         }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week4/collections_generics-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week4/collections_generics-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week4/collections_generics-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week4/collections_generics-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/04_collections_generics/collections_generics-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/04_collections_generics/collections_generics-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/04_collections_generics/collections_generics-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/04_collections_generics/collections_generics-dark.pdf",
       "hw_name": "Multilab",
       "hw_handout": "/hw/multilab/multilab.zip",
       "hw_writeup": "/hw/multilab/doc/multilab/index.html",
@@ -215,10 +215,10 @@
           ]
         }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week5/errors_traits-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/errors_traits-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week5/errors_traits-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week5/errors_traits-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/05_errors_traits/errors_traits-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/05_errors_traits/errors_traits-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/05_errors_traits/errors_traits-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/05_errors_traits/errors_traits-dark.pdf",
       "hw_name": "PokerLab",
       "hw_handout": "/hw/pokerlab/pokerlab.zip",
       "hw_writeup": "/hw/pokerlab/doc/pokerlab/index.html",
@@ -261,10 +261,10 @@
         },
         { "title": "Code Review" }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week6/modules_testing-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/modules_testing-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week6/modules_testing-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week6/modules_testing-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/06_modules_testing/modules_testing-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/06_modules_testing/modules_testing-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/06_modules_testing/modules_testing-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/06_modules_testing/modules_testing-dark.pdf",
       "hw_name": "GrepLab",
       "hw_handout": "/hw/greplab/greplab.zip",
       "hw_writeup": "/hw/greplab/doc/greplab/index.html",
@@ -279,6 +279,55 @@
         {
           "title": "Rust Book Chapter 11",
           "link": "https://doc.rust-lang.org/book/ch11-00-testing.html"
+        }
+      ]
+    },
+    {
+      "title": "The Rust Ecosystem",
+      "agenda": [
+        {
+          "title": "The Rust Toolchain",
+          "sub": [
+            { "title": "`rustup`" },
+            { "title": "`clippy`" },
+            { "title": "`rustfmt`" }
+          ]
+        },
+        {
+          "title": "Performance and Analysis",
+          "sub": [{ "title": "Criterion" }, { "title": "Flamegraphs" }]
+        },
+        {
+          "title": "Reading Documentation",
+          "sub": [
+            { "title": "`rand`" },
+            { "title": "`time` vs `chrono`" },
+            { "title": "`anyhow` vs `thiserror`" }
+          ]
+        }
+      ],
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/07_ecosystem/ecosystem-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/07_ecosystem/ecosystem-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/07_ecosystem/ecosystem-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/07_ecosystem/ecosystem-dark.pdf",
+      "hw_name": "Ownership Quiz (Gradescope)",
+      "hw_handout": "",
+      "hw_writeup": "",
+      "hw_released": true,
+      "details_released": true,
+      "slides_released": true,
+      "extras": [
+        {
+          "title": "The rustup book",
+          "link": "https://rust-lang.github.io/rustup/index.html"
+        },
+        {
+          "title": "Criterion.rs Documentation",
+          "link": "https://bheisler.github.io/criterion.rs/book/"
+        },
+        {
+          "title": "Curated Rust Ecosystem Crates",
+          "link": "https://blessed.rs/crates"
         }
       ]
     },
@@ -299,10 +348,10 @@
           ]
         }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week7/closures_iterators-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week7/closures_iterators-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week7/closures_iterators-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week7/closures_iterators-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/08_closures_iterators/closures_iterators-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/08_closures_iterators/closures_iterators-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/08_closures_iterators/closures_iterators-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/08_closures_iterators/closures_iterators-dark.pdf",
       "hw_handout": "/hw/iterlab/iterlab.zip",
       "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
       "hw_released": false,
@@ -328,25 +377,6 @@
       ]
     },
     {
-      "title": "Ownership (Part 2)",
-      "agenda": [],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/ownership_p2-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/ownership_p2-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week8/ownership_p2-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week8/ownership_p2-dark.pdf",
-      "hw_handout": "",
-      "hw_writeup": "",
-      "hw_released": false,
-      "details_released": false,
-      "slides_released": false,
-      "extras": [
-        {
-          "title": "Brown Rust Book Chapter 4",
-          "link": "https://rust-book.cs.brown.edu/ch04-00-understanding-ownership.html"
-        }
-      ]
-    },
-    {
       "title": "Lifetimes",
       "agenda": [
         { "title": "Intro and Motivation" },
@@ -355,10 +385,10 @@
         { "title": "Generics and Bounds" },
         { "title": "'static" }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/lifetimes-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/lifetimes-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week9/lifetimes-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week9/lifetimes-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/09_lifetimes/lifetimes-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/09_lifetimes/lifetimes-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/09_lifetimes/lifetimes-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/09_lifetimes/lifetimes-dark.pdf",
       "hw_handout": "/hw/splitlab/splitlab.zip",
       "hw_writeup": "/hw/splitlab/doc/splitlab/index.html",
       "hw_released": false,
@@ -402,10 +432,10 @@
         { "title": "The `Rc` Type" },
         { "title": "The `RefCell` Type" }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/smart_pointers-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/smart_pointers-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week10/smart_pointers-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week10/smart_pointers-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/10_smart_pointers/smart_pointers-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/10_smart_pointers/smart_pointers-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/10_smart_pointers/smart_pointers-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/10_smart_pointers/smart_pointers-dark.pdf",
       "hw_handout": "/hw/filterlab/filterlab.zip",
       "hw_writeup": "/hw/filterlab/doc/filterlab/index.html",
       "hw_released": false,
@@ -430,10 +460,10 @@
         { "title": "Raw Pointers" },
         { "title": "FFI" }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/unsafe-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/unsafe-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week11/unsafe-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week11/unsafe-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/11_unsafe/unsafe-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/11_unsafe/unsafe-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/11_unsafe/unsafe-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/11_unsafe/unsafe-dark.pdf",
       "hw_handout": "",
       "hw_writeup": "",
       "hw_released": false,
@@ -461,10 +491,10 @@
         { "title": "`thread::scope`" },
         { "title": "`Arc<T>`" }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/parallelism-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/parallelism-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week12/parallelism-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week12/parallelism-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/12_parallelism/parallelism-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/12_parallelism/parallelism-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/12_parallelism/parallelism-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/12_parallelism/parallelism-dark.pdf",
       "hw_handout": "/hw/rowlab/rowlab.zip",
       "hw_writeup": "/hw/rowlab/doc/rowlab/index.html",
       "hw_released": false,
@@ -486,64 +516,16 @@
       ]
     },
     {
-      "title": "The Rust Ecosystem",
-      "agenda": [
-        {
-          "title": "The Rust Toolchain",
-          "sub": [
-            { "title": "`rustup`" },
-            { "title": "`clippy`" },
-            { "title": "`rustfmt`" }
-          ]
-        },
-        {
-          "title": "Performance and Analysis",
-          "sub": [{ "title": "Criterion" }, { "title": "Flamegraphs" }]
-        },
-        {
-          "title": "Reading Documentation",
-          "sub": [
-            { "title": "`rand`" },
-            { "title": "`time` vs `chrono`" },
-            { "title": "`anyhow` vs `thiserror`" }
-          ]
-        }
-      ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/ecosystem-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/ecosystem-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week13/ecosystem-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week13/ecosystem-dark.pdf",
-      "hw_handout": "",
-      "hw_writeup": "",
-      "hw_released": false,
-      "details_released": false,
-      "slides_released": false,
-      "extras": [
-        {
-          "title": "The rustup book",
-          "link": "https://rust-lang.github.io/rustup/index.html"
-        },
-        {
-          "title": "Criterion.rs Documentation",
-          "link": "https://bheisler.github.io/criterion.rs/book/"
-        },
-        {
-          "title": "Curated Rust Ecosystem Crates",
-          "link": "https://blessed.rs/crates"
-        }
-      ]
-    },
-    {
       "title": "Concurrency",
       "agenda": [
         { "title": "`async`/`await`" },
         { "title": "Futures" },
         { "title": "Polling" }
       ],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week14/concurrency-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week14/concurrency-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/week14/concurrency-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/week14/concurrency-dark.pdf",
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/13_concurrency/concurrency-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/13_concurrency/concurrency-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/13_concurrency/concurrency-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/13_concurrency/concurrency-dark.pdf",
       "hw_handout": "",
       "hw_writeup": "",
       "hw_released": false,
@@ -553,6 +535,25 @@
         {
           "title": "Crust of Rust: async/await (livestream)",
           "link": "https://www.youtube.com/watch?v=ThjvMReOXYM"
+        }
+      ]
+    },
+    {
+      "title": "Ownership (Part 2)",
+      "agenda": [],
+      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/temp_ownership_p2/ownership_p2-light.html",
+      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/temp_ownership_p2/ownership_p2-light.pdf",
+      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/temp_ownership_p2/ownership_p2-dark.html",
+      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/temp_ownership_p2/ownership_p2-dark.pdf",
+      "hw_handout": "",
+      "hw_writeup": "",
+      "hw_released": false,
+      "details_released": false,
+      "slides_released": false,
+      "extras": [
+        {
+          "title": "Brown Rust Book Chapter 4",
+          "link": "https://rust-book.cs.brown.edu/ch04-00-understanding-ownership.html"
         }
       ]
     }

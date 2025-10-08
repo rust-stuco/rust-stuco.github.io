@@ -75,10 +75,16 @@ eleventyNavigation:
                 <td>
                     <ul>
                     {% if entry.hw_released %}
-                        <li>{{ entry.hw_name }} <br/> (<a href="{{ entry.hw_handout }}">handout</a> / <a href="{{ entry.hw_writeup }}">writeup</a>)</li>
+                        <li>{{ entry.hw_name }} 
+                        {% if entry.hw_handout %}
+                            <br/> (<a href="{{ entry.hw_handout }}">handout</a> / <a href="{{ entry.hw_writeup }}">writeup</a>)</li>
+                        {% endif %}    
                     {% endif %}
                     {% if entry.hw_ec_released %}
-                        <li>{{ entry.hw_ec_name }} <br/> (<a href="{{ entry.hw_ec_handout }}">handout</a> / <a href="{{ entry.hw_ec_writeup }}">writeup</a>)</li>
+                        <li>{{ entry.hw_ec_name }} 
+                        {% if entry.hw_ec_handout %}
+                            <br/> (<a href="{{ entry.hw_ec_handout }}">handout</a> / <a href="{{ entry.hw_ec_writeup }}">writeup</a>)</li>
+                        {% endif %}    
                     {% endif %}
                     </ul>
                 </td>
