@@ -355,8 +355,8 @@
       "hw_handout": "/hw/iterlab/iterlab.zip",
       "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
       "hw_released": false,
-      "details_released": false,
-      "slides_released": false,
+      "details_released": true,
+      "slides_released": true,
       "extras": [
         {
           "title": "Rust Book Chapter 13",
