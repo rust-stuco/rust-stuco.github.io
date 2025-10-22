@@ -354,7 +354,7 @@
       "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/08_closures_iterators/closures_iterators-dark.pdf",
       "hw_handout": "/hw/iterlab/iterlab.zip",
       "hw_writeup": "/hw/iterlab/doc/iterlab/index.html",
-      "hw_released": false,
+      "hw_released": true,
       "details_released": true,
       "slides_released": true,
       "extras": [
