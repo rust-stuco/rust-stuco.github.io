@@ -420,7 +420,7 @@
       ]
     },
     {
-      "title": "Smart Points and Trait Objects",
+      "title": "Smart Pointers and Trait Objects",
       "agenda": [
         { "title": "The `Box<T>` Type" },
         { "title": "The `Deref` Trait" },
