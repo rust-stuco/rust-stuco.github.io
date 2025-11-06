@@ -440,7 +440,7 @@
       "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/10_smart_pointers/smart_pointers-dark.pdf",
       "hw_handout": "/hw/filterlab/filterlab.zip",
       "hw_writeup": "/hw/filterlab/doc/filterlab/index.html",
-      "hw_released": true,
+      "hw_released": false,
       "details_released": true,
       "slides_released": true,
       "extras": [
