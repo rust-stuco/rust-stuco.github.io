@@ -497,11 +497,12 @@
       "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/12_parallelism/parallelism-light.pdf",
       "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/12_parallelism/parallelism-dark.html",
       "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/12_parallelism/parallelism-dark.pdf",
+      "hw_name": "RowLab",
       "hw_handout": "/hw/rowlab/rowlab.zip",
       "hw_writeup": "/hw/rowlab/doc/rowlab/index.html",
-      "hw_released": false,
-      "details_released": false,
-      "slides_released": false,
+      "hw_released": true,
+      "details_released": true,
+      "slides_released": true,
       "extras": [
         {
           "title": "Crust of Rust: Channels (livestream)",
