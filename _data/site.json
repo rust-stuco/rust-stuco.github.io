@@ -545,25 +545,6 @@
           "link": "https://www.youtube.com/watch?v=ThjvMReOXYM"
         }
       ]
-    },
-    {
-      "title": "Ownership (Part 2)",
-      "agenda": [],
-      "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/temp_ownership_p2/ownership_p2-light.html",
-      "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/temp_ownership_p2/ownership_p2-light.pdf",
-      "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/temp_ownership_p2/ownership_p2-dark.html",
-      "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/temp_ownership_p2/ownership_p2-dark.pdf",
-      "hw_handout": "",
-      "hw_writeup": "",
-      "hw_released": false,
-      "details_released": false,
-      "slides_released": false,
-      "extras": [
-        {
-          "title": "Brown Rust Book Chapter 4",
-          "link": "https://rust-book.cs.brown.edu/ch04-00-understanding-ownership.html"
-        }
-      ]
     }
   ]
 }
