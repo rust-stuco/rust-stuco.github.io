@@ -537,7 +537,7 @@
       "hw_handout": "",
       "hw_writeup": "",
       "hw_released": false,
-      "details_released": false,
+      "details_released": true,
       "slides_released": false,
       "extras": [
         {
