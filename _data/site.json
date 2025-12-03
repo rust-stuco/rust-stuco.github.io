@@ -525,11 +525,7 @@
     },
     {
       "title": "Concurrency",
-      "agenda": [
-        { "title": "`async`/`await`" },
-        { "title": "Futures" },
-        { "title": "Polling" }
-      ],
+      "agenda": [{ "title": "`async`/`await`" }, { "title": "Futures" }],
       "slides_light_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/13_concurrency/concurrency-light.html",
       "slides_light_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/13_concurrency/concurrency-light.pdf",
       "slides_dark_html": "http://htmlpreview.github.io/?https://github.com/rust-stuco/lectures/blob/main/13_concurrency/concurrency-dark.html",
