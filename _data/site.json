@@ -536,9 +536,9 @@
       "slides_dark_pdf": "https://raw.githubusercontent.com/rust-stuco/lectures/main/13_concurrency/concurrency-dark.pdf",
       "hw_handout": "",
       "hw_writeup": "",
-      "hw_released": true,
+      "hw_released": false,
       "details_released": true,
-      "slides_released": false,
+      "slides_released": true,
       "extras": [
         {
           "title": "Crust of Rust: async/await (livestream)",
