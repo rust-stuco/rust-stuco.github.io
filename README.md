@@ -1,16 +1,23 @@
 # Rust StuCo Website
 
-## Development
+This repository exists for historical purposes. The website has moved [here](https://github.com/rust-stuco/stuco.rs).
 
-1. Generate local `hw` directory
+<details>
+  <summary>Original README content</summary>
 
-    ```bash
-    ./scripts/generate-hw.sh
-    ```
+  ## Development
 
-2. Start project
+  1. Generate local `hw` directory
 
-    ```bash
-    bun install
-    bun run dev:11ty
-    ```
+  ```bash
+  ./scripts/generate-hw.sh
+  ```
+
+  2. Start project
+
+  ```bash
+  bun install
+  bun run dev:11ty
+  ```
+
+<details>
